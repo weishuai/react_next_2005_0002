@@ -1,0 +1,23 @@
+export const ProcurePlanList = {
+    //procurePlanList: 'FHtableName',
+    title: '标题',
+    read: '详细',
+    name: '名称',
+    mid:'mid',
+    product:'产品',
+    fhtext:'自定义说明',
+    number:'数量',
+    orderedQuantity:'已订购数量',
+    unit:'计量单位',
+    unitPrice:'单价',
+
+    description: '详细',
+    isactived: '是否激活',
+    islocked: '是否锁定',
+    createdAt: '创建时间',
+    updatedAt: '修改时间',
+    createdAtPlaceholder: '创建时间',
+    updatedAtPlaceholder: '修改时间',
+    createUid: '创建人',
+    updatedUid: '修改人',
+}

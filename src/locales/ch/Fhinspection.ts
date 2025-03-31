@@ -1,0 +1,23 @@
+export const Fhinspection = {
+    //fhinspection: 'FHtableName',
+    title: '标题',
+    read: '详细',
+    name: '名称',
+    fhname:'设备名称',
+    fhF1:'巡检时间',
+    fhF2:'巡检内容',
+    fhF3:'巡检情况',
+    fhF4:'巡检人员',
+    fhF5:'状态',
+    fhF6:'备注',
+
+    description: '详细',
+    isactived: '是否激活',
+    islocked: '是否锁定',
+    createdAt: '创建时间',
+    updatedAt: '修改时间',
+    createdAtPlaceholder: '创建时间',
+    updatedAtPlaceholder: '修改时间',
+    createUid: '创建人',
+    updatedUid: '修改人',
+}

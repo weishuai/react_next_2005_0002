@@ -1,0 +1,12 @@
+import classnames from 'classnames';
+export type Value<T> = keyof T | undefined | null;
+export type Mapping<T> = Partial<Record<keyof T, any>>;
+export type Argument<T> = Value<T> | Mapping<T> | Argument<T>[];
+export const cn = <T>(style: T, ...args: Argument<T>[]) => {
+  const elementClassnames = classnames(args);
+  const cnames = elementClassnames.split(' ');
+
+  return cnames.reduce(function (memo, item) {
+    return Object.assign(memo, style![item]);
+  }, {});
+};

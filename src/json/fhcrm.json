@@ -1,0 +1,570 @@
+{
+	"fhcrm": {
+		"AccountTag": {
+			"createAccountTag": "fhcrm.AccountTag.createAccountTag",
+			"updateaAccountTag": "fhcrm.AccountTag.updateaAccountTag",
+			"removeAccountTag": "fhcrm.AccountTag.removeAccountTag",
+			"getAccountTagById": "fhcrm.AccountTag.getAccountTagById",
+			"getAccountTag": "fhcrm.AccountTag.getAccountTag",
+			"getAccountTagAll": "fhcrm.AccountTag.getAccountTagAll",
+			"getAccountTagAllViewOK": "fhcrm.AccountTag.getAccountTagAllViewOK"
+		},
+		"Activity": {
+			"createActivity": "fhcrm.Activity.createActivity",
+			"updateaActivity": "fhcrm.Activity.updateaActivity",
+			"removeActivity": "fhcrm.Activity.removeActivity",
+			"getActivityById": "fhcrm.Activity.getActivityById",
+			"getActivitSQL": "fhcrm.Activity.getActivitSQL",
+			"getActivity": "fhcrm.Activity.getActivity",
+			"getActivityTask": "fhcrm.Activity.getActivityTask",
+			"getActivityNote": "fhcrm.Activity.getActivityNote",
+			"getActivityAll": "fhcrm.Activity.getActivityAll",
+			"getActivityAllView": "fhcrm.Activity.getActivityAllView",
+			"getActivityEventsAll": "fhcrm.Activity.getActivityEventsAll"
+		},
+		"Attachment": {
+			"getIssueAttachments": "fhcrm.Attachment.getIssueAttachments",
+			"addIssueAttachment": "fhcrm.Attachment.addIssueAttachment",
+			"removeAttachment": "fhcrm.Attachment.removeAttachment",
+			"queryTaskAttachments": "fhcrm.Attachment.queryTaskAttachments",
+			"addTaskAttachment": "fhcrm.Attachment.addTaskAttachment"
+		},
+		"Attence": {
+			"createAttence": "fhcrm.Attence.createAttence",
+			"updateaAttence": "fhcrm.Attence.updateaAttence",
+			"removeAttence": "fhcrm.Attence.removeAttence",
+			"getAttenceById": "fhcrm.Attence.getAttenceById",
+			"getAttence": "fhcrm.Attence.getAttence",
+			"getAttenceAll": "fhcrm.Attence.getAttenceAll",
+			"getAttenceAllView": "fhcrm.Attence.getAttenceAllView"
+		},
+		"Campaigns": {
+			"createCampaign": "fhcrm.Campaigns.createCampaign",
+			"updateaCampaign": "fhcrm.Campaigns.updateaCampaign",
+			"removeCampaign": "fhcrm.Campaigns.removeCampaign",
+			"getCampaignById": "fhcrm.Campaigns.getCampaignById",
+			"getCampaign": "fhcrm.Campaigns.getCampaign",
+			"getCampaignsAll": "fhcrm.Campaigns.getCampaignsAll",
+			"getCampaignsAllView": "fhcrm.Campaigns.getCampaignsAllView"
+		},
+		"Client": {
+			"createClient": "fhcrm.Client.createClient",
+			"updateaClient": "fhcrm.Client.updateaClient",
+			"removeClient": "fhcrm.Client.removeClient",
+			"getClientById": "fhcrm.Client.getClientById",
+			"getClient": "fhcrm.Client.getClient",
+			"getClientv2": "fhcrm.Client.getClientv2",
+			"getClientv2SQL": "fhcrm.Client.getClientv2SQL",
+			"getClientAll": "fhcrm.Client.getClientAll",
+			"getClientAllView": "fhcrm.Client.getClientAllView"
+		},
+		"ContacPerson": {
+			"createContacPerson": "fhcrm.ContacPerson.createContacPerson",
+			"updateaContacPerson": "fhcrm.ContacPerson.updateaContacPerson",
+			"removeContacPerson": "fhcrm.ContacPerson.removeContacPerson",
+			"getContacPersonById": "fhcrm.ContacPerson.getContacPersonById",
+			"getContacPerson": "fhcrm.ContacPerson.getContacPerson",
+			"getContacPersonAll": "fhcrm.ContacPerson.getContacPersonAll",
+			"getContacPersonAllView": "fhcrm.ContacPerson.getContacPersonAllView"
+		},
+		"Country": {
+			"createCountry": "fhcrm.Country.createCountry",
+			"updateaCountry": "fhcrm.Country.updateaCountry",
+			"removeCountry": "fhcrm.Country.removeCountry",
+			"getCountryById": "fhcrm.Country.getCountryById",
+			"getCountry": "fhcrm.Country.getCountry",
+			"getCountryAll": "fhcrm.Country.getCountryAll",
+			"getCountryAllView": "fhcrm.Country.getCountryAllView"
+		},
+		"Currency": {
+			"createCurrency": "fhcrm.Currency.createCurrency",
+			"updateaCurrency": "fhcrm.Currency.updateaCurrency",
+			"removeCurrency": "fhcrm.Currency.removeCurrency",
+			"getCurrencyById": "fhcrm.Currency.getCurrencyById",
+			"getCurrency": "fhcrm.Currency.getCurrency",
+			"getCurrencyAll": "fhcrm.Currency.getCurrencyAll",
+			"getCurrencyAllView": "fhcrm.Currency.getCurrencyAllView"
+		},
+		"Customization": {
+			"createCustomization": "fhcrm.Customization.createCustomization",
+			"updateaCustomization": "fhcrm.Customization.updateaCustomization",
+			"removeCustomization": "fhcrm.Customization.removeCustomization",
+			"getCustomizationById": "fhcrm.Customization.getCustomizationById",
+			"getCustomization": "fhcrm.Customization.getCustomization",
+			"getCustomizationAll": "fhcrm.Customization.getCustomizationAll",
+			"getCustomizationAllView": "fhcrm.Customization.getCustomizationAllView"
+		},
+		"DeliveryItem": {
+			"createDeliveryItem": "fhcrm.DeliveryItem.createDeliveryItem",
+			"updateaDeliveryItem": "fhcrm.DeliveryItem.updateaDeliveryItem",
+			"removeDeliveryItem": "fhcrm.DeliveryItem.removeDeliveryItem",
+			"getDeliveryItemById": "fhcrm.DeliveryItem.getDeliveryItemById",
+			"getDeliveryItem": "fhcrm.DeliveryItem.getDeliveryItem",
+			"getDeliveryItemAll": "fhcrm.DeliveryItem.getDeliveryItemAll",
+			"getDeliveryItemAllView": "fhcrm.DeliveryItem.getDeliveryItemAllView"
+		},
+		"DeliveryOrder": {
+			"createDeliveryOrder": "fhcrm.DeliveryOrder.createDeliveryOrder",
+			"updateaDeliveryOrder": "fhcrm.DeliveryOrder.updateaDeliveryOrder",
+			"removeDeliveryOrder": "fhcrm.DeliveryOrder.removeDeliveryOrder",
+			"getDeliveryOrderById": "fhcrm.DeliveryOrder.getDeliveryOrderById",
+			"getDeliveryOrder": "fhcrm.DeliveryOrder.getDeliveryOrder",
+			"getDeliveryOrderAll": "fhcrm.DeliveryOrder.getDeliveryOrderAll",
+			"getDeliveryOrderAllView": "fhcrm.DeliveryOrder.getDeliveryOrderAllView"
+		},
+		"ExchangeRate": {
+			"createExchangeRate": "fhcrm.ExchangeRate.createExchangeRate",
+			"updateaExchangeRate": "fhcrm.ExchangeRate.updateaExchangeRate",
+			"removeExchangeRate": "fhcrm.ExchangeRate.removeExchangeRate",
+			"getExchangeRateById": "fhcrm.ExchangeRate.getExchangeRateById",
+			"getExchangeRate": "fhcrm.ExchangeRate.getExchangeRate",
+			"getExchangeRateAll": "fhcrm.ExchangeRate.getExchangeRateAll",
+			"getExchangeRateAllView": "fhcrm.ExchangeRate.getExchangeRateAllView"
+		},
+		"Feedback": {
+			"createFeedback": "fhcrm.Feedback.createFeedback",
+			"updateaFeedback": "fhcrm.Feedback.updateaFeedback",
+			"removeFeedback": "fhcrm.Feedback.removeFeedback",
+			"getFeedbackById": "fhcrm.Feedback.getFeedbackById",
+			"getFeedback": "fhcrm.Feedback.getFeedback",
+			"getFeedbackAll": "fhcrm.Feedback.getFeedbackAll",
+			"getFeedbackAllView": "fhcrm.Feedback.getFeedbackAllView"
+		},
+		"FHRole": {
+			"createFHRole": "fhcrm.FHRole.createFHRole",
+			"updateaFHRole": "fhcrm.FHRole.updateaFHRole",
+			"removeFHRole": "fhcrm.FHRole.removeFHRole",
+			"getFHRoleById": "fhcrm.FHRole.getFHRoleById",
+			"getFHRole": "fhcrm.FHRole.getFHRole",
+			"getFHRoleAll": "fhcrm.FHRole.getFHRoleAll",
+			"getFHRoleAllView": "fhcrm.FHRole.getFHRoleAllView"
+		},
+		"Fhtest": {
+			"createFhtest": "fhcrm.Fhtest.createFhtest",
+			"update_Fhtest": "fhcrm.Fhtest.update_Fhtest",
+			"removeFhtest": "fhcrm.Fhtest.removeFhtest"
+		},
+		"FHUser": {
+			"createFHUser": "fhcrm.FHUser.createFHUser",
+			"updateaFHUser": "fhcrm.FHUser.updateaFHUser",
+			"removeFHUser": "fhcrm.FHUser.removeFHUser",
+			"getFHUserById": "fhcrm.FHUser.getFHUserById",
+			"getFHUser": "fhcrm.FHUser.getFHUser",
+			"getFHUserAll": "fhcrm.FHUser.getFHUserAll",
+			"getFHUserAllView": "fhcrm.FHUser.getFHUserAllView"
+		},
+		"Industry": {
+			"createIndustry": "fhcrm.Industry.createIndustry",
+			"updateaIndustry": "fhcrm.Industry.updateaIndustry",
+			"removeIndustry": "fhcrm.Industry.removeIndustry",
+			"getIndustryById": "fhcrm.Industry.getIndustryById",
+			"getIndustry": "fhcrm.Industry.getIndustry",
+			"getIndustryAll": "fhcrm.Industry.getIndustryAll",
+			"getIndustryAllView": "fhcrm.Industry.getIndustryAllView"
+		},
+		"InvoiceDetails": {
+			"createInvoiceDetails": "fhcrm.InvoiceDetails.createInvoiceDetails",
+			"updateaInvoiceDetails": "fhcrm.InvoiceDetails.updateaInvoiceDetails",
+			"removeInvoiceDetails": "fhcrm.InvoiceDetails.removeInvoiceDetails",
+			"getInvoiceDetailsById": "fhcrm.InvoiceDetails.getInvoiceDetailsById",
+			"getInvoiceDetails": "fhcrm.InvoiceDetails.getInvoiceDetails",
+			"getInvoiceDetailsAll": "fhcrm.InvoiceDetails.getInvoiceDetailsAll",
+			"getInvoiceDetailsAllView": "fhcrm.InvoiceDetails.getInvoiceDetailsAllView"
+		},
+		"InvoiceItem": {
+			"createInvoiceItem": "fhcrm.InvoiceItem.createInvoiceItem",
+			"updateaInvoiceItem": "fhcrm.InvoiceItem.updateaInvoiceItem",
+			"removeInvoiceItem": "fhcrm.InvoiceItem.removeInvoiceItem",
+			"removeToInvoiceItem": "fhcrm.InvoiceItem.removeToInvoiceItem",
+			"getInvoiceItemById": "fhcrm.InvoiceItem.getInvoiceItemById",
+			"getInvoiceItem": "fhcrm.InvoiceItem.getInvoiceItem",
+			"getInvoiceItemAll": "fhcrm.InvoiceItem.getInvoiceItemAll",
+			"getInvoiceItemAllView": "fhcrm.InvoiceItem.getInvoiceItemAllView"
+		},
+		"InvoicePayment": {
+			"createInvoicePayment": "fhcrm.InvoicePayment.createInvoicePayment",
+			"updateaInvoicePayment": "fhcrm.InvoicePayment.updateaInvoicePayment",
+			"removeInvoicePayment": "fhcrm.InvoicePayment.removeInvoicePayment",
+			"getInvoicePaymentById": "fhcrm.InvoicePayment.getInvoicePaymentById",
+			"getInvoicePayment": "fhcrm.InvoicePayment.getInvoicePayment",
+			"getInvoicePaymentAll": "fhcrm.InvoicePayment.getInvoicePaymentAll",
+			"getInvoicePaymentAllView": "fhcrm.InvoicePayment.getInvoicePaymentAllView"
+		},
+		"Job": {
+			"createJob": "fhcrm.Job.createJob",
+			"updateaJob": "fhcrm.Job.updateaJob",
+			"removeJob": "fhcrm.Job.removeJob",
+			"getJobById": "fhcrm.Job.getJobById",
+			"getJob": "fhcrm.Job.getJob",
+			"getJobAll": "fhcrm.Job.getJobAll",
+			"getJobAllView": "fhcrm.Job.getJobAllView"
+		},
+		"JobItem": {
+			"createJobItem": "fhcrm.JobItem.createJobItem",
+			"updateJobItemVoByMid": "fhcrm.JobItem.updateJobItemVoByMid",
+			"updateaJobItem": "fhcrm.JobItem.updateaJobItem",
+			"removeJobItem": "fhcrm.JobItem.removeJobItem",
+			"getJobItemById": "fhcrm.JobItem.getJobItemById",
+			"getJobItem": "fhcrm.JobItem.getJobItem",
+			"getJobItemAPP": "fhcrm.JobItem.getJobItemAPP",
+			"getJobItemAll": "fhcrm.JobItem.getJobItemAll",
+			"getJobItemAllView": "fhcrm.JobItem.getJobItemAllView"
+		},
+		"Language": {
+			"createLanguage": "fhcrm.Language.createLanguage",
+			"updateaLanguage": "fhcrm.Language.updateaLanguage",
+			"removeLanguage": "fhcrm.Language.removeLanguage",
+			"getLanguageById": "fhcrm.Language.getLanguageById",
+			"getLanguage": "fhcrm.Language.getLanguage",
+			"getLanguageAll": "fhcrm.Language.getLanguageAll",
+			"getLanguageAllView": "fhcrm.Language.getLanguageAllView"
+		},
+		"Leadpools": {
+			"createLeadPools": "fhcrm.Leadpools.createLeadPools",
+			"updateaLeadpools": "fhcrm.Leadpools.updateaLeadpools",
+			"removeLeadPools": "fhcrm.Leadpools.removeLeadPools",
+			"getLeadpoolsById": "fhcrm.Leadpools.getLeadpoolsById",
+			"getLeadpools": "fhcrm.Leadpools.getLeadpools",
+			"getLeadpoolsAll": "fhcrm.Leadpools.getLeadpoolsAll",
+			"getLeadpoolsAllView": "fhcrm.Leadpools.getLeadpoolsAllView"
+		},
+		"Leads": {
+			"createLeads": "fhcrm.Leads.createLeads",
+			"updateaLeads": "fhcrm.Leads.updateaLeads",
+			"removeLeads": "fhcrm.Leads.removeLeads",
+			"getLeadsById": "fhcrm.Leads.getLeadsById",
+			"getLeads": "fhcrm.Leads.getLeads",
+			"getLeadsAll": "fhcrm.Leads.getLeadsAll",
+			"getLeadsAllView": "fhcrm.Leads.getLeadsAllView"
+		},
+		"Message": {
+			"getMessageById": "fhcrm.Message.getMessageById"
+		},
+		"MonthlyGoal": {
+			"createMonthlyGoal": "fhcrm.MonthlyGoal.createMonthlyGoal",
+			"updateaMonthlyGoal": "fhcrm.MonthlyGoal.updateaMonthlyGoal",
+			"removeMonthlyGoal": "fhcrm.MonthlyGoal.removeMonthlyGoal",
+			"getMonthlyGoalById": "fhcrm.MonthlyGoal.getMonthlyGoalById",
+			"getMonthlyGoal": "fhcrm.MonthlyGoal.getMonthlyGoal",
+			"getMonthlyGoalAll": "fhcrm.MonthlyGoal.getMonthlyGoalAll"
+		},
+		"Note": {
+			"createNote": "fhcrm.Note.createNote",
+			"updateaNote": "fhcrm.Note.updateaNote",
+			"removeNote": "fhcrm.Note.removeNote",
+			"getNoteById": "fhcrm.Note.getNoteById",
+			"getNote": "fhcrm.Note.getNote",
+			"getNoteAll": "fhcrm.Note.getNoteAll"
+		},
+		"OpportunityComments": {
+			"createOpportunityComments": "fhcrm.OpportunityComments.createOpportunityComments",
+			"updateaOpportunityComments": "fhcrm.OpportunityComments.updateaOpportunityComments",
+			"removeOpportunityComments": "fhcrm.OpportunityComments.removeOpportunityComments",
+			"getOpportunityCommentsById": "fhcrm.OpportunityComments.getOpportunityCommentsById",
+			"getOpportunityComments": "fhcrm.OpportunityComments.getOpportunityComments",
+			"getOpportunityCommentsAll": "fhcrm.OpportunityComments.getOpportunityCommentsAll"
+		},
+		"Opportunity": {
+			"createOpportunity": "fhcrm.Opportunity.createOpportunity",
+			"updateaOpportunity": "fhcrm.Opportunity.updateaOpportunity",
+			"removeOpportunity": "fhcrm.Opportunity.removeOpportunity",
+			"getOpportunityById": "fhcrm.Opportunity.getOpportunityById",
+			"getOpportunitysCountBystageName": "fhcrm.Opportunity.getOpportunitysCountBystageName",
+			"getOpportunity": "fhcrm.Opportunity.getOpportunity",
+			"getOpportunitySQL": "fhcrm.Opportunity.getOpportunitySQL",
+			"getOpportunityAll": "fhcrm.Opportunity.getOpportunityAll",
+			"getOpportunityAllView": "fhcrm.Opportunity.getOpportunityAllView"
+		},
+		"Parameter": {
+			"createParameter": "fhcrm.Parameter.createParameter",
+			"updateaParameter": "fhcrm.Parameter.updateaParameter",
+			"removeParameter": "fhcrm.Parameter.removeParameter",
+			"getParameterById": "fhcrm.Parameter.getParameterById",
+			"getParameter": "fhcrm.Parameter.getParameter",
+			"getParameterAll": "fhcrm.Parameter.getParameterAll",
+			"getParameterAllView": "fhcrm.Parameter.getParameterAllView"
+		},
+		"PaymentTerm": {
+			"createPaymentTerm": "fhcrm.PaymentTerm.createPaymentTerm",
+			"updateaPaymentTerm": "fhcrm.PaymentTerm.updateaPaymentTerm",
+			"removePaymentTerm": "fhcrm.PaymentTerm.removePaymentTerm",
+			"getPaymentTermById": "fhcrm.PaymentTerm.getPaymentTermById",
+			"getPaymentTerm": "fhcrm.PaymentTerm.getPaymentTerm",
+			"getPaymentTermAll": "fhcrm.PaymentTerm.getPaymentTermAll",
+			"getPaymentTermAllView": "fhcrm.PaymentTerm.getPaymentTermAllView"
+		},
+		"Product": {
+			"createProduct": "fhcrm.Product.createProduct",
+			"updateaProduct": "fhcrm.Product.updateaProduct",
+			"removeProduct": "fhcrm.Product.removeProduct",
+			"getProductById": "fhcrm.Product.getProductById",
+			"getProduct": "fhcrm.Product.getProduct",
+			"getProductAll": "fhcrm.Product.getProductAll",
+			"getProductAllView": "fhcrm.Product.getProductAllView"
+		},
+		"ProductItem": {
+			"createProductItem": "fhcrm.ProductItem.createProductItem",
+			"updateaProductItem": "fhcrm.ProductItem.updateaProductItem",
+			"removeProductItem": "fhcrm.ProductItem.removeProductItem",
+			"getProductItemById": "fhcrm.ProductItem.getProductItemById",
+			"getProductItem": "fhcrm.ProductItem.getProductItem",
+			"getProductItemAll": "fhcrm.ProductItem.getProductItemAll",
+			"getProductItemAllView": "fhcrm.ProductItem.getProductItemAllView"
+		},
+		"ProductType": {
+			"createProductType": "fhcrm.ProductType.createProductType",
+			"updateaProductType": "fhcrm.ProductType.updateaProductType",
+			"removeProductType": "fhcrm.ProductType.removeProductType",
+			"getProductTypeById": "fhcrm.ProductType.getProductTypeById",
+			"getProductType": "fhcrm.ProductType.getProductType",
+			"getProductTypeAll": "fhcrm.ProductType.getProductTypeAll",
+			"getProductTypeAllView": "fhcrm.ProductType.getProductTypeAllView"
+		},
+		"PurchaseItem": {
+			"createPurchaseItem": "fhcrm.PurchaseItem.createPurchaseItem",
+			"updateaPurchaseItem": "fhcrm.PurchaseItem.updateaPurchaseItem",
+			"removePurchaseItem": "fhcrm.PurchaseItem.removePurchaseItem",
+			"getPurchaseItemById": "fhcrm.PurchaseItem.getPurchaseItemById",
+			"getPurchaseItem": "fhcrm.PurchaseItem.getPurchaseItem",
+			"getPurchaseItemAll": "fhcrm.PurchaseItem.getPurchaseItemAll",
+			"getPurchaseItemAllView": "fhcrm.PurchaseItem.getPurchaseItemAllView"
+		},
+		"PurchaseOrder": {
+			"createPurchaseOrder": "fhcrm.PurchaseOrder.createPurchaseOrder",
+			"updateaPurchaseOrder": "fhcrm.PurchaseOrder.updateaPurchaseOrder",
+			"removePurchaseOrder": "fhcrm.PurchaseOrder.removePurchaseOrder",
+			"getPurchaseOrderById": "fhcrm.PurchaseOrder.getPurchaseOrderById",
+			"getPurchaseOrder": "fhcrm.PurchaseOrder.getPurchaseOrder",
+			"getPurchaseOrderAll": "fhcrm.PurchaseOrder.getPurchaseOrderAll",
+			"getPurchaseOrderAllView": "fhcrm.PurchaseOrder.getPurchaseOrderAllView"
+		},
+		"PythonShell": {
+			"sendMessage": "fhcrm.PythonShell.sendMessage"
+		},
+		"QuotationComments": {
+			"createQuotationComments": "fhcrm.QuotationComments.createQuotationComments",
+			"updateaQuotationComments": "fhcrm.QuotationComments.updateaQuotationComments",
+			"removeQuotationComments": "fhcrm.QuotationComments.removeQuotationComments",
+			"getQuotationCommentsById": "fhcrm.QuotationComments.getQuotationCommentsById",
+			"getQuotationComments": "fhcrm.QuotationComments.getQuotationComments",
+			"getQuotationCommentsAll": "fhcrm.QuotationComments.getQuotationCommentsAll",
+			"getQuotationCommentsAllView": "fhcrm.QuotationComments.getQuotationCommentsAllView"
+		},
+		"Quotation": {
+			"createQuotation": "fhcrm.Quotation.createQuotation",
+			"updateaQuotation": "fhcrm.Quotation.updateaQuotation",
+			"removeQuotation": "fhcrm.Quotation.removeQuotation",
+			"getQuotationById": "fhcrm.Quotation.getQuotationById",
+			"getQuotation": "fhcrm.Quotation.getQuotation",
+			"getQuotationSQL": "fhcrm.Quotation.getQuotationSQL",
+			"getquotationSQLList": "fhcrm.Quotation.getquotationSQLList",
+			"getQuotationAll": "fhcrm.Quotation.getQuotationAll",
+			"getQuotationAllView": "fhcrm.Quotation.getQuotationAllView"
+		},
+		"QuotationItem": {
+			"createQuotationItem": "fhcrm.QuotationItem.createQuotationItem",
+			"updateaQuotationItem": "fhcrm.QuotationItem.updateaQuotationItem",
+			"removeQuotationItem": "fhcrm.QuotationItem.removeQuotationItem",
+			"getQuotationItemById": "fhcrm.QuotationItem.getQuotationItemById",
+			"getQuotationItemsAllByMid": "fhcrm.QuotationItem.getQuotationItemsAllByMid",
+			"getQuotationItem": "fhcrm.QuotationItem.getQuotationItem",
+			"getQuotationItemAll": "fhcrm.QuotationItem.getQuotationItemAll",
+			"getQuotationItemAllView": "fhcrm.QuotationItem.getQuotationItemAllView"
+		},
+		"ServiceContract": {
+			"createServiceContract": "fhcrm.ServiceContract.createServiceContract",
+			"updateaServiceContract": "fhcrm.ServiceContract.updateaServiceContract",
+			"removeServiceContract": "fhcrm.ServiceContract.removeServiceContract",
+			"getServiceContractById": "fhcrm.ServiceContract.getServiceContractById",
+			"getServiceContract": "fhcrm.ServiceContract.getServiceContract",
+			"getServiceContractAll": "fhcrm.ServiceContract.getServiceContractAll",
+			"getServiceContractAllView": "fhcrm.ServiceContract.getServiceContractAllView"
+		},
+		"ServiceItem": {
+			"createServiceItem": "fhcrm.ServiceItem.createServiceItem",
+			"updateaServiceItem": "fhcrm.ServiceItem.updateaServiceItem",
+			"removeServiceItem": "fhcrm.ServiceItem.removeServiceItem",
+			"getServiceItemById": "fhcrm.ServiceItem.getServiceItemById",
+			"getServiceItem": "fhcrm.ServiceItem.getServiceItem",
+			"getServiceItemAll": "fhcrm.ServiceItem.getServiceItemAll",
+			"getServiceItemAllView": "fhcrm.ServiceItem.getServiceItemAllView"
+		},
+		"Skill": {
+			"createSkill": "fhcrm.Skill.createSkill",
+			"updateaSkill": "fhcrm.Skill.updateaSkill",
+			"removeSkill": "fhcrm.Skill.removeSkill",
+			"getSkillById": "fhcrm.Skill.getSkillById",
+			"getSkill": "fhcrm.Skill.getSkill",
+			"getSkillAll": "fhcrm.Skill.getSkillAll",
+			"getSkillAllView": "fhcrm.Skill.getSkillAllView"
+		},
+		"StaffList": {
+			"createStaffList": "fhcrm.StaffList.createStaffList",
+			"updateaStaffList": "fhcrm.StaffList.updateaStaffList",
+			"removeStaffList": "fhcrm.StaffList.removeStaffList",
+			"getStaffListById": "fhcrm.StaffList.getStaffListById",
+			"getStaffList": "fhcrm.StaffList.getStaffList",
+			"getStaffListAll": "fhcrm.StaffList.getStaffListAll",
+			"getStaffListAllView": "fhcrm.StaffList.getStaffListAllView"
+		},
+		"Stage": {
+			"createStage": "fhcrm.Stage.createStage",
+			"updateaStage": "fhcrm.Stage.updateaStage",
+			"removeStage": "fhcrm.Stage.removeStage",
+			"getStageById": "fhcrm.Stage.getStageById",
+			"getStage": "fhcrm.Stage.getStage",
+			"getStageAll": "fhcrm.Stage.getStageAll",
+			"getStageAllView": "fhcrm.Stage.getStageAllView"
+		},
+		"TaskAttachment": {
+			"createTaskAttachment": "fhcrm.TaskAttachment.createTaskAttachment",
+			"updateaTaskAttachment": "fhcrm.TaskAttachment.updateaTaskAttachment",
+			"removeTaskAttachment": "fhcrm.TaskAttachment.removeTaskAttachment",
+			"getTaskAttachmentById": "fhcrm.TaskAttachment.getTaskAttachmentById",
+			"getTaskAttachment": "fhcrm.TaskAttachment.getTaskAttachment",
+			"getTaskAttachmentAll": "fhcrm.TaskAttachment.getTaskAttachmentAll",
+			"getTaskAttachmentAllView": "fhcrm.TaskAttachment.getTaskAttachmentAllView"
+		},
+		"TaskComments": {
+			"createTaskComments": "fhcrm.TaskComments.createTaskComments",
+			"updateaTaskComments": "fhcrm.TaskComments.updateaTaskComments",
+			"removeTaskComments": "fhcrm.TaskComments.removeTaskComments",
+			"getTaskCommentsById": "fhcrm.TaskComments.getTaskCommentsById",
+			"getTaskComments": "fhcrm.TaskComments.getTaskComments",
+			"getTaskCommentsAll": "fhcrm.TaskComments.getTaskCommentsAll",
+			"getTaskCommentsAllView": "fhcrm.TaskComments.getTaskCommentsAllView"
+		},
+		"Task": {
+			"createTask": "fhcrm.Task.createTask",
+			"updateaTask": "fhcrm.Task.updateaTask",
+			"updateaTaskStatus": "fhcrm.Task.updateaTaskStatus",
+			"removeTask": "fhcrm.Task.removeTask",
+			"getTaskById": "fhcrm.Task.getTaskById",
+			"getTask": "fhcrm.Task.getTask",
+			"getTaskAll": "fhcrm.Task.getTaskAll",
+			"getTaskAllView": "fhcrm.Task.getTaskAllView"
+		},
+		"Taxes": {
+			"createTaxes": "fhcrm.Taxes.createTaxes",
+			"updateaTaxes": "fhcrm.Taxes.updateaTaxes",
+			"removeTaxes": "fhcrm.Taxes.removeTaxes",
+			"getTaxesById": "fhcrm.Taxes.getTaxesById",
+			"getTaxes": "fhcrm.Taxes.getTaxes",
+			"getTaxesAll": "fhcrm.Taxes.getTaxesAll",
+			"getTaxesAllView": "fhcrm.Taxes.getTaxesAllView"
+		},
+		"Template": {
+			"createTemplate": "fhcrm.Template.createTemplate",
+			"updateaTemplate": "fhcrm.Template.updateaTemplate",
+			"removeTemplate": "fhcrm.Template.removeTemplate",
+			"getTemplateById": "fhcrm.Template.getTemplateById",
+			"getTemplate": "fhcrm.Template.getTemplate",
+			"getTemplateAll": "fhcrm.Template.getTemplateAll",
+			"getTemplateAllView": "fhcrm.Template.getTemplateAllView"
+		},
+		"TermCondition": {
+			"createTermCondition": "fhcrm.TermCondition.createTermCondition",
+			"updateaTermCondition": "fhcrm.TermCondition.updateaTermCondition",
+			"removeTermCondition": "fhcrm.TermCondition.removeTermCondition",
+			"getTermConditionById": "fhcrm.TermCondition.getTermConditionById",
+			"getTermCondition": "fhcrm.TermCondition.getTermCondition",
+			"getTermConditionAll": "fhcrm.TermCondition.getTermConditionAll",
+			"getTermConditionAllView": "fhcrm.TermCondition.getTermConditionAllView"
+		},
+		"Terms": {
+			"createTerms": "fhcrm.Terms.createTerms",
+			"updateaTerms": "fhcrm.Terms.updateaTerms",
+			"removeTerms": "fhcrm.Terms.removeTerms",
+			"getTermsById": "fhcrm.Terms.getTermsById",
+			"getTerms": "fhcrm.Terms.getTerms",
+			"getTermsAll": "fhcrm.Terms.getTermsAll",
+			"getTermsAllView": "fhcrm.Terms.getTermsAllView"
+		},
+		"TermsMember": {
+			"createTermsMember": "fhcrm.TermsMember.createTermsMember",
+			"updateaTermsMember": "fhcrm.TermsMember.updateaTermsMember",
+			"removeTermsMember": "fhcrm.TermsMember.removeTermsMember",
+			"getTermsMemberById": "fhcrm.TermsMember.getTermsMemberById",
+			"getTermsMember": "fhcrm.TermsMember.getTermsMember",
+			"getTermsMemberAll": "fhcrm.TermsMember.getTermsMemberAll",
+			"getTermsMemberAllView": "fhcrm.TermsMember.getTermsMemberAllView"
+		},
+		"Test": {
+			"thisIsAMethod": "fhcrm.Test.thisIsAMethod",
+			"hello": "fhcrm.Test.hello",
+			"weishuai": "fhcrm.Test.weishuai"
+		},
+		"Ticket": {
+			"createTicket": "fhcrm.Ticket.createTicket",
+			"updateaTicket": "fhcrm.Ticket.updateaTicket",
+			"removeTicket": "fhcrm.Ticket.removeTicket",
+			"getTicketById": "fhcrm.Ticket.getTicketById",
+			"getTicket": "fhcrm.Ticket.getTicket",
+			"getTicketAll": "fhcrm.Ticket.getTicketAll",
+			"getTicketAllView": "fhcrm.Ticket.getTicketAllView"
+		},
+		"Translate": {
+			"createTranslate": "fhcrm.Translate.createTranslate",
+			"updateaTranslate": "fhcrm.Translate.updateaTranslate",
+			"removeTranslate": "fhcrm.Translate.removeTranslate",
+			"getTranslateById": "fhcrm.Translate.getTranslateById",
+			"getTranslate": "fhcrm.Translate.getTranslate",
+			"getTranslateAll": "fhcrm.Translate.getTranslateAll",
+			"getTranslateAllView": "fhcrm.Translate.getTranslateAllView"
+		},
+		"Unit": {
+			"createUnit": "fhcrm.Unit.createUnit",
+			"updateaUnit": "fhcrm.Unit.updateaUnit",
+			"removeUnit": "fhcrm.Unit.removeUnit",
+			"getUnitById": "fhcrm.Unit.getUnitById",
+			"getUnit": "fhcrm.Unit.getUnit",
+			"getUnitAll": "fhcrm.Unit.getUnitAll",
+			"getUnitAllView": "fhcrm.Unit.getUnitAllView"
+		},
+		"User": {
+			"getUserBaseAll": "fhcrm.User.getUserBaseAll",
+			"getUserBaseAllView": "fhcrm.User.getUserBaseAllView",
+			"getUserBaseById": "fhcrm.User.getUserBaseById"
+		},
+		"Warranty": {
+			"createWarranty": "fhcrm.Warranty.createWarranty",
+			"updateaWarranty": "fhcrm.Warranty.updateaWarranty",
+			"removeWarranty": "fhcrm.Warranty.removeWarranty",
+			"getWarrantyById": "fhcrm.Warranty.getWarrantyById",
+			"getWarranty": "fhcrm.Warranty.getWarranty",
+			"getWarrantyAll": "fhcrm.Warranty.getWarrantyAll",
+			"getWarrantyAllView": "fhcrm.Warranty.getWarrantyAllView"
+		},
+		"Work": {
+			"createWork": "fhcrm.Work.createWork",
+			"updateaWork": "fhcrm.Work.updateaWork",
+			"removeWork": "fhcrm.Work.removeWork",
+			"getWorkById": "fhcrm.Work.getWorkById",
+			"getWorkOrderBySqlStartDate": "fhcrm.Work.getWorkOrderBySqlStartDate",
+			"getWork": "fhcrm.Work.getWork",
+			"getWorkAPP": "fhcrm.Work.getWorkAPP",
+			"getWorkAll": "fhcrm.Work.getWorkAll",
+			"getWorkAllView": "fhcrm.Work.getWorkAllView"
+		},
+		"WorkItem": {
+			"createWorkItem": "fhcrm.WorkItem.createWorkItem",
+			"removeToToWorkItem": "fhcrm.WorkItem.removeToToWorkItem",
+			"WorkItemUpdateMid": "fhcrm.WorkItem.WorkItemUpdateMid",
+			"updateaWorkItem": "fhcrm.WorkItem.updateaWorkItem",
+			"removeWorkItem": "fhcrm.WorkItem.removeWorkItem",
+			"getWorkItemById": "fhcrm.WorkItem.getWorkItemById",
+			"getWorkItem": "fhcrm.WorkItem.getWorkItem",
+			"getWorkItemAll": "fhcrm.WorkItem.getWorkItemAll",
+			"getWorkItemAllView": "fhcrm.WorkItem.getWorkItemAllView"
+		},
+		"WorkNote": {
+			"createWorkNote": "fhcrm.WorkNote.createWorkNote",
+			"updateaWorkNote": "fhcrm.WorkNote.updateaWorkNote",
+			"removeWorkNote": "fhcrm.WorkNote.removeWorkNote",
+			"getWorkNoteById": "fhcrm.WorkNote.getWorkNoteById",
+			"getWorkNote": "fhcrm.WorkNote.getWorkNote",
+			"getWorkNoteAll": "fhcrm.WorkNote.getWorkNoteAll",
+			"getWorkNoteAllView": "fhcrm.WorkNote.getWorkNoteAllView"
+		}
+	}
+}

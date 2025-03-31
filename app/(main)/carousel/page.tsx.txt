@@ -1,0 +1,16 @@
+// import React from 'react';
+// import { AppLayout } from '../../../src/components/layout/AppLayout';
+// import  FHCarousel  from '../../../src/views/Carousel/FHCarousel';
+// export default function Page() {
+//   return (
+//     <AppLayout
+//       appBreadcrumb={[
+//         {
+//           label: 'AccountTag',
+//         },
+//       ]}
+//     >
+//       <FHCarousel />
+//     </AppLayout>
+//   );
+// }

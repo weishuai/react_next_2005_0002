@@ -1,0 +1,20 @@
+export const JobItem = {
+    jobItem: '详细工单',
+    title: '标题',
+    read: '详细',
+    name: '名称',
+    step:'序号',
+    template:'模板',
+    require:'必填',
+    photo:'图片',
+
+    description: '详细',
+    isactived: '是否激活',
+    islocked: '是否锁定',
+    createdAt: '创建时间',
+    updatedAt: '修改时间',
+    createdAtPlaceholder: '创建时间',
+    updatedAtPlaceholder: '修改时间',
+    createUid: '创建人',
+    updatedUid: '修改人',
+}

@@ -1,0 +1,27 @@
+// import React from 'react';
+// import { useTranslation } from 'react-i18next';
+// import { useRouter } from 'next/router';
+// import { AppLayout } from '../../src/components/layout/AppLayout';
+// import { AccountTagItem } from '../../src/views/AccountTag/AccountTagItem';
+
+// export default function Page() {
+//   const { query } = useRouter();
+//   const { t, i18n } = useTranslation();
+//   const Id = `${query['Id']}`;
+//   const Mode = `${query['Mode']}`;
+//   return (
+//     <AppLayout
+//       appBreadcrumb={[
+//         {
+//           label: t('account.accountTag'),
+//           url: '/account',
+//         },
+//         {
+//           label: t('account.read'),
+//         },
+//       ]}
+//     >
+//       <AccountTagItem Id={Id} Mode={Mode}/>
+//     </AppLayout>
+//   );
+// }

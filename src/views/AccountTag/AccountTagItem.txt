@@ -1,0 +1,223 @@
+import _ from 'lodash';
+import { Button } from 'primereact/button';
+import { Calendar } from 'primereact/calendar';
+import { InputText } from 'primereact/inputtext';
+import { Dropdown } from 'primereact/dropdown';
+import { InputNumber } from 'primereact/inputnumber';
+import { Checkbox } from 'primereact/checkbox';
+import { RadioButton } from 'primereact/radiobutton';
+import { InputTextarea } from 'primereact/inputtextarea';
+import { MultiSelect } from 'primereact/multiselect';
+import { Image } from 'primereact/image';
+import { Steps } from 'primereact/steps';
+import { Card } from 'primereact/card';
+import React, { useEffect, useState } from 'react';
+export const AccountTagItem = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const items = [
+    {label: 'Personal'},
+    {label: 'Seat'},
+    {label: 'Payment'},
+    {label: 'Confirmation'}
+];
+ 
+  useEffect(() => {}, []);
+  return (
+<Card>
+      
+    <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>
+ 
+      <div className="p-fluid p-formgrid p-grid">
+
+      <table width="98%">
+      <thead>
+      </thead>
+      <tbody>
+        <tr>
+          <td  width="45%">
+
+        <div className="p-field">
+         
+         <Image src="https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png" alt="Image" width="100" />
+       
+        </div>
+          </td>
+          <td  width="4%"></td>
+          <td  width="45%">
+          <div className="p-field" >
+        
+          </div>
+          </td>
+          </tr>
+
+          <tr>
+          <td >
+
+               
+          <div className="p-field" >
+          <label htmlFor="firstname1">客户</label>
+          <InputText id="username"   />
+        
+        </div>
+          </td>
+
+          <td ></td>
+          <td>
+          <div className="p-field">
+          <label htmlFor="firstname1">公司</label>
+
+          <InputText id="username"  />
+ 
+        </div>
+          </td>
+          </tr>
+          <tr>
+          <td >
+          <div className="p-field p-col-12 p-md-6">
+          <label htmlFor="firstname1">开始时间</label>
+          <Calendar
+            placeholder='starts'
+          
+            onChange={(e) => {
+              if (e.value != null) {
+                console.log('e.value' + e.value);
+              }
+            }}
+          />
+        </div>
+
+
+          </td>
+          <td ></td>
+          <td >
+
+          <div className="p-field p-col-12 p-md-6">
+          <label htmlFor="firstname1">结束时间</label>
+
+          <Calendar
+            placeholder='ends'
+            onChange={(e) => {
+              if (e.value != null) {
+                console.log('e.value' + e.value);
+              }
+            }}
+          />
+        </div>
+
+
+          </td>
+          </tr>
+
+          <tr>
+          <td >
+
+          <div className="p-field p-col-12 p-md-6">
+          <label htmlFor="firstname1">城市</label>
+          <Dropdown />
+        </div>
+
+          </td>
+          <td ></td>
+          <td >
+          <div className="p-field p-col-12 p-md-6">
+          <label htmlFor="firstname1">国家</label>
+
+          <MultiSelect />
+        </div>  
+
+
+          </td>
+          </tr>
+
+
+          <tr>
+          <td >
+          <div className="p-field p-col-12 p-md-6">
+          <label htmlFor="firstname1">合同金额</label>
+          <InputNumber />
+        </div>
+
+
+          </td>
+          <td ></td>
+          <td >
+
+          <div className="p-field p-col-12 p-md-6">
+          <label htmlFor="firstname1">国家</label>
+          <div style={{height:10}}> 
+          </div>
+          <RadioButton />
+          
+        </div> 
+
+          </td>
+          </tr>
+
+          <tr>
+          <td >
+          <div className="p-field p-col-12 p-md-6">
+          <label htmlFor="firstname1">合同金额</label>
+          <div style={{height:10}}> 
+          </div>
+          <Checkbox></Checkbox>
+        </div>
+
+          </td>
+          <td ></td>
+          <td >
+          <div className="p-field p-col-12 p-md-6">
+          <label htmlFor="firstname1">国家</label>
+          <div style={{height:10}}> 
+          </div>
+          <RadioButton />
+          
+        </div> 
+
+          </td>
+          </tr>
+
+         
+
+
+
+          <tr>
+
+            <td colSpan={3}>
+
+            <div className="p-field p-col-12 p-md-12">
+            <InputTextarea></InputTextarea>
+           </div>
+            </td>
+          </tr>
+          <tr>
+          <td >
+         
+        <div className="p-field p-col-12 p-md-6">
+          <Button
+            label="提交"
+            onClick={(e) => { 
+            }}
+            style={{backgroundColor:'#4682B4'}}
+          />
+        </div>
+
+
+          </td>
+          <td ></td>
+          <td>
+          <div >
+          <Button label="取消" onClick={(e) => {}}  style={{backgroundColor:'#4682B4'}}  />
+        </div>
+
+
+          </td>
+          </tr>
+
+
+          </tbody>
+          </table>
+
+      </div>
+      </Card>
+  );
+};

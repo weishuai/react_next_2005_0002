@@ -1,0 +1,18 @@
+// import React from 'react';
+// import { useTranslation } from 'react-i18next'
+// import { AppLayout } from '../../src/components/layout/AppLayout';
+// import  {ListOfTenThings}  from '../../src/views/DataSource/fhData';
+// export default function Page() {
+//   const { t, i18n } = useTranslation();
+//   return (
+//     <AppLayout
+//       appBreadcrumb={[
+//         {
+//           label: t('Menu.dataSource'),
+//         },
+//       ]}
+//     >
+//       <ListOfTenThings />
+//     </AppLayout>
+//   );
+// }

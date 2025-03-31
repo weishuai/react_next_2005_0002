@@ -1,0 +1,22 @@
+export const Fhreform = {
+    //fhreform: 'FHtableName',
+    title: '标题',
+    read: '详细',
+    name: '名称',
+    fhname:'设备名称',
+    fhF1:'改造内容',
+    fhF2:'改造原因',
+    fhF3:'改造后效果评估及总结',
+    fhF4:'改造花费统',
+    fhF5:'备注',
+
+    description: '详细',
+    isactived: '是否激活',
+    islocked: '是否锁定',
+    createdAt: '创建时间',
+    updatedAt: '修改时间',
+    createdAtPlaceholder: '创建时间',
+    updatedAtPlaceholder: '修改时间',
+    createUid: '创建人',
+    updatedUid: '修改人',
+}

@@ -1,0 +1,20 @@
+export const SellingPrice = {
+    //sellingPrice: 'FHtableName',
+    title: '标题',
+    read: '详细',
+    name: '名称',
+    fhname:'标题',
+    company:'公司',
+    mygroup:'公司分组',
+    dscountPolicy:'折扣政策',
+
+    description: '详细',
+    isactived: '是否激活',
+    islocked: '是否锁定',
+    createdAt: '创建时间',
+    updatedAt: '修改时间',
+    createdAtPlaceholder: '创建时间',
+    updatedAtPlaceholder: '修改时间',
+    createUid: '创建人',
+    updatedUid: '修改人',
+}

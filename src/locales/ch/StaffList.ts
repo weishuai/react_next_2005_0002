@@ -1,0 +1,23 @@
+export const StaffList = {
+    staffList: '人事',
+    title: '标题',
+    read: '详细',
+    name: '名称',
+    FullName:'Full Name',
+    ContactNo:'Contact No',
+    Email:'Email',
+    Role:'Role',
+    Clients:'Clients',
+    Type:'Type',
+    Login:'Login',
+
+    description: '详细',
+    isactived: '是否激活',
+    islocked: '是否锁定',
+    createdAt: '创建时间',
+    updatedAt: '修改时间',
+    createdAtPlaceholder: '创建时间',
+    updatedAtPlaceholder: '修改时间',
+    createUid: '创建人',
+    updatedUid: '修改人',
+}

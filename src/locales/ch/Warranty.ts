@@ -1,0 +1,20 @@
+export const Warranty = {
+    warranty: '保修',
+    title: '标题',
+    read: '详细',
+    name: '名称',
+    product:'产品',
+    isRemind:'是否提醒',
+    startDate:'开始日期',
+    endDate:'结束日期',
+
+    description: '详细',
+    isactived: '是否激活',
+    islocked: '是否锁定',
+    createdAt: '创建时间',
+    updatedAt: '修改时间',
+    createdAtPlaceholder: '创建时间',
+    updatedAtPlaceholder: '修改时间',
+    createUid: '创建人',
+    updatedUid: '修改人',
+}

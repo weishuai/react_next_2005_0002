@@ -1,0 +1,51 @@
+{
+  "name": "fhsoft",
+  "version": "10.1.0-fhsoft",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write \"{components,app,service,api-generator}/**/*.{js,ts,tsx,d.ts}\"",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.9",
+    "@fullcalendar/daygrid": "^6.1.9",
+    "@fullcalendar/interaction": "^6.1.9",
+    "@fullcalendar/react": "^6.1.9",
+    "@fullcalendar/timegrid": "^6.1.9",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.12",
+    "@types/react-dom": "18.2.5",
+    "axios": "^1.5.1",
+    "chart.js": "4.2.1",
+    "eventemitter3": "^5.0.1",
+    "html-docx-js": "^0.3.1",
+    "i18next": "^23.5.1",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "next": "^13.5.4-canary.4",
+    "primeflex": "^3.3.1",
+    "primeicons": "^6.0.1",
+    "primereact": "^9.6.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "^13.2.2",
+    "react-router-dom": "^6.16.0",
+    "react-to-print": "^2.15.1",
+    "sinon": "^16.1.0",
+    "store2": "^2.14.2",
+    "tls": "^0.0.1",
+    "typescript": "5.1.3",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@types/lodash": "^4.17.4",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.6",
+    "prettier": "^2.8.8",
+    "sass": "^1.63.4"
+  }
+}

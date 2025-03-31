@@ -1,0 +1,139 @@
+import React,{useState} from 'react';
+import { useTranslation } from 'react-i18next'
+import { useRouter } from 'next/navigation';
+import { FilterMatchMode, FilterOperator } from 'primereact/api';
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
+import { InputText } from 'primereact/inputtext';
+import { MultiSelect } from 'primereact/multiselect';
+import { Dropdown } from 'primereact/dropdown';
+import { CustomerService } from '../../controllers/customerController';
+import { Button } from 'primereact/button';
+import { Ripple } from 'primereact/ripple';
+import { classNames } from 'primereact/utils';
+import { MyDataTable } from '../../components/myDataTable/DataTable';
+import { Dialog } from 'primereact/dialog';
+export const AccountTagList = () => {
+    const { t, i18n } = useTranslation();
+    const [customers, setCustomers] = React.useState(null);
+    const [dialogVisible, setDialogVisible] = useState(false);
+    const customerService = new CustomerService();
+    const { pathname, push,replace } = useRouter();   
+    React.useEffect(() => {
+        customerService.getCustomersMedium().then(data => setCustomers(data));
+    }, []); 
+
+    //1.数据过滤代码:
+   
+    const filters={
+        'global': { value: null, matchMode: FilterMatchMode.CONTAINS },
+        'name': { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }] },
+        'country.name': { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }] },
+        'representative': { value: null, matchMode: FilterMatchMode.IN },
+        'status': { operator: FilterOperator.OR, constraints: [{ value: null, matchMode: FilterMatchMode.EQUALS }] }
+    };
+
+    const [FHfilters, setFHfilters] = useState(filters);
+
+    //2.弹出窗体
+    const openDialog = () => {
+        setDialogVisible(true);
+    }
+
+    const closeDialog = () => {
+        setDialogVisible(false);
+    }
+
+    const dialogFooterTemplate = () => {
+        return (
+            <div>
+                <Button label={t('dataTable.Cancel')} icon="pi pi-times" onClick={closeDialog}  style={{backgroundColor:'#4682B4'}}/>
+                &nbsp;&nbsp;&nbsp;
+                <Button label={t('dataTable.Submit')} icon="pi pi-check" onClick={closeDialog}  autoFocus  style={{backgroundColor:'#4682B4'}}/>
+            </div>
+        );       
+    }
+
+    //3.选择框设置:
+    //多选 selectionMode="multiple"
+    //单选 selectionMode="single"
+    return (
+        <div>
+       <div >
+          <hr></hr>
+         <span className="p-buttonset">
+            <span style={{width:100}}></span>
+            <Button label={t('dataTable.Save')} icon="pi pi-check"  onClick={()=>{replace("/account/0/0");}} style={{backgroundColor:'#4682B4'}}  />
+            <span style={{width:100}}></span>
+            <Button label={t('dataTable.Delete')} icon="pi pi-trash" style={{backgroundColor:'#4682B4'}}  />
+            <span style={{width:100}}></span>
+            <Button label={t('dataTable.Import')} icon="pi pi-sign-in"  style={{backgroundColor:'#4682B4'}} />
+            <Button label={t('dataTable.Export')} icon="pi pi-sign-out"  style={{backgroundColor:'#4682B4'}} />
+            <Button label={t('dataTable.Report')} icon="pi pi-file-pdf" />        
+        </span>
+        <hr></hr>
+        </div>
+       
+            <div className="card" >   
+            <MyDataTable 
+                    FHfilters={FHfilters}
+                    fhvalue={customers}
+                    fhHeight={'800px'}                   
+                    FHColumns={
+                        [
+                            <Column selectionMode="multiple" headerStyle={{ width: '3em' }} key={0}></Column>,
+
+                            <Column  header={t('dataTable.HeadInfo')} field="id"   body={(rowData) => {
+                                    return(
+                                        <React.Fragment>
+                                         <Button label={'['+rowData.id+']'} style={{height:25}} className="p-button-sm p-button-info"  onClick={()=>{replace("/account/0/2");}}></Button>
+                                        </React.Fragment>
+                                    ); 
+                                }             
+                                } sortable  key={2}></Column>,
+
+                            <Column field="name" header="Name" sortable  key={3}></Column>,
+                            <Column header="Country" body={(rowData) => {
+                                return (
+                                    <React.Fragment>
+                                        <span className="image-text">{rowData.country.name}</span>
+                                    </React.Fragment>
+                                );
+                            }} sortable sortField="country.name"  key={4}></Column>,
+                            <Column header="Agent" body={(rowData) => {
+                                return (
+                                    <React.Fragment>
+                                        <span className="image-text">{rowData.representative.name}</span>
+                                    </React.Fragment>
+                                );
+                            }} sortable sortField="representative.name"  key={5}></Column>,
+                            <Column field="status" header="Status" body={(rowData) => {
+                                return(
+                                    <React.Fragment>
+                                       <span className="image-text">{rowData.status}</span>
+                                    </React.Fragment>
+                                )
+                                
+                            }             
+                            } sortable  key={6}></Column>,
+
+                            <Column  header={t('dataTable.EditorDelete')}  field="id"   body={(rowData) => {
+                                return(
+                                    <React.Fragment>
+                                     <Button label={t('dataTable.Edit')}  style={{height:25}}  className="p-button-sm p-button-secondary"  onClick={()=>{replace("/account/0/1");}} />
+                                     &nbsp;
+                                     <Button label={t('dataTable.Delete')}  style={{height:25}}  className="p-button-sm p-button-danger" onClick={() => {replace("chart");}}  />
+                                    </React.Fragment>
+                                ); 
+                            }             
+                            } sortable  key={7}></Column>,
+                        ]  
+                    } 
+
+                    >
+            </MyDataTable>
+            </div>
+        </div>
+    );
+}
+                 
