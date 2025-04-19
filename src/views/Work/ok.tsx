@@ -465,11 +465,10 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
           </tr>
 
          <tr>
-          <td width="10%"> 
-          <label htmlFor="firstname1">{t("work.quote")}</label>
-          </td>
-              <td  width="40%">
-              
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.quote")}</label>
+                    <div style={{height:10}}> </div>
             
 
                 <table width="100%">
@@ -501,13 +500,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                </table>
 
 
-                    
+                    </div>
               </td>
-              <td width="10%">
-              <label htmlFor="firstname1">{t("work.title")}</label>
-              </td>
-          <td  width="40%">
-                    
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.title")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="title"
                     value={title}
@@ -516,15 +515,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      settitle(e.target.value);
                     }}
                     />
-                    
+                    </div>
               </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.terms_id")}</label>
-          </td>
-              <td >
-               
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.terms_id")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="terms_id"
                     value={terms_id}
@@ -536,13 +534,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setterms_id(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td >
-              <label htmlFor="firstname1">{t("work.priority")}</label>
-              </td>
-          <td  >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.priority")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="priority"
                       value={priority}
@@ -554,15 +552,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                        setpriority(e.value);
                       }}
                       />
-                      
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.states")}</label>
-          </td>
-              <td >
-                   
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.states")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="states"
                     value={states}
@@ -574,13 +571,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setstates(e.value);
                     }}
                     />
-                  
+                    </div>
               </td>
-              <td >
-              <label htmlFor="firstname1">{t("work.qty")}</label>
-              </td>
-          <td >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.qty")}</label>
+                      <div style={{height:10}}> </div>
                       <InputNumber 
                       id="qty"
                       value={qty}
@@ -589,15 +586,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                        setqty(e.value);
                       }}
                       />
-               
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.work_type")}</label>
-          </td>
-              <td >
-          
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.work_type")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="work_type"
                     value={work_type}
@@ -609,13 +605,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setwork_type(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.room")}</label>
-              </td>
-          <td  >
-                  
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.room")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="room"
                     value={room}
@@ -624,15 +620,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setroom(e.target.value);
                     }}
                     />
-                   
+                    </div>
               </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.client")}</label>
-          </td>
-              <td >
-                  
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.client")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="client"
                     value={client}
@@ -644,13 +639,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setclient(e.value);
                     }}
                     />
-                    
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.contact")}</label>
-              </td>
-          <td >
-                  
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.contact")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="contact"
                       value={contact}
@@ -662,15 +657,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                        setcontact(e.value);
                       }}
                       />
-                      
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.work_instructions")}</label>
-          </td>
-              <td  >
-          
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.work_instructions")}</label>
+                    <div style={{height:10}}> </div>
                     <MultiSelect 
                     id="work_instructions"
                     // value={work_instructions}
@@ -682,13 +676,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setwork_instructions(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td >
-              <label htmlFor="firstname1">{t("work.assign_to")}</label>
-              </td>
-          <td >
-                    
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.assign_to")}</label>
+                      <div style={{height:10}}> </div>
                       <MultiSelect 
                       id="assign_to"
                       // value={assign_to}
@@ -700,15 +694,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                        setassign_to(e.value);
                       }}
                       />
-                      
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.start_date")}</label>
-          </td>
-              <td >
-     
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.start_date")}</label>
+                    <div style={{height:10}}> </div>
                     <Calendar 
                     id="start_date"
                     value={start_date}
@@ -717,11 +710,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setstart_date(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td > <label htmlFor="firstname1">{t("work.end_date")}</label></td>
-          <td  >
-                    
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.end_date")}</label>
+                      <div style={{height:10}}> </div>
                       <Calendar 
                       id="end_date"
                       value={end_date}
@@ -730,15 +725,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                        setend_date(e.value);
                       }}
                       />
-                    
+                      </div>
                 </td>
                 </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.remark")}</label>
-            </td>
-                <td colSpan={3}>
-                  
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("work.remark")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="remark"
                     // value={remark}
@@ -747,15 +741,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                   
+                    </div>
                 </td>
               </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.reedback")}</label>
-            </td>
-                <td colSpan={3}>
-                
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("work.reedback")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="reedback"
                     // value={reedback}
@@ -764,17 +757,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setreedback(e.target.value);
                     }}
                     />
-                   
+                    </div>
                 </td>
               </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.sign_below_txt")}</label>
-            <div style={{height:10}}> </div>
-            </td>
-                <td colSpan={3}>
-                    
-                   
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("work.sign_below_txt")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="sign_below_txt"
                     // value={sign_below_txt}
@@ -783,26 +773,23 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setsign_below_txt(e.target.value);
                     }}
                     />
-                    
+                    </div>
                 </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.sign_below_photo")}</label>
-          </td>
-              <td  >
+              <td  width="46%">
                     <div className="p-field p-col-12 p-md-6">
-                   
+                    <label htmlFor="firstname1">{t("work.sign_below_photo")}</label>
                     <div style={{height:10}}> </div>
                     <Image 
                     />
                     </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.sign_below_userid")}</label>
-              </td>
-          <td >
-                 
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.sign_below_userid")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="sign_below_userid"
                     value={sign_below_userid}
@@ -811,15 +798,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setsign_below_userid(e.target.value);
                     }}
                     />
-                   
+                    </div>
               </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.sign_below_time")}</label>
-          </td>
-              <td  >
-          
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.sign_below_time")}</label>
+                    <div style={{height:10}}> </div>
                     <Calendar 
                     id="sign_below_time"
                     value={sign_below_time}
@@ -828,13 +814,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setsign_below_time(e.value);
                     }}
                     />
-                
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.full_address")}</label>
-              </td>
-          <td >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.full_address")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="full_address"
                     value={full_address}
@@ -843,16 +829,15 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                      setfull_address(e.target.value);
                     }}
                     />
-                   
+                    </div>
               </td>
               </tr>
 
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.isactived")}</label>
-            </td>
-          <td >
-             
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.isactived")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -863,13 +848,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("work.isactived")} />
-               
+                </div>
           </td>
-          <td>
-          <label htmlFor="firstname1">{t("work.islocked")}</label>
-            </td> 
-          <td >
-        
+          <td width="2%"></td> 
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.islocked")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -880,15 +865,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("work.islocked")} />
-               
+                </div> 
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.createdAt")}</label>
-            </td>
           <td >
-           
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.createdAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -902,13 +886,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                     }
                   }}
                 />
-              
+               </div>
           </td>
+          <td ></td>
           <td >
-          <label htmlFor="firstname1">{t("work.updatedAt")}</label>
-          </td>
-          <td >
-           
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.updatedAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -922,15 +906,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                     }
                   }}
                 />
-               
+                </div>
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.createUid")}</label>
-            </td>
           <td >
-             
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.createUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -942,11 +925,13 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("work.createUid")} />
               
-               
+                </div>
           </td>
-          <td ><label htmlFor="firstname1">{t("work.updatedUid")}</label></td>
+          <td ></td>
           <td >
-          
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.updatedUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -957,7 +942,7 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("work.updatedUid")} />
-              
+               </div>  
           </td>
           </tr>
 
@@ -978,14 +963,14 @@ export const WorkItemAdd =({ Id, Mode }: WorkItemProps) => {
 
 
           <tr>
-          <td  colSpan={2}>
+          <td >
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/work");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-         
-          <td colSpan={2}>
+          <td ></td>
+          <td>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -1549,11 +1534,10 @@ const dialogFooterTemplate = () => {
           </tr>
 
          <tr>
-          <td width="10%"> 
-          <label htmlFor="firstname1">{t("work.quote")}</label>
-          </td>
-              <td  width="40%">
-              
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.quote")}</label>
+                    <div style={{height:10}}> </div>
             
 
                 <table width="100%">
@@ -1585,13 +1569,13 @@ const dialogFooterTemplate = () => {
                </table>
 
 
-                    
+                    </div>
               </td>
-              <td width="10%">
-              <label htmlFor="firstname1">{t("work.title")}</label>
-              </td>
-          <td  width="40%">
-                    
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.title")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="title"
                     value={title}
@@ -1600,15 +1584,14 @@ const dialogFooterTemplate = () => {
                      settitle(e.target.value);
                     }}
                     />
-                    
+                    </div>
               </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.terms_id")}</label>
-          </td>
-              <td >
-               
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.terms_id")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="terms_id"
                     value={terms_id}
@@ -1620,13 +1603,13 @@ const dialogFooterTemplate = () => {
                      setterms_id(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td >
-              <label htmlFor="firstname1">{t("work.priority")}</label>
-              </td>
-          <td  >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.priority")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="priority"
                       value={priority}
@@ -1638,15 +1621,14 @@ const dialogFooterTemplate = () => {
                        setpriority(e.value);
                       }}
                       />
-                      
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.states")}</label>
-          </td>
-              <td >
-                   
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.states")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="states"
                     value={states}
@@ -1658,13 +1640,13 @@ const dialogFooterTemplate = () => {
                      setstates(e.value);
                     }}
                     />
-                  
+                    </div>
               </td>
-              <td >
-              <label htmlFor="firstname1">{t("work.qty")}</label>
-              </td>
-          <td >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.qty")}</label>
+                      <div style={{height:10}}> </div>
                       <InputNumber 
                       id="qty"
                       value={qty}
@@ -1673,15 +1655,14 @@ const dialogFooterTemplate = () => {
                        setqty(e.value);
                       }}
                       />
-               
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.work_type")}</label>
-          </td>
-              <td >
-          
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.work_type")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="work_type"
                     value={work_type}
@@ -1693,13 +1674,13 @@ const dialogFooterTemplate = () => {
                      setwork_type(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.room")}</label>
-              </td>
-          <td  >
-                  
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.room")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="room"
                     value={room}
@@ -1708,15 +1689,14 @@ const dialogFooterTemplate = () => {
                      setroom(e.target.value);
                     }}
                     />
-                   
+                    </div>
               </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.client")}</label>
-          </td>
-              <td >
-                  
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.client")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="client"
                     value={client}
@@ -1728,13 +1708,13 @@ const dialogFooterTemplate = () => {
                      setclient(e.value);
                     }}
                     />
-                    
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.contact")}</label>
-              </td>
-          <td >
-                  
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.contact")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="contact"
                       value={contact}
@@ -1746,53 +1726,53 @@ const dialogFooterTemplate = () => {
                        setcontact(e.value);
                       }}
                       />
-                      
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.work_instructions")}</label>
-          </td>
-              <td  >
-          
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.work_instructions")}</label>
+                    <div style={{height:10}}> </div>
                     <MultiSelect 
                     id="work_instructions"
-                    // value={work_instructions}
+                    value={work_instructions}
                     options={Jobs} 
-                      optionLabel="name" 
-                      optionValue="code"                    
+                    optionLabel="name" 
+                    optionValue="code"                    
                     onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.value));
-                     setwork_instructions(e.value);
+                      console.info('mye.value:'+JSON.stringify(e.value));
+                    //  const selectedCodes = e.value.map(option => option);
+                    //  console.log(selectedCodes);
+                    setwork_instructions(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td >
-              <label htmlFor="firstname1">{t("work.assign_to")}</label>
-              </td>
-          <td >
-                    
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.assign_to")}</label>
+                      <div style={{height:10}}> </div>
                       <MultiSelect 
                       id="assign_to"
-                      // value={assign_to}
+                      value={assign_to}
                       options={FHUsers}
                       optionLabel="name" 
                       optionValue="code"
                       onChange={(e)=>{
-                       console.info('e.value:'+JSON.stringify(e.value));
+                       console.info('mye.value:'+JSON.stringify(e.value));
                        setassign_to(e.value);
                       }}
                       />
-                      
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.start_date")}</label>
-          </td>
-              <td >
-     
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.start_date")}</label>
+                    <div style={{height:10}}> </div>
                     <Calendar 
                     id="start_date"
                     value={start_date}
@@ -1801,11 +1781,13 @@ const dialogFooterTemplate = () => {
                      setstart_date(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td > <label htmlFor="firstname1">{t("work.end_date")}</label></td>
-          <td  >
-                    
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.end_date")}</label>
+                      <div style={{height:10}}> </div>
                       <Calendar 
                       id="end_date"
                       value={end_date}
@@ -1814,15 +1796,14 @@ const dialogFooterTemplate = () => {
                        setend_date(e.value);
                       }}
                       />
-                    
+                      </div>
                 </td>
                 </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.remark")}</label>
-            </td>
-                <td colSpan={3}>
-                  
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("work.remark")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="remark"
                     // value={remark}
@@ -1831,15 +1812,14 @@ const dialogFooterTemplate = () => {
                      setremark(e.target.value);
                     }}
                     />
-                   
+                    </div>
                 </td>
               </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.reedback")}</label>
-            </td>
-                <td colSpan={3}>
-                
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("work.reedback")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="reedback"
                     // value={reedback}
@@ -1848,17 +1828,14 @@ const dialogFooterTemplate = () => {
                      setreedback(e.target.value);
                     }}
                     />
-                   
+                    </div>
                 </td>
               </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.sign_below_txt")}</label>
-            <div style={{height:10}}> </div>
-            </td>
-                <td colSpan={3}>
-                    
-                   
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("work.sign_below_txt")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="sign_below_txt"
                     // value={sign_below_txt}
@@ -1867,26 +1844,23 @@ const dialogFooterTemplate = () => {
                      setsign_below_txt(e.target.value);
                     }}
                     />
-                    
+                    </div>
                 </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.sign_below_photo")}</label>
-          </td>
-              <td  >
+              <td  width="46%">
                     <div className="p-field p-col-12 p-md-6">
-                   
+                    <label htmlFor="firstname1">{t("work.sign_below_photo")}</label>
                     <div style={{height:10}}> </div>
                     <Image 
                     />
                     </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.sign_below_userid")}</label>
-              </td>
-          <td >
-                 
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.sign_below_userid")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="sign_below_userid"
                     value={sign_below_userid}
@@ -1895,15 +1869,14 @@ const dialogFooterTemplate = () => {
                      setsign_below_userid(e.target.value);
                     }}
                     />
-                   
+                    </div>
               </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.sign_below_time")}</label>
-          </td>
-              <td  >
-          
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.sign_below_time")}</label>
+                    <div style={{height:10}}> </div>
                     <Calendar 
                     id="sign_below_time"
                     value={sign_below_time}
@@ -1912,13 +1885,13 @@ const dialogFooterTemplate = () => {
                      setsign_below_time(e.value);
                     }}
                     />
-                
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.full_address")}</label>
-              </td>
-          <td >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.full_address")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="full_address"
                     value={full_address}
@@ -1927,16 +1900,15 @@ const dialogFooterTemplate = () => {
                      setfull_address(e.target.value);
                     }}
                     />
-                   
+                    </div>
               </td>
               </tr>
 
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.isactived")}</label>
-            </td>
-          <td >
-             
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.isactived")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -1947,13 +1919,13 @@ const dialogFooterTemplate = () => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("work.isactived")} />
-               
+                </div>
           </td>
-          <td>
-          <label htmlFor="firstname1">{t("work.islocked")}</label>
-            </td> 
-          <td >
-        
+          <td width="2%"></td> 
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.islocked")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -1964,15 +1936,14 @@ const dialogFooterTemplate = () => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("work.islocked")} />
-               
+                </div> 
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.createdAt")}</label>
-            </td>
           <td >
-           
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.createdAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -1986,13 +1957,13 @@ const dialogFooterTemplate = () => {
                     }
                   }}
                 />
-              
+               </div>
           </td>
+          <td ></td>
           <td >
-          <label htmlFor="firstname1">{t("work.updatedAt")}</label>
-          </td>
-          <td >
-           
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.updatedAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -2006,15 +1977,14 @@ const dialogFooterTemplate = () => {
                     }
                   }}
                 />
-               
+                </div>
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.createUid")}</label>
-            </td>
           <td >
-             
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.createUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -2026,11 +1996,13 @@ const dialogFooterTemplate = () => {
                  setCreateUid(e.value);
                 }}  placeholder={t("work.createUid")} />
               
-               
+                </div>
           </td>
-          <td ><label htmlFor="firstname1">{t("work.updatedUid")}</label></td>
+          <td ></td>
           <td >
-          
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.updatedUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -2041,7 +2013,7 @@ const dialogFooterTemplate = () => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("work.updatedUid")} />
-              
+               </div>  
           </td>
           </tr>
 
@@ -2050,29 +2022,37 @@ const dialogFooterTemplate = () => {
              
               <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
                     <TabPanel header="产品信息">
-                    <WorkItemList mid={FHid}></WorkItemList>
+                    <WorkItemList mid={FHid}
+                     FHonChange={(e:any) => {
+                      setVal(e);
+                    }}> 
+                    </WorkItemList>
                     </TabPanel>
                     <TabPanel header="工序信息">
-                    <WorkNoteList mid={FHid}></WorkNoteList>
+                    <WorkNoteList mid={FHid}
+                      FHonChange={(e:any) => {
+                      setVal(e);
+                    }}
+                    
+                    ></WorkNoteList>
                     </TabPanel>            
                 </TabView>
              
             </td>
           </tr>
 
-
           <tr>
-          <td  colSpan={2}>
+          <td >
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/work");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-         
-          <td colSpan={2}>
+          <td ></td>
+          <td>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button
+                  <Button
                     label="提交"
                     onClick={(e) => { 
                       const fhnew=new Date();
@@ -2588,11 +2568,10 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
           </tr>
 
          <tr>
-          <td width="10%"> 
-          <label htmlFor="firstname1">{t("work.quote")}</label>
-          </td>
-              <td  width="40%">
-              
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.quote")}</label>
+                    <div style={{height:10}}> </div>
             
 
                 <table width="100%">
@@ -2624,13 +2603,13 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                </table>
 
 
-                    
+                    </div>
               </td>
-              <td width="10%">
-              <label htmlFor="firstname1">{t("work.title")}</label>
-              </td>
-          <td  width="40%">
-                    
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.title")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="title"
                     value={title}
@@ -2639,15 +2618,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      settitle(e.target.value);
                     }}
                     />
-                    
+                    </div>
               </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.terms_id")}</label>
-          </td>
-              <td >
-               
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.terms_id")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="terms_id"
                     value={terms_id}
@@ -2659,13 +2637,13 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setterms_id(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td >
-              <label htmlFor="firstname1">{t("work.priority")}</label>
-              </td>
-          <td  >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.priority")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="priority"
                       value={priority}
@@ -2677,15 +2655,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                        setpriority(e.value);
                       }}
                       />
-                      
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.states")}</label>
-          </td>
-              <td >
-                   
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.states")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="states"
                     value={states}
@@ -2697,13 +2674,13 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setstates(e.value);
                     }}
                     />
-                  
+                    </div>
               </td>
-              <td >
-              <label htmlFor="firstname1">{t("work.qty")}</label>
-              </td>
-          <td >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.qty")}</label>
+                      <div style={{height:10}}> </div>
                       <InputNumber 
                       id="qty"
                       value={qty}
@@ -2712,15 +2689,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                        setqty(e.value);
                       }}
                       />
-               
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.work_type")}</label>
-          </td>
-              <td >
-          
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.work_type")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="work_type"
                     value={work_type}
@@ -2732,13 +2708,13 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setwork_type(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.room")}</label>
-              </td>
-          <td  >
-                  
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.room")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="room"
                     value={room}
@@ -2747,15 +2723,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setroom(e.target.value);
                     }}
                     />
-                   
+                    </div>
               </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.client")}</label>
-          </td>
-              <td >
-                  
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.client")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="client"
                     value={client}
@@ -2767,13 +2742,13 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setclient(e.value);
                     }}
                     />
-                    
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.contact")}</label>
-              </td>
-          <td >
-                  
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.contact")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="contact"
                       value={contact}
@@ -2785,18 +2760,17 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                        setcontact(e.value);
                       }}
                       />
-                      
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.work_instructions")}</label>
-          </td>
-              <td  >
-          
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.work_instructions")}</label>
+                    <div style={{height:10}}> </div>
                     <MultiSelect 
                     id="work_instructions"
-                    // value={work_instructions}
+                    value={work_instructions}
                     options={Jobs} 
                       optionLabel="name" 
                       optionValue="code"                    
@@ -2805,16 +2779,16 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setwork_instructions(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td >
-              <label htmlFor="firstname1">{t("work.assign_to")}</label>
-              </td>
-          <td >
-                    
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.assign_to")}</label>
+                      <div style={{height:10}}> </div>
                       <MultiSelect 
                       id="assign_to"
-                      // value={assign_to}
+                      value={assign_to}
                       options={FHUsers}
                       optionLabel="name" 
                       optionValue="code"
@@ -2823,15 +2797,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                        setassign_to(e.value);
                       }}
                       />
-                      
+                      </div>
                 </td>
                 </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.start_date")}</label>
-          </td>
-              <td >
-     
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.start_date")}</label>
+                    <div style={{height:10}}> </div>
                     <Calendar 
                     id="start_date"
                     value={start_date}
@@ -2840,11 +2813,13 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setstart_date(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td > <label htmlFor="firstname1">{t("work.end_date")}</label></td>
-          <td  >
-                    
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("work.end_date")}</label>
+                      <div style={{height:10}}> </div>
                       <Calendar 
                       id="end_date"
                       value={end_date}
@@ -2853,15 +2828,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                        setend_date(e.value);
                       }}
                       />
-                    
+                      </div>
                 </td>
                 </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.remark")}</label>
-            </td>
-                <td colSpan={3}>
-                  
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("work.remark")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="remark"
                     // value={remark}
@@ -2870,15 +2844,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                   
+                    </div>
                 </td>
               </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.reedback")}</label>
-            </td>
-                <td colSpan={3}>
-                
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("work.reedback")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="reedback"
                     // value={reedback}
@@ -2887,17 +2860,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setreedback(e.target.value);
                     }}
                     />
-                   
+                    </div>
                 </td>
               </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.sign_below_txt")}</label>
-            <div style={{height:10}}> </div>
-            </td>
-                <td colSpan={3}>
-                    
-                   
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("work.sign_below_txt")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="sign_below_txt"
                     // value={sign_below_txt}
@@ -2906,26 +2876,23 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setsign_below_txt(e.target.value);
                     }}
                     />
-                    
+                    </div>
                 </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.sign_below_photo")}</label>
-          </td>
-              <td  >
+              <td  width="46%">
                     <div className="p-field p-col-12 p-md-6">
-                   
+                    <label htmlFor="firstname1">{t("work.sign_below_photo")}</label>
                     <div style={{height:10}}> </div>
                     <Image 
                     />
                     </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.sign_below_userid")}</label>
-              </td>
-          <td >
-                 
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.sign_below_userid")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="sign_below_userid"
                     value={sign_below_userid}
@@ -2934,15 +2901,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setsign_below_userid(e.target.value);
                     }}
                     />
-                   
+                    </div>
               </td>
               </tr>
          <tr>
-          <td>
-          <label htmlFor="firstname1">{t("work.sign_below_time")}</label>
-          </td>
-              <td  >
-          
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("work.sign_below_time")}</label>
+                    <div style={{height:10}}> </div>
                     <Calendar 
                     id="sign_below_time"
                     value={sign_below_time}
@@ -2951,13 +2917,13 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setsign_below_time(e.value);
                     }}
                     />
-                
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("work.full_address")}</label>
-              </td>
-          <td >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                     <label htmlFor="firstname1">{t("work.full_address")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="full_address"
                     value={full_address}
@@ -2966,16 +2932,15 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                      setfull_address(e.target.value);
                     }}
                     />
-                   
+                    </div>
               </td>
               </tr>
 
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.isactived")}</label>
-            </td>
-          <td >
-             
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.isactived")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -2986,13 +2951,13 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("work.isactived")} />
-               
+                </div>
           </td>
-          <td>
-          <label htmlFor="firstname1">{t("work.islocked")}</label>
-            </td> 
-          <td >
-        
+          <td width="2%"></td> 
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.islocked")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -3003,15 +2968,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("work.islocked")} />
-               
+                </div> 
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.createdAt")}</label>
-            </td>
           <td >
-           
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.createdAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -3025,13 +2989,13 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                     }
                   }}
                 />
-              
+               </div>
           </td>
+          <td ></td>
           <td >
-          <label htmlFor="firstname1">{t("work.updatedAt")}</label>
-          </td>
-          <td >
-           
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.updatedAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -3045,15 +3009,14 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                     }
                   }}
                 />
-               
+                </div>
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("work.createUid")}</label>
-            </td>
           <td >
-             
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.createUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -3065,11 +3028,13 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("work.createUid")} />
               
-               
+                </div>
           </td>
-          <td ><label htmlFor="firstname1">{t("work.updatedUid")}</label></td>
+          <td ></td>
           <td >
-          
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("work.updatedUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -3080,7 +3045,7 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("work.updatedUid")} />
-              
+               </div>  
           </td>
           </tr>
 
@@ -3101,17 +3066,17 @@ export const WorkItemView =({ Id, Mode }: WorkItemProps) => {
 
 
           <tr>
-          <td  colSpan={2}>
+          <td >
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/work");}}  style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/work");}}   style={{backgroundColor:'#4682B4'}} />
                 </div>
           </td>
-         
-          <td colSpan={2}>
+          <td ></td>
+          <td>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                 <Button
+                  <Button
                     label="确认"
                     onClick={(e) => {replace("/work");}}
                     style={{backgroundColor:'#4682B4'}}

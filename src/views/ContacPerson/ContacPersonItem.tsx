@@ -230,7 +230,7 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
   return (
   <Card>  
 
-<Dialog header={t('dataTable.Search')} visible={dialogVisible} style={{ width: '80vw' }} maximizable modal
+ <Dialog header={t('dataTable.Search')} visible={dialogVisible} style={{ width: '80vw' }} maximizable modal
                 contentStyle={{ height: '600px' }} 
                 onHide={closeDialog} 
                 footer={dialogFooterTemplate}>
@@ -374,23 +374,29 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
 
                         >
                 </MyDataTable>
-          </Dialog>
+ </Dialog>
 
 
 
       <div className="p-fluid p-formgrid p-grid">
       
-      <table width="98%">
+   <table width="98%">
       <thead>
       </thead>
-      <tbody>
- 
-          <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("contacPerson.name")}</label>
-                <div style={{height:10}}> </div>
-                <InputText 
+          <tbody>
+
+            <tr>
+              <td  colSpan={4}>
+              <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>    
+              </td>
+
+            </tr>           
+            <tr>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="name">{t("contacPerson.name")}</label>
+              </td>
+              <td style={{  width: '40%' }}>
+              <InputText 
                 id="name" 
                 value={name}  
                 onChange={(e)=>{
@@ -398,32 +404,16 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
-          </td>
-          </tr>
-          <tr>
-            <td colSpan={4}>
-                <div className="p-field p-col-12 p-md-12">
-                <label htmlFor="firstname1">{t("contacPerson.description")}</label>
-                <div style={{height:10}}> </div>
-                <InputTextarea 
-                id="description"
-                value={description}  
-                onChange={(e)=>{
-                 console.info('e.value:'+JSON.stringify(e.target.value));
-                 setdDescription(e.target.value);
-                }}                 
-                
-                ></InputTextarea>
-                </div>
-            </td>
-          </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.email")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+              </td>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1">{t("contacPerson.email")}</label>
+
+
+              </td>
+              <td style={{  width: '40%' }}>
+
+              <InputText 
                     id="email"
                     value={email}
                     onChange={(e)=>{
@@ -431,14 +421,15 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setemail(e.target.value);
                     }}
                     />
-                    </div>
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.islogin")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
+            </tr>
+
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.islogin")}</label>
+          </td>
+          <td>
+          <Dropdown 
                       id="islogin"
                       options={fhitems} 
                       value={islogin}
@@ -449,15 +440,12 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                        setislogin(e.value);
                       }}
                       />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.isnotiﬁcation")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.isnotiﬁcation")}</label>
+          </td>
+          <td>
+          <Dropdown 
                     id="isnotiﬁcation"
                     value={isnotiﬁcation}
                     options={fhitems} 
@@ -468,14 +456,14 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setisnotiﬁcation(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.isemail")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.isemail")}</label>
+          </td>
+          <td>
+          <Dropdown 
                       id="isemail"
                       value={isemail}
                       options={fhitems} 
@@ -485,16 +473,13 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                        console.info('e.value:'+JSON.stringify(e.value));
                        setisemail(e.value);
                       }}
-                      />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.jobTitle")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                      />           
+          </td>
+          <td> 
+            <label htmlFor="firstname1">{t("contacPerson.jobTitle")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="jobTitle"
                     value={jobTitle}
                     onChange={(e)=>{
@@ -502,14 +487,14 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setjobTitle(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                      <label htmlFor="firstname1">{t("contacPerson.phoneNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label htmlFor="firstname1">{t("contacPerson.phoneNumber")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="phoneNumber"
                     value={phoneNumber}
                     onChange={(e)=>{
@@ -517,16 +502,14 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setphoneNumber(e.target.value);
                     }}
                     />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  colSpan={4}>
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.account")}</label>
-                    <div style={{height:10}}> </div>
 
-               <table width="100%">
+          </td>
+          <td>
+
+          <label htmlFor="firstname1">{t("contacPerson.account")}</label>
+          </td>
+          <td>
+          <table width="100%">
                  <tr>
                    <td width="85%">
 
@@ -553,32 +536,28 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                    </td>
                  </tr>
                </table>
-
-                    </div>
-              </td>
-            
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.mobileNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.mobileNumber")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="mobileNumber"
                     value={mobileNumber}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setmobileNumber(e.target.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.faxNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                    />           
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.faxNumber")}</label>
+
+          </td>
+          <td>
+          <InputText 
                     id="faxNumber"
                     value={faxNumber}
                     onChange={(e)=>{
@@ -586,15 +565,15 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setfaxNumber(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.gender")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.gender")}</label>
+
+          </td>
+          <td>
+          <Dropdown 
                     id="gender"
                     options={fhGenderitems} 
                     optionLabel="name" 
@@ -604,15 +583,13 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      console.info('e.value:'+JSON.stringify(e.value));
                      setgender(e.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.dateofBirth")}</label>
-                      <div style={{height:10}}> </div>
-                      <Calendar 
+                    />           
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.dateofBirth")}</label>
+          </td>
+          <td>
+          <Calendar 
                       id="dateofBirth"
                       value={dateofBirth}
                       onChange={(e:any)=>{
@@ -620,15 +597,15 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                        setdateofBirth(e.value);
                       }}
                       />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.language")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.language")}</label>
+
+          </td>
+          <td>
+          <Dropdown 
                     id="language"
                     value={language}
                     options={Languages}
@@ -639,14 +616,14 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setlanguage(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.income")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+          </td>
+          <td>
+
+          <label htmlFor="firstname1">{t("contacPerson.income")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="income"
                     value={income}
                     onChange={(e)=>{
@@ -654,15 +631,15 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setincome(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.status")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label htmlFor="firstname1">{t("contacPerson.status")}</label>
+            </td>
+          <td>
+          <InputText 
                     id="status"
                     value={status}
                     onChange={(e)=>{
@@ -670,14 +647,10 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setstatus(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.children")}</label>
-                      <div style={{height:10}}> </div>
-                      <InputNumber 
+          </td>
+          <td>  <label htmlFor="firstname1">{t("contacPerson.children")}</label></td>
+          <td>
+          <InputNumber 
                       id="children"
                       value={children}
                       onChange={(e:any)=>{
@@ -685,15 +658,14 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                        setchildren(e.value);
                       }}
                       />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.street")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.street")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="street"
                     value={street}
                     onChange={(e)=>{
@@ -701,14 +673,11 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setstreet(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.city")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+          </td>
+          <td> <label htmlFor="firstname1">{t("contacPerson.city")}</label></td>
+          <td>
+          <InputText 
                     id="city"
                     value={city}
                     onChange={(e)=>{
@@ -716,30 +685,29 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.state")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>  
+
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.state")}</label>
+        </td>
+
+        <td>
+        <InputText 
                     id="state"
                     value={state}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setstate(e.target.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.postCode")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                    /> 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.postCode")}</label>
+        </td>
+        <td>
+        <InputText 
                     id="postCode"
                     value={postCode}
                     onChange={(e)=>{
@@ -747,15 +715,16 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.country")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>       
+        </tr> 
+
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.country")}</label>
+        </td>
+
+        <td>
+        <Dropdown 
                     id="country"
                     value={country}
                     options={Countrys}
@@ -766,14 +735,13 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setcountry(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.emergency")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.emergency")}</label>
+       
+        </td>
+        <td>
+        <InputText 
                     id="emergency"
                     value={emergency}
                     onChange={(e)=>{
@@ -781,30 +749,28 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setemergency(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.securityCourse")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>       
+        </tr>
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.securityCourse")}</label>
+        </td>
+
+        <td>
+        <InputText 
                     id="securityCourse"
                     value={securityCourse}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setsecurityCourse(e.target.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.additionalField3")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                    />  
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.additionalField3")}</label>
+        </td>
+        <td>
+        <InputText 
                     id="additionalField3"
                     value={additionalField3}
                     onChange={(e)=>{
@@ -812,15 +778,16 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setadditionalField3(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.additionalField4")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>       
+        </tr>
+
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.additionalField4")}</label>
+        </td>
+
+        <td>
+        <InputText 
                     id="additionalField4"
                     value={additionalField4}
                     onChange={(e)=>{
@@ -828,14 +795,13 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setadditionalField4(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.additionalField5")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.additionalField5")}</label>
+          
+        </td>
+        <td>
+        <InputText 
                     id="additionalField5"
                     value={additionalField5}
                     onChange={(e)=>{
@@ -843,39 +809,40 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                      setadditionalField5(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-          <tr>
-                     <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                      <label htmlFor="firstname1">{t("contacPerson.isAlert")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
-                      id="isAlert"
-                      value={isAlert}
-                      options={fhitems} 
-                      optionLabel="name" 
-                      optionValue="code"
-                      onChange={(e)=>{
-                       console.info('e.value:'+JSON.stringify(e.value));
-                       setisAlert(e.value);
-                      }}
-                      />
-                      </div>
-                </td>
-                <td width="2%"></td>
-                <td  width="46%">
-    
-                </td>
-                </tr> 
+          </td>       
+        </tr>
+   
 
-          <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.isactived")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+        <tr>
+        <td>  
+    
+          
+          <label htmlFor="firstname1">{t("contacPerson.description")}</label>
+        </td>
+
+        <td colSpan={3}>
+
+                <InputTextarea 
+                id="description"
+                value={description}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setdDescription(e.target.value);
+                }}                 
+                
+                ></InputTextarea>
+        </td>
+
+
+          </tr>
+
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.isactived")}</label>
+        </td>
+
+        <td>
+        <Dropdown 
                 value={isactived} 
                 disabled={true}
                 options={fhitems} 
@@ -885,14 +852,12 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("contacPerson.isactived")} />
-                </div>
-          </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.islocked")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.islocked")}</label>
+        </td>
+        <td>
+        <Dropdown 
                 value={islocked} 
                 disabled={true}
                 options={fhitems} 
@@ -902,15 +867,16 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("contacPerson.islocked")} />
-                </div> 
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.createdAt")}</label>
-                <div style={{height:10}}> </div>
-                <Calendar
+          </td>       
+        </tr>
+
+     <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.createdAt")}</label>
+        </td>
+
+        <td>
+        <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
                   value={createAt}
@@ -923,14 +889,12 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                     }
                   }}
                 />
-               </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.updatedAt")}</label>
-                <div style={{height:10}}> </div>
-                <Calendar
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.updatedAt")}</label>
+        </td>
+        <td>
+        <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
                   value={updatedAt}
@@ -942,16 +906,16 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                       setUpdatedAt(e.value);
                     }
                   }}
-                />
-                </div>
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.createUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+                /> 
+          </td>       
+        </tr>
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.createUid")}</label>
+        </td>
+
+        <td>
+        <Dropdown 
                 value={createUid} 
                 disabled={true}
                 options={FHUsers} 
@@ -961,15 +925,12 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setCreateUid(e.value);
                 }}  placeholder={t("contacPerson.createUid")} />
-              
-                </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.updatedUid")}</label>
+        </td>
+        <td>
+        <Dropdown 
                 value={updatedUid} 
                 disabled={true}
                 options={FHUsers}
@@ -979,25 +940,27 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("contacPerson.updatedUid")} />
-               </div>  
-          </td>
-          </tr>
+          </td>       
+        </tr>
 
+         <tr>
+        <td>
 
+        </td>
 
+        <td>
 
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/contacperson");}}  style={{backgroundColor:'#4682B4'}}  />
-                </div>
-          </td>
-          <td ></td>
-          <td>
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
-                  <Button
+        </td>
+
+        <td></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td  colSpan={2}>
+        <Button label="取消" onClick={(e) => {replace("/contacperson");}}  style={{backgroundColor:'#4682B4'}}  />
+        </td>
+        <td colSpan={2}> 
+        <Button
                     label="提交"
                     onClick={(e) => { 
                       ctlContacPerson.createContacPerson({
@@ -1040,12 +1003,14 @@ export const ContacPersonItemAdd =({ Id, Mode }: ContacPersonItemProps) => {
                       replace("/contacperson");
                     }}
                     style={{backgroundColor:'#4682B4'}}
-                  />
-                </div>
-          </td>
-          </tr>
-          </tbody>
-          </table>
+                  />   
+        </td>       
+        </tr>
+
+
+              
+            </tbody>
+   </table>
       </div>
     </Card>
   );
@@ -1419,14 +1384,20 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
       <table width="98%">
       <thead>
       </thead>
-      <tbody>
- 
-          <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("contacPerson.name")}</label>
-                <div style={{height:10}}> </div>
-                <InputText 
+          <tbody>
+
+            <tr>
+              <td  colSpan={4}>
+              <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>    
+              </td>
+
+            </tr>           
+            <tr>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="name">{t("contacPerson.name")}</label>
+              </td>
+              <td style={{  width: '40%' }}>
+              <InputText 
                 id="name" 
                 value={name}  
                 onChange={(e)=>{
@@ -1434,32 +1405,16 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
-          </td>
-          </tr>
-          <tr>
-            <td colSpan={4}>
-                <div className="p-field p-col-12 p-md-12">
-                <label htmlFor="firstname1">{t("contacPerson.description")}</label>
-                <div style={{height:10}}> </div>
-                <InputTextarea 
-                id="description"
-                value={description}  
-                onChange={(e)=>{
-                 console.info('e.value:'+JSON.stringify(e.target.value));
-                 setdDescription(e.target.value);
-                }}                 
-                
-                ></InputTextarea>
-                </div>
-            </td>
-          </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.email")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+              </td>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1">{t("contacPerson.email")}</label>
+
+
+              </td>
+              <td style={{  width: '40%' }}>
+
+              <InputText 
                     id="email"
                     value={email}
                     onChange={(e)=>{
@@ -1467,14 +1422,15 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setemail(e.target.value);
                     }}
                     />
-                    </div>
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.islogin")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
+            </tr>
+
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.islogin")}</label>
+          </td>
+          <td>
+          <Dropdown 
                       id="islogin"
                       options={fhitems} 
                       value={islogin}
@@ -1485,15 +1441,12 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                        setislogin(e.value);
                       }}
                       />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.isnotiﬁcation")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.isnotiﬁcation")}</label>
+          </td>
+          <td>
+          <Dropdown 
                     id="isnotiﬁcation"
                     value={isnotiﬁcation}
                     options={fhitems} 
@@ -1504,14 +1457,14 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setisnotiﬁcation(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.isemail")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.isemail")}</label>
+          </td>
+          <td>
+          <Dropdown 
                       id="isemail"
                       value={isemail}
                       options={fhitems} 
@@ -1521,16 +1474,13 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                        console.info('e.value:'+JSON.stringify(e.value));
                        setisemail(e.value);
                       }}
-                      />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.jobTitle")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                      />           
+          </td>
+          <td> 
+            <label htmlFor="firstname1">{t("contacPerson.jobTitle")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="jobTitle"
                     value={jobTitle}
                     onChange={(e)=>{
@@ -1538,14 +1488,14 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setjobTitle(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                      <label htmlFor="firstname1">{t("contacPerson.phoneNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label htmlFor="firstname1">{t("contacPerson.phoneNumber")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="phoneNumber"
                     value={phoneNumber}
                     onChange={(e)=>{
@@ -1553,16 +1503,14 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setphoneNumber(e.target.value);
                     }}
                     />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  colSpan={4}>
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.account")}</label>
-                    <div style={{height:10}}> </div>
 
-               <table width="100%">
+          </td>
+          <td>
+
+          <label htmlFor="firstname1">{t("contacPerson.account")}</label>
+          </td>
+          <td>
+          <table width="100%">
                  <tr>
                    <td width="85%">
 
@@ -1589,32 +1537,28 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                    </td>
                  </tr>
                </table>
-
-                    </div>
-              </td>
-            
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.mobileNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.mobileNumber")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="mobileNumber"
                     value={mobileNumber}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setmobileNumber(e.target.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.faxNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                    />           
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.faxNumber")}</label>
+
+          </td>
+          <td>
+          <InputText 
                     id="faxNumber"
                     value={faxNumber}
                     onChange={(e)=>{
@@ -1622,15 +1566,15 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setfaxNumber(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.gender")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.gender")}</label>
+
+          </td>
+          <td>
+          <Dropdown 
                     id="gender"
                     options={fhGenderitems} 
                     optionLabel="name" 
@@ -1640,15 +1584,13 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      console.info('e.value:'+JSON.stringify(e.value));
                      setgender(e.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.dateofBirth")}</label>
-                      <div style={{height:10}}> </div>
-                      <Calendar 
+                    />           
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.dateofBirth")}</label>
+          </td>
+          <td>
+          <Calendar 
                       id="dateofBirth"
                       value={dateofBirth}
                       onChange={(e:any)=>{
@@ -1656,15 +1598,15 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                        setdateofBirth(e.value);
                       }}
                       />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.language")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.language")}</label>
+
+          </td>
+          <td>
+          <Dropdown 
                     id="language"
                     value={language}
                     options={Languages}
@@ -1675,14 +1617,14 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setlanguage(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.income")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+          </td>
+          <td>
+
+          <label htmlFor="firstname1">{t("contacPerson.income")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="income"
                     value={income}
                     onChange={(e)=>{
@@ -1690,15 +1632,15 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setincome(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.status")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label htmlFor="firstname1">{t("contacPerson.status")}</label>
+            </td>
+          <td>
+          <InputText 
                     id="status"
                     value={status}
                     onChange={(e)=>{
@@ -1706,14 +1648,10 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setstatus(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.children")}</label>
-                      <div style={{height:10}}> </div>
-                      <InputNumber 
+          </td>
+          <td>  <label htmlFor="firstname1">{t("contacPerson.children")}</label></td>
+          <td>
+          <InputNumber 
                       id="children"
                       value={children}
                       onChange={(e:any)=>{
@@ -1721,15 +1659,14 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                        setchildren(e.value);
                       }}
                       />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.street")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.street")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="street"
                     value={street}
                     onChange={(e)=>{
@@ -1737,14 +1674,11 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setstreet(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.city")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+          </td>
+          <td> <label htmlFor="firstname1">{t("contacPerson.city")}</label></td>
+          <td>
+          <InputText 
                     id="city"
                     value={city}
                     onChange={(e)=>{
@@ -1752,30 +1686,29 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.state")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>  
+
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.state")}</label>
+        </td>
+
+        <td>
+        <InputText 
                     id="state"
                     value={state}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setstate(e.target.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.postCode")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                    /> 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.postCode")}</label>
+        </td>
+        <td>
+        <InputText 
                     id="postCode"
                     value={postCode}
                     onChange={(e)=>{
@@ -1783,15 +1716,16 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.country")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>       
+        </tr> 
+
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.country")}</label>
+        </td>
+
+        <td>
+        <Dropdown 
                     id="country"
                     value={country}
                     options={Countrys}
@@ -1802,14 +1736,13 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setcountry(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.emergency")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.emergency")}</label>
+       
+        </td>
+        <td>
+        <InputText 
                     id="emergency"
                     value={emergency}
                     onChange={(e)=>{
@@ -1817,30 +1750,28 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setemergency(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.securityCourse")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>       
+        </tr>
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.securityCourse")}</label>
+        </td>
+
+        <td>
+        <InputText 
                     id="securityCourse"
                     value={securityCourse}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setsecurityCourse(e.target.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.additionalField3")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                    />  
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.additionalField3")}</label>
+        </td>
+        <td>
+        <InputText 
                     id="additionalField3"
                     value={additionalField3}
                     onChange={(e)=>{
@@ -1848,15 +1779,16 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setadditionalField3(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.additionalField4")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>       
+        </tr>
+
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.additionalField4")}</label>
+        </td>
+
+        <td>
+        <InputText 
                     id="additionalField4"
                     value={additionalField4}
                     onChange={(e)=>{
@@ -1864,14 +1796,13 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setadditionalField4(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.additionalField5")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.additionalField5")}</label>
+          
+        </td>
+        <td>
+        <InputText 
                     id="additionalField5"
                     value={additionalField5}
                     onChange={(e)=>{
@@ -1879,39 +1810,37 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                      setadditionalField5(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-          <tr>
-                     <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                      <label htmlFor="firstname1">{t("contacPerson.isAlert")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
-                      id="isAlert"
-                      value={isAlert}
-                      options={fhitems} 
-                      optionLabel="name" 
-                      optionValue="code"
-                      onChange={(e)=>{
-                       console.info('e.value:'+JSON.stringify(e.value));
-                       setisAlert(e.value);
-                      }}
-                      />
-                      </div>
-                </td>
-                <td width="2%"></td>
-                <td  width="46%">
+          </td>       
+        </tr>
+        <tr>
+        <td>  
     
-                </td>
-                </tr> 
+          
+          <label htmlFor="firstname1">{t("contacPerson.description")}</label>
+        </td>
 
-          <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.isactived")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+        <td colSpan={3}>
+
+                <InputTextarea 
+                id="description"
+                value={description}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setdDescription(e.target.value);
+                }}                 
+                
+                ></InputTextarea>
+        </td>
+
+
+          </tr>
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.isactived")}</label>
+        </td>
+
+        <td>
+        <Dropdown 
                 value={isactived} 
                 disabled={true}
                 options={fhitems} 
@@ -1921,14 +1850,12 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("contacPerson.isactived")} />
-                </div>
-          </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.islocked")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.islocked")}</label>
+        </td>
+        <td>
+        <Dropdown 
                 value={islocked} 
                 disabled={true}
                 options={fhitems} 
@@ -1938,15 +1865,16 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("contacPerson.islocked")} />
-                </div> 
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.createdAt")}</label>
-                <div style={{height:10}}> </div>
-                <Calendar
+          </td>       
+        </tr>
+
+     <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.createdAt")}</label>
+        </td>
+
+        <td>
+        <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
                   value={createAt}
@@ -1959,14 +1887,12 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                     }
                   }}
                 />
-               </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.updatedAt")}</label>
-                <div style={{height:10}}> </div>
-                <Calendar
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.updatedAt")}</label>
+        </td>
+        <td>
+        <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
                   value={updatedAt}
@@ -1978,16 +1904,16 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                       setUpdatedAt(e.value);
                     }
                   }}
-                />
-                </div>
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.createUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+                /> 
+          </td>       
+        </tr>
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.createUid")}</label>
+        </td>
+
+        <td>
+        <Dropdown 
                 value={createUid} 
                 disabled={true}
                 options={FHUsers} 
@@ -1997,15 +1923,12 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setCreateUid(e.value);
                 }}  placeholder={t("contacPerson.createUid")} />
-              
-                </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.updatedUid")}</label>
+        </td>
+        <td>
+        <Dropdown 
                 value={updatedUid} 
                 disabled={true}
                 options={FHUsers}
@@ -2015,23 +1938,16 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("contacPerson.updatedUid")} />
-               </div>  
-          </td>
-          </tr>
+          </td>       
+        </tr>
 
-
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/contacperson");}} style={{backgroundColor:'#4682B4'}}  />
-                </div>
-          </td>
-          <td ></td>
-          <td>
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
-                  <Button
+   
+        <tr>
+        <td  colSpan={2}>
+        <Button label="取消" onClick={(e) => {replace("/contacperson");}} style={{backgroundColor:'#4682B4'}}  />
+        </td>
+        <td colSpan={2}> 
+        <Button
                     label="提交"
                     onClick={(e) => { 
                       const fhnew=new Date();
@@ -2079,11 +1995,13 @@ export const ContacPersonItemEdit =({ Id, Mode }: ContacPersonItemProps) => {
                     }}
                     style={{backgroundColor:'#4682B4'}}
                   />
-                </div>
-          </td>
-          </tr>
-          </tbody>
-          </table>
+        </td>       
+        </tr>
+
+
+              
+            </tbody>
+      </table>
       </div>
     </Card>
   );
@@ -2439,67 +2357,60 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
 
 
       <div className="p-fluid p-formgrid p-grid">
-      
       <table width="98%">
       <thead>
       </thead>
-      <tbody>
- 
-          <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("contacPerson.name")}</label>
-                <div style={{height:10}}> </div>
-                <InputText 
+          <tbody>
+
+            <tr>
+              <td  colSpan={4}>
+              <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>    
+              </td>
+
+            </tr>           
+            <tr>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="name">{t("contacPerson.name")}</label>
+              </td>
+              <td style={{  width: '40%' }}>
+              <InputText 
                 id="name" 
+                disabled={true}
                 value={name}  
                 onChange={(e)=>{
                  console.info('e.value:'+JSON.stringify(e.target.value));
                  setName(e.target.value);
                 }}  
                 />
-                </div>
-          </td>
-          </tr>
-          <tr>
-            <td colSpan={4}>
-                <div className="p-field p-col-12 p-md-12">
-                <label htmlFor="firstname1">{t("contacPerson.description")}</label>
-                <div style={{height:10}}> </div>
-                <InputTextarea 
-                id="description"
-                value={description}  
-                onChange={(e)=>{
-                 console.info('e.value:'+JSON.stringify(e.target.value));
-                 setdDescription(e.target.value);
-                }}                 
-                
-                ></InputTextarea>
-                </div>
-            </td>
-          </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.email")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+              </td>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1">{t("contacPerson.email")}</label>
+
+
+              </td>
+              <td style={{  width: '40%' }}>
+
+              <InputText 
                     id="email"
+                    disabled={true}
                     value={email}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setemail(e.target.value);
                     }}
                     />
-                    </div>
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.islogin")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
+            </tr>
+
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.islogin")}</label>
+          </td>
+          <td>
+          <Dropdown 
                       id="islogin"
+                      disabled={true}
                       options={fhitems} 
                       value={islogin}
                       optionLabel="name" 
@@ -2509,16 +2420,14 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                        setislogin(e.value);
                       }}
                       />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.isnotiﬁcation")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.isnotiﬁcation")}</label>
+          </td>
+          <td>
+          <Dropdown 
                     id="isnotiﬁcation"
+                    disabled={true}
                     value={isnotiﬁcation}
                     options={fhitems} 
                     optionLabel="name" 
@@ -2528,15 +2437,16 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                      setisnotiﬁcation(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.isemail")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.isemail")}</label>
+          </td>
+          <td>
+          <Dropdown 
                       id="isemail"
+                      disabled={true}
                       value={isemail}
                       options={fhitems} 
                       optionLabel="name" 
@@ -2545,48 +2455,45 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                        console.info('e.value:'+JSON.stringify(e.value));
                        setisemail(e.value);
                       }}
-                      />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.jobTitle")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                      />           
+          </td>
+          <td> 
+            <label htmlFor="firstname1">{t("contacPerson.jobTitle")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="jobTitle"
+                    disabled={true}
                     value={jobTitle}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setjobTitle(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                      <label htmlFor="firstname1">{t("contacPerson.phoneNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label htmlFor="firstname1">{t("contacPerson.phoneNumber")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="phoneNumber"
+                    disabled={true}
                     value={phoneNumber}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setphoneNumber(e.target.value);
                     }}
                     />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  colSpan={4}>
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.account")}</label>
-                    <div style={{height:10}}> </div>
 
-               <table width="100%">
+          </td>
+          <td>
+
+          <label htmlFor="firstname1">{t("contacPerson.account")}</label>
+          </td>
+          <td>
+          <table width="100%">
                  <tr>
                    <td width="85%">
 
@@ -2594,6 +2501,7 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
 
                     <InputText 
                     id="account"
+                    disabled={true}
                     value={account}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
@@ -2604,7 +2512,8 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                    </td>
                    <td width="15%">
                     <Button 
-                    label={t('dataTable.Search')} 
+                    label={t('dataTable.Search')}
+                    disabled={true} 
                     icon="pi pi-external-link" 
                   
                     style={{backgroundColor:'#4682B4'}}
@@ -2613,50 +2522,49 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                    </td>
                  </tr>
                </table>
-
-                    </div>
-              </td>
-            
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.mobileNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.mobileNumber")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="mobileNumber"
+                    disabled={true}
                     value={mobileNumber}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setmobileNumber(e.target.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.faxNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                    />           
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.faxNumber")}</label>
+
+          </td>
+          <td>
+          <InputText 
                     id="faxNumber"
                     value={faxNumber}
+                    disabled={true}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setfaxNumber(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.gender")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.gender")}</label>
+
+          </td>
+          <td>
+          <Dropdown 
                     id="gender"
                     options={fhGenderitems} 
+                    disabled={true}
                     optionLabel="name" 
                     optionValue="code"                     
                     value={gender}
@@ -2664,33 +2572,33 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                      console.info('e.value:'+JSON.stringify(e.value));
                      setgender(e.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.dateofBirth")}</label>
-                      <div style={{height:10}}> </div>
-                      <Calendar 
+                    />           
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.dateofBirth")}</label>
+          </td>
+          <td>
+          <Calendar 
                       id="dateofBirth"
+                      disabled={true}
                       value={dateofBirth}
                       onChange={(e:any)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setdateofBirth(e.value);
                       }}
                       />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.language")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.language")}</label>
+
+          </td>
+          <td>
+          <Dropdown 
                     id="language"
                     value={language}
+                    disabled={true}
                     options={Languages}
                     optionLabel="name" 
                     optionValue="code"               
@@ -2699,124 +2607,124 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                      setlanguage(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.income")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+          </td>
+          <td>
+
+          <label htmlFor="firstname1">{t("contacPerson.income")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="income"
+                    disabled={true}
                     value={income}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setincome(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.status")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label htmlFor="firstname1">{t("contacPerson.status")}</label>
+            </td>
+          <td>
+          <InputText 
                     id="status"
                     value={status}
+                    disabled={true}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setstatus(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("contacPerson.children")}</label>
-                      <div style={{height:10}}> </div>
-                      <InputNumber 
+          </td>
+          <td>  <label htmlFor="firstname1">{t("contacPerson.children")}</label></td>
+          <td>
+          <InputNumber 
                       id="children"
+                      disabled={true}
                       value={children}
                       onChange={(e:any)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setchildren(e.value);
                       }}
                       />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.street")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("contacPerson.street")}</label>
+          </td>
+          <td>
+          <InputText 
                     id="street"
+                    disabled={true}
                     value={street}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setstreet(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.city")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+
+          </td>
+          <td> <label htmlFor="firstname1">{t("contacPerson.city")}</label></td>
+          <td>
+          <InputText 
                     id="city"
+                    disabled={true}
                     value={city}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.state")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>
+        </tr>  
+
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.state")}</label>
+        </td>
+
+        <td>
+        <InputText 
                     id="state"
                     value={state}
+                    disabled={true}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setstate(e.target.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.postCode")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                    /> 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.postCode")}</label>
+        </td>
+        <td>
+        <InputText 
                     id="postCode"
+                    disabled={true}
                     value={postCode}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.country")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
+          </td>       
+        </tr> 
+
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.country")}</label>
+        </td>
+
+        <td>
+        <Dropdown 
                     id="country"
+                    disabled={true}
                     value={country}
                     options={Countrys}
                     optionLabel="name" 
@@ -2826,116 +2734,116 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                      setcountry(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.emergency")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.emergency")}</label>
+       
+        </td>
+        <td>
+        <InputText 
                     id="emergency"
+                    disabled={true}
                     value={emergency}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setemergency(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.securityCourse")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>       
+        </tr>
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.securityCourse")}</label>
+        </td>
+
+        <td>
+        <InputText 
                     id="securityCourse"
+                    disabled={true}
                     value={securityCourse}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setsecurityCourse(e.target.value);
                     }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.additionalField3")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+                    />  
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.additionalField3")}</label>
+        </td>
+        <td>
+        <InputText 
                     id="additionalField3"
+                    disabled={true}
                     value={additionalField3}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setadditionalField3(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("contacPerson.additionalField4")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+          </td>       
+        </tr>
+
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.additionalField4")}</label>
+        </td>
+
+        <td>
+        <InputText 
                     id="additionalField4"
+                    disabled={true}
                     value={additionalField4}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setadditionalField4(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("contacPerson.additionalField5")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.additionalField5")}</label>
+          
+        </td>
+        <td>
+        <InputText 
                     id="additionalField5"
+                    disabled={true}
                     value={additionalField5}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.target.value));
                      setadditionalField5(e.target.value);
                     }}
                     />
-                    </div>
-              </td>
-              </tr>
-          <tr>
-                     <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                      <label htmlFor="firstname1">{t("contacPerson.isAlert")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
-                      id="isAlert"
-                      value={isAlert}
-                      options={fhitems} 
-                      optionLabel="name" 
-                      optionValue="code"
-                      onChange={(e)=>{
-                       console.info('e.value:'+JSON.stringify(e.value));
-                       setisAlert(e.value);
-                      }}
-                      />
-                      </div>
-                </td>
-                <td width="2%"></td>
-                <td  width="46%">
+          </td>       
+        </tr>
+        <tr>
+        <td>  
     
-                </td>
-                </tr> 
+          
+          <label htmlFor="firstname1">{t("contacPerson.description")}</label>
+        </td>
 
-          <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.isactived")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+        <td colSpan={3}>
+
+                <InputTextarea 
+                id="description"
+                value={description}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setdDescription(e.target.value);
+                }}                 
+                
+                ></InputTextarea>
+        </td>
+
+
+          </tr>
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.isactived")}</label>
+        </td>
+
+        <td>
+        <Dropdown 
                 value={isactived} 
                 disabled={true}
                 options={fhitems} 
@@ -2945,14 +2853,12 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("contacPerson.isactived")} />
-                </div>
-          </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.islocked")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.islocked")}</label>
+        </td>
+        <td>
+        <Dropdown 
                 value={islocked} 
                 disabled={true}
                 options={fhitems} 
@@ -2962,15 +2868,16 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("contacPerson.islocked")} />
-                </div> 
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.createdAt")}</label>
-                <div style={{height:10}}> </div>
-                <Calendar
+          </td>       
+        </tr>
+
+     <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.createdAt")}</label>
+        </td>
+
+        <td>
+        <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
                   value={createAt}
@@ -2983,14 +2890,12 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                     }
                   }}
                 />
-               </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.updatedAt")}</label>
-                <div style={{height:10}}> </div>
-                <Calendar
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.updatedAt")}</label>
+        </td>
+        <td>
+        <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
                   value={updatedAt}
@@ -3002,16 +2907,16 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                       setUpdatedAt(e.value);
                     }
                   }}
-                />
-                </div>
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.createUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+                /> 
+          </td>       
+        </tr>
+        <tr>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.createUid")}</label>
+        </td>
+
+        <td>
+        <Dropdown 
                 value={createUid} 
                 disabled={true}
                 options={FHUsers} 
@@ -3021,15 +2926,12 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setCreateUid(e.value);
                 }}  placeholder={t("contacPerson.createUid")} />
-              
-                </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("contacPerson.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+        </td>
+        <td>
+        <label htmlFor="firstname1">{t("contacPerson.updatedUid")}</label>
+        </td>
+        <td>
+        <Dropdown 
                 value={updatedUid} 
                 disabled={true}
                 options={FHUsers}
@@ -3039,32 +2941,25 @@ export const ContacPersonItemView =({ Id, Mode }: ContacPersonItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("contacPerson.updatedUid")} />
-               </div>  
-          </td>
-          </tr>
+          </td>       
+        </tr>
 
-
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/contacperson");}}  style={{backgroundColor:'#4682B4'}}  />
-                </div>
-          </td>
-          <td ></td>
-          <td>
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
-                  <Button
+    
+        <tr>
+        <td  colSpan={2}>
+        <Button label="取消" onClick={(e) => {replace("/contacperson");}}  style={{backgroundColor:'#4682B4'}}  />
+        </td>
+        <td colSpan={2}> 
+        <Button
                     label="确认"
                     onClick={(e) => {replace("/contacperson");}}
                     style={{backgroundColor:'#4682B4'}}
                   />
-                </div>
-          </td>
-          </tr>
-          </tbody>
-          </table>
+        </td>       
+        </tr>
+
+            </tbody>
+      </table>     
       </div>
     </Card>
   );

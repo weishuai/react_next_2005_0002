@@ -25,7 +25,7 @@ import {ClientController} from '../../controllers/ClientController';
 import { globalStorage } from '../../utils/Globalstorage';
 import { DataTableReorder } from '../../views/DataTableReorder/DataTableReorderList';
 
-import { OpportunityCommentsList } from '../OpportunityComments/OpportunityCommentsList';
+import { OpportunityCommentsList, OpportunityCommentsListShow } from '../OpportunityComments/OpportunityCommentsList';
 const { nanoid } = require('nanoid');
 export type OpportunityItemProps = {
   Id: string;
@@ -1128,416 +1128,424 @@ export const OpportunityItemEdit =({ Id, Mode }: OpportunityItemProps) => {
       <table width="98%">
       <thead>
       </thead>
-      <tbody>
-          <tr>
-          <td colSpan={4}> 
-            <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>
-          </td>
-          </tr>  
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.refNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="refNumber"
-                    value={refNumber}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setrefNumber(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.opportunityName")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="opportunityName"
-                    value={opportunityName}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setopportunityName(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.account")}</label>
-                    <div style={{height:10}}> </div>
-               <table width="100%">
-                 <tr>
-                   <td width="75%">
-                    <InputText 
-                    id="account"
-                    value={account}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setaccount(e.target.value);
-                    }}
-                    />
+          <tbody>
 
-                   </td>
-                   <td width="25%">
-                    <Button 
-                    label={t('dataTable.Search')} 
-                    icon="pi pi-external-link" 
-                  
-                    style={{backgroundColor:'#4682B4'}}
-                    onClick={openDialog} 
-                      /> 
-                   </td>
-                 </tr>
-               </table>
+            <tr>
+              <td  colSpan={4}>
+              <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>    
+              </td>
+
+            </tr>           
+            <tr>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1"   >{t("opportunity.refNumber")}</label>  
+              </td>
+              <td style={{  width: '40%' }}>
+              <InputText 
+                                id="refNumber"
+                                value={refNumber}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setrefNumber(e.target.value);
+                                }}
+                                />
+
+              </td>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1"  >{t("opportunity.opportunityName")}</label>
 
 
-                    </div>
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("opportunity.opportunityOwner")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
-                      id="opportunityOwner"
-                      value={opportunityOwner}
-                      options={FHUsers} 
-                      optionLabel="name" 
-                      optionValue="code"
-                      onChange={(e)=>{
-                       console.info('e.value:'+JSON.stringify(e.value));
-                       setopportunityOwner(e.value);
-                      }}
-                      />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.expiryDate")}</label>
-                    <div style={{height:10}}> </div>
-                    <Calendar 
-                    id="expiryDate"
-                    value={expiryDate}
-                    onChange={(e:any)=>{
-                     console.info('e.value:'+JSON.stringify(e.value));
-                     setexpiryDate(e.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.stageName")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="stageName"
-                    value={stageName}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setstageName(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.probability")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="probability"
-                    value={probability}
+              <td style={{  width: '40%' }}>
 
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setprobability(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.stag")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="stag"
-                    value={stage}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setstage(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.priority")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
-                    id="priority"
-                    value={priority}
-                    options={FHProbabilitysItems} 
-                    optionLabel="name" 
-                    optionValue="code"
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.value));
-                     setpriority(e.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.dealAge")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="dealAge"
-                    value={dealAge}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setdealAge(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.closeProbability")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="closeProbability"
-                    value={closeProbability}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setcloseProbability(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.forecastValue")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="forecastValue"
-                    value={forecastValue}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setforecastValue(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.expectedCloseDate")}</label>
-                    <div style={{height:10}}> </div>
-                    <Calendar 
-                    id="expectedCloseDate"
-                    value={expectedCloseDate}
-                    onChange={(e:any)=>{
-                     console.info('e.value:'+JSON.stringify(e.value));
-                     setexpectedCloseDate(e.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.currency")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="currency"
-                    value={currency}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setcurrency(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.salesValue")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="salesValue"
-                    value={salesValue}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setsalesValue(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.cost")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="cost"
-                    value={cost}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setcost(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-          <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("opportunity.remark")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputTextarea 
-                    id="remark"
-                    value={remark}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setremark(e.target.value);
-                    }}
-                    />
-                    </div>
-                </td>
-              </tr>
+              <InputText 
+                                id="opportunityName"
+                                value={opportunityName}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setopportunityName(e.target.value);
+                                }}
+                                />
 
-          <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.isactived")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={isactived} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIsactived(e.value);
-                }}  placeholder={t("opportunity.isactived")} />
-                </div>
-          </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.islocked")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={islocked} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIslocked(e.value);
-                }}  placeholder={t("opportunity.islocked")} />
-                </div> 
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.createdAt")}</label>
-                <div style={{height:10}}> </div>
-                <Calendar
-                  dateFormat="dd/mm/yy"
-                  id="createdAt"
-                  value={createAt}
-                  disabled={true}
-                  placeholder={t("opportunity.createdAtPlaceholder")}
-                  onChange={(e) => {
-                    if (e.value != null) {
-                    console.log('e.value' + e.value);
-                    setCreateAt(e.value);
-                    }
-                  }}
-                />
-               </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.updatedAt")}</label>
-                <div style={{height:10}}> </div>
-                <Calendar
-                  dateFormat="dd/mm/yy"
-                  id="updatedAt"
-                  value={updatedAt}
-                  disabled={true}
-                  placeholder={t("opportunity.updatedAtPlaceholder")}
-                  onChange={(e) => {
-                    if (e.value != null) {
-                      console.log('e.value' + e.value);
-                      setUpdatedAt(e.value);
-                    }
-                  }}
-                />
-                </div>
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.createUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={createUid} 
-                disabled={true}
-                options={FHUsers} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setCreateUid(e.value);
-                }}  placeholder={t("opportunity.createUid")} />
-              
-                </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={updatedUid} 
-                disabled={true}
-                options={FHUsers}
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setUpdatedUid(e.value);
-                }}  placeholder={t("opportunity.updatedUid")} />
-               </div>  
-          </td>
-          </tr>
+              </td>
+            </tr>
+            <tr>
+              <td>
 
-          <tr>
+              <label htmlFor="firstname1"  >{t("opportunity.account")}</label>
+
+              </td>
+              <td>
+              <table width="100%">
+                            <tr>
+                              <td width="75%">
+                                <InputText 
+                                id="account"
+                                value={account}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setaccount(e.target.value);
+                                }}
+                                />
+
+                              </td>
+                              <td width="25%">
+                                <Button 
+                                label={t('dataTable.Search')} 
+                                icon="pi pi-external-link" 
+                              
+                                style={{backgroundColor:'#4682B4'}}
+                                onClick={openDialog} 
+                                  /> 
+                              </td>
+                            </tr>
+                </table>   
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.opportunityOwner")}</label>
+              </td>
+              <td>
+              <Dropdown 
+                                  id="opportunityOwner"
+                                  value={opportunityOwner}
+                                  options={FHUsers} 
+                                  optionLabel="name" 
+                                  optionValue="code"
+                                  onChange={(e)=>{
+                                  console.info('e.value:'+JSON.stringify(e.value));
+                                  setopportunityOwner(e.value);
+                                  }}
+                                  />
+
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.expiryDate")}</label>
+
+              </td>
+              <td>
+              <Calendar 
+                                id="expiryDate"
+                                value={expiryDate}
+                                onChange={(e:any)=>{
+                                console.info('e.value:'+JSON.stringify(e.value));
+                                setexpiryDate(e.value);
+                                }}
+                                /> 
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.stageName")}</label>
+
+              </td>
+              <td>
+
+              <InputText 
+                                id="stageName"
+                                value={stageName}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setstageName(e.target.value);
+                                }}
+                                />
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+
+              <label htmlFor="firstname1"  >{t("opportunity.probability")}</label>
+
+              </td>
+              <td>
+
+              <InputText 
+                                id="probability"
+                                value={probability}
+
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setprobability(e.target.value);
+                                }}
+                                />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.stag")}</label>
+
+              </td>
+              <td>
+              <InputText 
+                                id="stag"
+                                value={stage}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setstage(e.target.value);
+                                }}
+                                />
+
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.priority")}</label>
+
+              </td>
+              <td>
+              <Dropdown 
+                                id="priority"
+                                value={priority}
+                                options={FHProbabilitysItems} 
+                                optionLabel="name" 
+                                optionValue="code"
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.value));
+                                setpriority(e.value);
+                                }}
+                                />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.dealAge")}</label>
+
+              </td>
+              <td>
+              <InputText 
+                                id="dealAge"
+                                value={dealAge}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setdealAge(e.target.value);
+                                }}
+                                />
+
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.closeProbability")}</label>
+
+              </td>
+              <td>
+              <InputText 
+                                id="closeProbability"
+                                value={closeProbability}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setcloseProbability(e.target.value);
+                                }}
+                                />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.forecastValue")}</label>
+              </td>
+              <td>
+              <InputText 
+                                id="forecastValue"
+                                value={forecastValue}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setforecastValue(e.target.value);
+                                }}
+                                />
+
+              </td>
+            </tr>
+            <tr>
+              <td> 
+                <label htmlFor="firstname1"  >{t("opportunity.expectedCloseDate")}</label></td>
+              <td>
+              <Calendar 
+                                id="expectedCloseDate"
+                                value={expectedCloseDate}
+                                onChange={(e:any)=>{
+                                console.info('e.value:'+JSON.stringify(e.value));
+                                setexpectedCloseDate(e.value);
+                                }}
+                                />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.currency")}</label>
+
+              </td>
+              <td>
+              <InputText 
+                                id="currency"
+                                value={currency}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setcurrency(e.target.value);
+                                }}
+                                />
+
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.salesValue")}</label>
+
+              </td>
+              <td>
+                                    <InputText 
+                                id="salesValue"
+                                value={salesValue}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setsalesValue(e.target.value);
+                                }}
+                                />
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.cost")}</label>
+              </td>
+              <td>
+              <InputText 
+                                id="cost"
+                                value={cost}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setcost(e.target.value);
+                                }}
+                                />
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.remark")}</label>
+
+              </td>
+              <td colSpan={3}>
+              <InputTextarea 
+                                id="remark"
+                                value={remark}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setremark(e.target.value);
+                                }}
+                                />
+
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.isactived")}</label>
+              </td>
+              <td>
+              <Dropdown 
+                            value={isactived} 
+                            disabled={true}
+                            options={fhitems} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                            console.info('e.value:'+JSON.stringify(e.value));
+                            setIsactived(e.value);
+                            }}  placeholder={t("opportunity.isactived")} />
+
+              </td>
+              <td>
+                <label htmlFor="firstname1"  >{t("opportunity.islocked")}</label>
+              </td>
+              <td>
+              <Dropdown 
+                            value={islocked} 
+                            disabled={true}
+                            options={fhitems} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                            console.info('e.value:'+JSON.stringify(e.value));
+                            setIslocked(e.value);
+                            }}  placeholder={t("opportunity.islocked")} />
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label htmlFor="firstname1"  >{t("opportunity.createdAt")}</label>
+              </td>
+              <td>
+              <Calendar
+                              dateFormat="dd/mm/yy"
+                              id="createdAt"
+                              value={createAt}
+                              disabled={true}
+                              placeholder={t("opportunity.createdAtPlaceholder")}
+                              onChange={(e) => {
+                                if (e.value != null) {
+                                console.log('e.value' + e.value);
+                                setCreateAt(e.value);
+                                }
+                              }}
+                            />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.updatedAt")}</label>
+              </td>
+              <td>
+
+              <Calendar
+                              dateFormat="dd/mm/yy"
+                              id="updatedAt"
+                              value={updatedAt}
+                              disabled={true}
+                              placeholder={t("opportunity.updatedAtPlaceholder")}
+                              onChange={(e) => {
+                                if (e.value != null) {
+                                  console.log('e.value' + e.value);
+                                  setUpdatedAt(e.value);
+                                }
+                              }}
+                            /> 
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.createUid")}</label>
+
+              </td>
+              <td>
+              <Dropdown 
+                            value={createUid} 
+                            disabled={true}
+                            options={FHUsers} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                            console.info('e.value:'+JSON.stringify(e.value));
+                            setCreateUid(e.value);
+                            }}  placeholder={t("opportunity.createUid")} />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.updatedUid")}</label>
+              </td>
+              <td>
+              <Dropdown 
+                            value={updatedUid} 
+                            disabled={true}
+                            options={FHUsers}
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                            console.info('e.value:'+JSON.stringify(e.value));
+                            setUpdatedUid(e.value);
+                            }}  placeholder={t("opportunity.updatedUid")} />
+              </td>
+            </tr>
+
+            <tr>
             <td colSpan={4}>
             <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
                     <TabPanel header="跟踪信息">
@@ -1552,15 +1560,16 @@ export const OpportunityItemEdit =({ Id, Mode }: OpportunityItemProps) => {
                 </TabView>
             </td>
           </tr>
+
           <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
+          <td colSpan={2}>
+                <div className="p-field p-col-12 p-md-6" >
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/opportunity");}} style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+         
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -1605,8 +1614,9 @@ export const OpportunityItemEdit =({ Id, Mode }: OpportunityItemProps) => {
                 </div>
           </td>
           </tr>
+
           </tbody>
-          </table>
+      </table>
       </div>
     </Card>
   );
@@ -1921,422 +1931,456 @@ export const OpportunityItemView =({ Id, Mode }: OpportunityItemProps) => {
           </Dialog>  
       <div className="p-fluid p-formgrid p-grid">
       
-      <table width="98%">
+
+
+<table width="98%">
       <thead>
       </thead>
-      <tbody>
-          <tr>
-          <td colSpan={4}> 
-            <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>
-          </td>
-          </tr>  
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.refNumber")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="refNumber"
-                    value={refNumber}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setrefNumber(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.opportunityName")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="opportunityName"
-                    value={opportunityName}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setopportunityName(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.account")}</label>
-                    <div style={{height:10}}> </div>
-               <table width="100%">
-                 <tr>
-                   <td width="75%">
-                    <InputText 
-                    id="account"
-                    value={account}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setaccount(e.target.value);
-                    }}
-                    />
+          <tbody>
 
-                   </td>
-                   <td width="25%">
-                    <Button 
-                    label={t('dataTable.Search')} 
-                    icon="pi pi-external-link" 
-                  
-                    style={{backgroundColor:'#4682B4'}}
-                    onClick={openDialog} 
-                      /> 
-                   </td>
-                 </tr>
-               </table>
+            <tr>
+              <td  colSpan={4}>
+              <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>    
+              </td>
+
+            </tr>           
+            <tr>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1"   >{t("opportunity.refNumber")}</label>  
+              </td>
+              <td style={{  width: '40%' }}>
+              <InputText 
+                                id="refNumber"
+                                disabled={true}
+                                value={refNumber}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setrefNumber(e.target.value);
+                                }}
+                                />
+
+              </td>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1"  >{t("opportunity.opportunityName")}</label>
 
 
-                    </div>
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("opportunity.opportunityOwner")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
-                      id="opportunityOwner"
-                      value={opportunityOwner}
-                      options={FHUsers} 
-                      optionLabel="name" 
-                      optionValue="code"
-                      onChange={(e)=>{
-                       console.info('e.value:'+JSON.stringify(e.value));
-                       setopportunityOwner(e.value);
-                      }}
-                      />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.expiryDate")}</label>
-                    <div style={{height:10}}> </div>
-                    <Calendar 
-                    id="expiryDate"
-                    value={expiryDate}
-                    onChange={(e:any)=>{
-                     console.info('e.value:'+JSON.stringify(e.value));
-                     setexpiryDate(e.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.stageName")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="stageName"
-                    value={stageName}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setstageName(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.probability")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="probability"
-                    value={probability}
+              <td style={{  width: '40%' }}>
 
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setprobability(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.stag")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="stag"
-                    value={stage}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setstage(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.priority")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
-                    id="priority"
-                    value={priority}
-                    options={FHProbabilitysItems} 
-                    optionLabel="name" 
-                    optionValue="code"
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.value));
-                     setpriority(e.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.dealAge")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="dealAge"
-                    value={dealAge}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setdealAge(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.closeProbability")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="closeProbability"
-                    value={closeProbability}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setcloseProbability(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.forecastValue")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="forecastValue"
-                    value={forecastValue}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setforecastValue(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.expectedCloseDate")}</label>
-                    <div style={{height:10}}> </div>
-                    <Calendar 
-                    id="expectedCloseDate"
-                    value={expectedCloseDate}
-                    onChange={(e:any)=>{
-                     console.info('e.value:'+JSON.stringify(e.value));
-                     setexpectedCloseDate(e.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.currency")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="currency"
-                    value={currency}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setcurrency(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("opportunity.salesValue")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="salesValue"
-                    value={salesValue}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setsalesValue(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("opportunity.cost")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="cost"
-                    value={cost}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setcost(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              </tr>
-          <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("opportunity.remark")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputTextarea 
-                    id="remark"
-                    value={remark}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setremark(e.target.value);
-                    }}
-                    />
-                    </div>
-                </td>
-              </tr>
+              <InputText 
+                                id="opportunityName"
+                                disabled={true}
+                                value={opportunityName}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setopportunityName(e.target.value);
+                                }}
+                                />
 
-          <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.isactived")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={isactived} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIsactived(e.value);
-                }}  placeholder={t("opportunity.isactived")} />
-                </div>
-          </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.islocked")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={islocked} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIslocked(e.value);
-                }}  placeholder={t("opportunity.islocked")} />
-                </div> 
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.createdAt")}</label>
-                <div style={{height:10}}> </div>
-                <Calendar
-                  dateFormat="dd/mm/yy"
-                  id="createdAt"
-                  value={createAt}
-                  disabled={true}
-                  placeholder={t("opportunity.createdAtPlaceholder")}
-                  onChange={(e) => {
-                    if (e.value != null) {
-                    console.log('e.value' + e.value);
-                    setCreateAt(e.value);
-                    }
-                  }}
-                />
-               </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.updatedAt")}</label>
-                <div style={{height:10}}> </div>
-                <Calendar
-                  dateFormat="dd/mm/yy"
-                  id="updatedAt"
-                  value={updatedAt}
-                  disabled={true}
-                  placeholder={t("opportunity.updatedAtPlaceholder")}
-                  onChange={(e) => {
-                    if (e.value != null) {
-                      console.log('e.value' + e.value);
-                      setUpdatedAt(e.value);
-                    }
-                  }}
-                />
-                </div>
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.createUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={createUid} 
-                disabled={true}
-                options={FHUsers} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setCreateUid(e.value);
-                }}  placeholder={t("opportunity.createUid")} />
-              
-                </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("opportunity.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={updatedUid} 
-                disabled={true}
-                options={FHUsers}
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setUpdatedUid(e.value);
-                }}  placeholder={t("opportunity.updatedUid")} />
-               </div>  
-          </td>
-          </tr>
-          <tr>
+              </td>
+            </tr>
+            <tr>
+              <td>
+
+              <label htmlFor="firstname1"  >{t("opportunity.account")}</label>
+
+              </td>
+              <td>
+              <table width="100%">
+                            <tr>
+                              <td width="75%">
+                                <InputText 
+                                id="account"
+                                disabled={true}
+                                value={account}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setaccount(e.target.value);
+                                }}
+                                />
+
+                              </td>
+                              <td width="25%">
+                                <Button 
+                                label={t('dataTable.Search')}
+                                disabled={true} 
+                                icon="pi pi-external-link" 
+                              
+                                style={{backgroundColor:'#4682B4'}}
+                                onClick={openDialog} 
+                                  /> 
+                              </td>
+                            </tr>
+                </table>   
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.opportunityOwner")}</label>
+              </td>
+              <td>
+              <Dropdown 
+                                  id="opportunityOwner"
+                                  value={opportunityOwner}
+                                  options={FHUsers} 
+                                  disabled={true}
+                                  optionLabel="name" 
+                                  optionValue="code"
+                                  onChange={(e)=>{
+                                  console.info('e.value:'+JSON.stringify(e.value));
+                                  setopportunityOwner(e.value);
+                                  }}
+                                  />
+
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.expiryDate")}</label>
+
+              </td>
+              <td>
+              <Calendar 
+                                id="expiryDate"
+                                value={expiryDate}
+                                disabled={true}
+                                onChange={(e:any)=>{
+                                console.info('e.value:'+JSON.stringify(e.value));
+                                setexpiryDate(e.value);
+                                }}
+                                /> 
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.stageName")}</label>
+
+              </td>
+              <td>
+
+              <InputText 
+                                id="stageName"
+                                value={stageName}
+                                disabled={true}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setstageName(e.target.value);
+                                }}
+                                />
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+
+              <label htmlFor="firstname1"  >{t("opportunity.probability")}</label>
+
+              </td>
+              <td>
+
+              <InputText 
+                                id="probability"
+                                value={probability}
+                                disabled={true}
+
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setprobability(e.target.value);
+                                }}
+                                />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.stag")}</label>
+
+              </td>
+              <td>
+              <InputText 
+                                id="stag"
+                                disabled={true}
+                                value={stage}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setstage(e.target.value);
+                                }}
+                                />
+
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.priority")}</label>
+
+              </td>
+              <td>
+              <Dropdown 
+                                id="priority"
+                                value={priority}
+                                disabled={true}
+                                options={FHProbabilitysItems} 
+                                optionLabel="name" 
+                                optionValue="code"
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.value));
+                                setpriority(e.value);
+                                }}
+                                />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.dealAge")}</label>
+
+              </td>
+              <td>
+              <InputText 
+                                id="dealAge"
+                                value={dealAge}
+                                disabled={true}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setdealAge(e.target.value);
+                                }}
+                                />
+
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.closeProbability")}</label>
+
+              </td>
+              <td>
+              <InputText 
+                                id="closeProbability"
+                                value={closeProbability}
+                                disabled={true}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setcloseProbability(e.target.value);
+                                }}
+                                />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.forecastValue")}</label>
+              </td>
+              <td>
+              <InputText 
+                                id="forecastValue"
+                                value={forecastValue}
+                                disabled={true}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setforecastValue(e.target.value);
+                                }}
+                                />
+
+              </td>
+            </tr>
+            <tr>
+              <td> 
+                <label htmlFor="firstname1"  >{t("opportunity.expectedCloseDate")}</label></td>
+              <td>
+              <Calendar 
+                                id="expectedCloseDate"
+                                value={expectedCloseDate}
+                                disabled={true}
+                                onChange={(e:any)=>{
+                                console.info('e.value:'+JSON.stringify(e.value));
+                                setexpectedCloseDate(e.value);
+                                }}
+                                />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.currency")}</label>
+
+              </td>
+              <td>
+              <InputText 
+                                id="currency"
+                                value={currency}
+                                disabled={true}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setcurrency(e.target.value);
+                                }}
+                                />
+
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.salesValue")}</label>
+
+              </td>
+              <td>
+                                    <InputText 
+                                id="salesValue"
+                                value={salesValue}
+                                disabled={true}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setsalesValue(e.target.value);
+                                }}
+                                />
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.cost")}</label>
+              </td>
+              <td>
+              <InputText 
+                                id="cost"
+                                value={cost}
+                                disabled={true}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setcost(e.target.value);
+                                }}
+                                />
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.remark")}</label>
+
+              </td>
+              <td colSpan={3}>
+              <InputTextarea 
+                                id="remark"
+                                value={remark}
+                                disabled={true}
+                                onChange={(e)=>{
+                                console.info('e.value:'+JSON.stringify(e.target.value));
+                                setremark(e.target.value);
+                                }}
+                                />
+
+
+              </td>
+
+            </tr>
+
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.isactived")}</label>
+              </td>
+              <td>
+              <Dropdown 
+                            value={isactived} 
+                            disabled={true}
+                            options={fhitems} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                            console.info('e.value:'+JSON.stringify(e.value));
+                            setIsactived(e.value);
+                            }}  placeholder={t("opportunity.isactived")} />
+
+              </td>
+              <td>
+                <label htmlFor="firstname1"  >{t("opportunity.islocked")}</label>
+              </td>
+              <td>
+              <Dropdown 
+                            value={islocked} 
+                            disabled={true}
+                            options={fhitems} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                            console.info('e.value:'+JSON.stringify(e.value));
+                            setIslocked(e.value);
+                            }}  placeholder={t("opportunity.islocked")} />
+
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label htmlFor="firstname1"  >{t("opportunity.createdAt")}</label>
+              </td>
+              <td>
+              <Calendar
+                              dateFormat="dd/mm/yy"
+                              id="createdAt"
+                              value={createAt}
+                              disabled={true}
+                              placeholder={t("opportunity.createdAtPlaceholder")}
+                              onChange={(e) => {
+                                if (e.value != null) {
+                                console.log('e.value' + e.value);
+                                setCreateAt(e.value);
+                                }
+                              }}
+                            />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.updatedAt")}</label>
+              </td>
+              <td>
+
+              <Calendar
+                              dateFormat="dd/mm/yy"
+                              id="updatedAt"
+                              value={updatedAt}
+                              disabled={true}
+                              placeholder={t("opportunity.updatedAtPlaceholder")}
+                              onChange={(e) => {
+                                if (e.value != null) {
+                                  console.log('e.value' + e.value);
+                                  setUpdatedAt(e.value);
+                                }
+                              }}
+                            /> 
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.createUid")}</label>
+
+              </td>
+              <td>
+              <Dropdown 
+                            value={createUid} 
+                            disabled={true}
+                            options={FHUsers} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                            console.info('e.value:'+JSON.stringify(e.value));
+                            setCreateUid(e.value);
+                            }}  placeholder={t("opportunity.createUid")} />
+
+              </td>
+              <td>
+              <label htmlFor="firstname1"  >{t("opportunity.updatedUid")}</label>
+              </td>
+              <td>
+              <Dropdown 
+                            value={updatedUid} 
+                            disabled={true}
+                            options={FHUsers}
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                            console.info('e.value:'+JSON.stringify(e.value));
+                            setUpdatedUid(e.value);
+                            }}  placeholder={t("opportunity.updatedUid")} />
+              </td>
+            </tr>
+
+            <tr>
             <td colSpan={4}>
-             <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
+            <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
                     <TabPanel header="跟踪信息">
-                    <OpportunityCommentsList mid={Id} /> 
+                    <OpportunityCommentsListShow mid={Id} 
+                      FHonChange={(e:any) => {
+                      setVal(e);
+                    }}                   
+                    
+                    /> 
                     </TabPanel>
                    
                 </TabView>
@@ -2344,17 +2388,17 @@ export const OpportunityItemView =({ Id, Mode }: OpportunityItemProps) => {
           </tr>
 
           <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
+          <td colSpan={2}>
+                <div className="p-field p-col-12 p-md-6" >
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/opportunity");}}  style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/opportunity");}} style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+         
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                  <Button
+                <Button
                     label="确认"
                     onClick={(e) => {replace("/opportunity");}}
                     style={{backgroundColor:'#4682B4'}}
@@ -2362,8 +2406,9 @@ export const OpportunityItemView =({ Id, Mode }: OpportunityItemProps) => {
                 </div>
           </td>
           </tr>
+
           </tbody>
-          </table>
+      </table>       
       </div>
     </Card>
   );

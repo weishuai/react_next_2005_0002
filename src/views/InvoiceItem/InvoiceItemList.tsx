@@ -7,7 +7,7 @@ import {Column} from 'primereact/column';
 import {InvoiceItemController} from '../../controllers/InvoiceItemController';
 import {Button} from 'primereact/button';
 import { globalStorage } from '../../utils/Globalstorage';
-import {MyDataTable} from '../../components/myDataTable/DataTable';
+import {MyDataTable} from '../../components/myDataTable/FHDataTable';
 const { nanoid } = require('nanoid');
 export const InvoiceItemList = (props: any) => {
     const { t, i18n } = useTranslation();
@@ -84,10 +84,11 @@ export const InvoiceItemList = (props: any) => {
                 }
                 replace("/invoicedetails/"+Mainid+"/1");
                 }}   />
-            <span style={{width:100}}></span>
+                  <span style={{width:650}}></span>
+            {/* <span style={{width:100}}></span>
             <Button label={t('dataTable.Import')} icon="pi pi-sign-in"  style={{backgroundColor:'#4682B4'}} />
             <Button label={t('dataTable.Export')} icon="pi pi-sign-out"  style={{backgroundColor:'#4682B4'}} />
-            <Button label={t('dataTable.Report')} icon="pi pi-file-pdf" /> 
+            <Button label={t('dataTable.Report')} icon="pi pi-file-pdf" />  */}
                    
         </span>
         <hr></hr>

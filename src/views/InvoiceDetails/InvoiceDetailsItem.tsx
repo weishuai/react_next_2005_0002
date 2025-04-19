@@ -392,10 +392,11 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
           </tr>
 
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.ref_number")}</label>
-                    <div style={{height:10}}> </div>
+          <td width="10%">
+          <label htmlFor="firstname1">{t("invoiceDetails.ref_number")}</label>
+          </td>
+              <td  width="40%">
+                
                     <InputText 
                     id="ref_number"
                     value={ref_number}
@@ -404,15 +405,13 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setref_number(e.target.value);
                     }}
                     />
-                    </div>
+                 
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.linked_uotation")}</label>
-                      <div style={{height:10}}> </div>
-           
-
+              <td width="10%">
+              <label htmlFor="firstname1">{t("invoiceDetails.linked_uotation")}</label>
+              </td>
+          <td width="40%" >
+      
                   <table width="100%">
                   <tr>
                    <td width="75%">
@@ -440,17 +439,14 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                    </td>
                  </tr>
                </table>
-
-
-
-                      </div>
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.invoice_number")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.invoice_number")}</label>
+          </td>
+              <td  >
+
                     <InputText  
                     id="invoice_number"
                     value={invoice_number}
@@ -459,13 +455,13 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setinvoice_number(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.invoice_status")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.invoice_status")}</label>
+              </td>
+              <td  >
+
                       <Dropdown 
                       id="invoice_status"
                       value={invoice_status}
@@ -477,14 +473,15 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                        setinvoice_status(e.value);
                       }}
                       />
-                      </div>
+             
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.invoice_name")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.invoice_name")}</label>
+          </td>
+              <td >
+              
                     <InputText 
                     id="invoice_name"
                     value={invoice_name}
@@ -493,13 +490,11 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setinvoice_name(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.account")}</label>
-                      <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.account")}</label></td>
+          <td  >
+    
                       <Dropdown 
                       id="account"
                       value={account}
@@ -511,14 +506,15 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                        setaccount(e.value);
                       }}
                       />
-                      </div>
+               
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.sales_person")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.sales_person")}</label>
+          </td>
+              <td >
+     
                     <Dropdown 
                     id="sales_person"
                     value={sales_person}
@@ -530,13 +526,13 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setsales_person(e.value);
                     }}
                     />
-                    </div>
+               
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.client_contact")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("invoiceDetails.client_contact")}</label>
+              </td>
+          <td >
+          
                       <Dropdown 
                       id="client_contact"
                       value={client_contact}
@@ -548,14 +544,15 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                        setclient_contact(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.client_po_number")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.client_po_number")}</label>
+          </td>
+              <td  >
+          
                     <InputText 
                     id="client_po_number"
                     value={client_po_number}
@@ -564,13 +561,11 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setclient_po_number(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.currency")}</label>
-                      <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.currency")}</label></td>
+          <td >
+                
                       <Dropdown 
                       id="currency"
                       value={currency}
@@ -582,14 +577,17 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                        setcurrency(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.tax")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.tax")}</label>
+          </td>
+              <td >
+                  
+                   
+                  
                     <Dropdown 
                     id="tax"
                     value={tax}
@@ -601,13 +599,13 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      settax(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.invoice_date")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.invoice_date")}</label>
+              </td>
+          <td  >
+                     
                       <Calendar 
                       id="invoice_date"
                       value={invoice_date}
@@ -616,14 +614,17 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                        setinvoice_date(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.due_date")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.due_date")}</label>
+          </td>
+              <td >
+                  
+                   
+                  
                     <Calendar 
                     id="due_date"
                     value={due_date}
@@ -632,13 +633,11 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setdue_date(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.over_date")}</label>
-                      <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.over_date")}</label></td>
+          <td >
+                
                       <InputNumber 
                       showButtons
                       id="over_date"
@@ -648,14 +647,15 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                        setover_date(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.is_alert")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.is_alert")}</label>
+          </td>
+              <td >
+               
                     <Dropdown 
                     id="is_alert"
                     value={is_alert}
@@ -667,13 +667,13 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setis_alert(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.total_amount")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.total_amount")}</label>
+              </td>
+          <td >
+              
                       <InputNumber 
                       id="total_amount"
                       
@@ -683,14 +683,15 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                        settotal_amount(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.paid_amount")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.paid_amount")}</label>
+          </td>
+              <td >
+            
                     <InputNumber 
                     showButtons
                     id="paid_amount"
@@ -700,13 +701,13 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setpaid_amount(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.outstanding_amount")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("invoiceDetails.outstanding_amount")}</label>
+              </td>
+          <td  >
+                  
                       <InputNumber 
                       id="outstanding_amount"
                       showButtons
@@ -716,14 +717,15 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                        setoutstanding_amount(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.tech_name")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.tech_name")}</label>
+          </td>
+              <td  >
+                    
                     <InputText 
                     id="tech_name"
                     value={tech_name}
@@ -732,13 +734,13 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      settech_name(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("invoiceDetails.tracking_no")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.tracking_no")}</label>
+              </td>
+          <td >
+                  
                     <InputText 
                     id="tracking_no"
                     value={tracking_no}
@@ -747,14 +749,15 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      settracking_no(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.additional_field3")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.additional_field3")}</label>
+          </td>
+              <td>
+                
                     <InputText 
                     id="additional_field3"
                     value={additional_field3}
@@ -763,13 +766,11 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setadditional_field3(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("invoiceDetails.additional_field4")}</label>
-                    <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.additional_field4")}</label></td>
+          <td >
+                 
                     <InputText 
                     id="additional_field4"
                     value={additional_field4}
@@ -778,14 +779,16 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setadditional_field4(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("invoiceDetails.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.remark")}</label>
+            <div style={{height:10}}> </div>
+            </td>
+                <td colSpan={3}>
+                    
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -794,15 +797,16 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                   
                 </td>
               </tr>
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.isactived")}</label>
+            </td>
+          <td  >
+       
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -813,13 +817,11 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("invoiceDetails.isactived")} />
-                </div>
+               
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td >  <label htmlFor="firstname1">{t("invoiceDetails.islocked")}</label></td> 
+          <td  >
+             
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -830,14 +832,15 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("invoiceDetails.islocked")} />
-                </div> 
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.createdAt")}</label>
-                <div style={{height:10}}> </div>
+             
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -851,13 +854,11 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
+          <td > <label htmlFor="firstname1">{t("invoiceDetails.updatedAt")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+         
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -871,14 +872,15 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                     }
                   }}
                 />
-                </div>
+              
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.createUid")}</label>
-                <div style={{height:10}}> </div>
+              
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -890,13 +892,13 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("invoiceDetails.createUid")} />
               
-                </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("invoiceDetails.updatedUid")}</label>
+          </td>
+          <td >
+               
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -907,7 +909,7 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("invoiceDetails.updatedUid")} />
-               </div>  
+               
           </td>
           </tr>
 
@@ -928,14 +930,14 @@ export const InvoiceDetailsItemAdd =({ Id, Mode }: InvoiceDetailsItemProps) => {
 
 
           <tr>
-          <td >
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/invoicedetails");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+          
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -1423,10 +1425,11 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
           </tr>
 
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.ref_number")}</label>
-                    <div style={{height:10}}> </div>
+          <td width="10%">
+          <label htmlFor="firstname1">{t("invoiceDetails.ref_number")}</label>
+          </td>
+              <td width="40%">
+                
                     <InputText 
                     id="ref_number"
                     value={ref_number}
@@ -1435,15 +1438,13 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setref_number(e.target.value);
                     }}
                     />
-                    </div>
+                 
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.linked_uotation")}</label>
-                      <div style={{height:10}}> </div>
-           
-
+              <td width="10%">
+              <label htmlFor="firstname1">{t("invoiceDetails.linked_uotation")}</label>
+              </td>
+          <td  width="40%">
+      
                   <table width="100%">
                   <tr>
                    <td width="75%">
@@ -1471,17 +1472,14 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                    </td>
                  </tr>
                </table>
-
-
-
-                      </div>
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.invoice_number")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.invoice_number")}</label>
+          </td>
+              <td  >
+
                     <InputText  
                     id="invoice_number"
                     value={invoice_number}
@@ -1490,13 +1488,13 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setinvoice_number(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.invoice_status")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.invoice_status")}</label>
+              </td>
+              <td  >
+
                       <Dropdown 
                       id="invoice_status"
                       value={invoice_status}
@@ -1508,14 +1506,15 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setinvoice_status(e.value);
                       }}
                       />
-                      </div>
+             
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.invoice_name")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.invoice_name")}</label>
+          </td>
+              <td >
+              
                     <InputText 
                     id="invoice_name"
                     value={invoice_name}
@@ -1524,13 +1523,11 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setinvoice_name(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.account")}</label>
-                      <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.account")}</label></td>
+          <td  >
+    
                       <Dropdown 
                       id="account"
                       value={account}
@@ -1542,14 +1539,15 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setaccount(e.value);
                       }}
                       />
-                      </div>
+               
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.sales_person")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.sales_person")}</label>
+          </td>
+              <td >
+     
                     <Dropdown 
                     id="sales_person"
                     value={sales_person}
@@ -1561,13 +1559,13 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setsales_person(e.value);
                     }}
                     />
-                    </div>
+               
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.client_contact")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("invoiceDetails.client_contact")}</label>
+              </td>
+          <td >
+          
                       <Dropdown 
                       id="client_contact"
                       value={client_contact}
@@ -1579,14 +1577,15 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setclient_contact(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.client_po_number")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.client_po_number")}</label>
+          </td>
+              <td  >
+          
                     <InputText 
                     id="client_po_number"
                     value={client_po_number}
@@ -1595,13 +1594,11 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setclient_po_number(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.currency")}</label>
-                      <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.currency")}</label></td>
+          <td >
+                
                       <Dropdown 
                       id="currency"
                       value={currency}
@@ -1613,14 +1610,17 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setcurrency(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.tax")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.tax")}</label>
+          </td>
+              <td >
+                  
+                   
+                  
                     <Dropdown 
                     id="tax"
                     value={tax}
@@ -1632,13 +1632,13 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      settax(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.invoice_date")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.invoice_date")}</label>
+              </td>
+          <td  >
+                     
                       <Calendar 
                       id="invoice_date"
                       value={invoice_date}
@@ -1647,14 +1647,17 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setinvoice_date(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.due_date")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.due_date")}</label>
+          </td>
+              <td >
+                  
+                   
+                  
                     <Calendar 
                     id="due_date"
                     value={due_date}
@@ -1663,14 +1666,13 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setdue_date(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.over_date")}</label>
-                      <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.over_date")}</label></td>
+          <td >
+                
                       <InputNumber 
+                      showButtons
                       id="over_date"
                       value={over_date}
                       onChange={(e:any)=>{
@@ -1678,14 +1680,15 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setover_date(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.is_alert")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.is_alert")}</label>
+          </td>
+              <td >
+               
                     <Dropdown 
                     id="is_alert"
                     value={is_alert}
@@ -1697,46 +1700,47 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setis_alert(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.total_amount")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.total_amount")}</label>
+              </td>
+          <td >
+              
                       <InputNumber 
                       id="total_amount"
-                     
+                      
                       value={total_amount}
                       onChange={(e:any)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        settotal_amount(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.paid_amount")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.paid_amount")}</label>
+          </td>
+              <td >
+            
                     <InputNumber 
-                    id="paid_amount"
                     showButtons
+                    id="paid_amount"
                     value={paid_amount}
                     onChange={(e:any)=>{
                      console.info('e.value:'+JSON.stringify(e.value));
                      setpaid_amount(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.outstanding_amount")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("invoiceDetails.outstanding_amount")}</label>
+              </td>
+          <td  >
+                  
                       <InputNumber 
                       id="outstanding_amount"
                       showButtons
@@ -1746,14 +1750,15 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setoutstanding_amount(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.tech_name")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.tech_name")}</label>
+          </td>
+              <td  >
+                    
                     <InputText 
                     id="tech_name"
                     value={tech_name}
@@ -1762,13 +1767,13 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      settech_name(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("invoiceDetails.tracking_no")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.tracking_no")}</label>
+              </td>
+          <td >
+                  
                     <InputText 
                     id="tracking_no"
                     value={tracking_no}
@@ -1777,14 +1782,15 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      settracking_no(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.additional_field3")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.additional_field3")}</label>
+          </td>
+              <td>
+                
                     <InputText 
                     id="additional_field3"
                     value={additional_field3}
@@ -1793,13 +1799,11 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setadditional_field3(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("invoiceDetails.additional_field4")}</label>
-                    <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.additional_field4")}</label></td>
+          <td >
+                 
                     <InputText 
                     id="additional_field4"
                     value={additional_field4}
@@ -1808,14 +1812,16 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setadditional_field4(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("invoiceDetails.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.remark")}</label>
+            <div style={{height:10}}> </div>
+            </td>
+                <td colSpan={3}>
+                    
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -1824,15 +1830,16 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                   
                 </td>
               </tr>
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.isactived")}</label>
+            </td>
+          <td  >
+       
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -1843,13 +1850,11 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("invoiceDetails.isactived")} />
-                </div>
+               
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td >  <label htmlFor="firstname1">{t("invoiceDetails.islocked")}</label></td> 
+          <td  >
+             
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -1860,14 +1865,15 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("invoiceDetails.islocked")} />
-                </div> 
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.createdAt")}</label>
-                <div style={{height:10}}> </div>
+             
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -1881,13 +1887,11 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
+          <td > <label htmlFor="firstname1">{t("invoiceDetails.updatedAt")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+         
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -1901,14 +1905,15 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                     }
                   }}
                 />
-                </div>
+              
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.createUid")}</label>
-                <div style={{height:10}}> </div>
+              
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -1920,13 +1925,13 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                  setCreateUid(e.value);
                 }}  placeholder={t("invoiceDetails.createUid")} />
               
-                </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("invoiceDetails.updatedUid")}</label>
+          </td>
+          <td >
+               
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -1937,91 +1942,83 @@ export const InvoiceDetailsItemEdit =({ Id, Mode }: InvoiceDetailsItemProps) => 
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("invoiceDetails.updatedUid")} />
-               </div>  
+               
           </td>
           </tr>
+
           <tr>
             <td colSpan={4}>
              
               <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
                     <TabPanel header="支付信息">
-                    <InvoiceItemList mid={FHid}                 
-                     FHonChange={(e:any) => {
-                      setVal(e);
-                    }}/> 
+                    <InvoiceItemList mid={FHid} /> 
                     </TabPanel>
                     <TabPanel header="产品信息">
-                    <InvoicePaymentList mid={FHid}                      
-                    FHonChange={(e:any) => {
-                      setVal(e);
-                    }}/>  
+                    <InvoicePaymentList mid={FHid} /> 
                     </TabPanel>            
                 </TabView>
              
             </td>
           </tr>
+
+
           <tr>
-          <td >
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/invoicedetails");}} style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/invoicedetails");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+          
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
                     label="提交"
-                    onClick={(e) => { 
-                      const fhnew=new Date();
-                      const userID=globalStorage.get("userID");
-                      console.log('userID:'+userID);
-                      ctlInvoiceDetails.updateInvoiceDetailsv2({
-                        id:FHid,
-                        name:name,
-                        description:description,
-                         isactived:"0",
-                        islocked:islocked,
-                        createdAt:createAt,
-                        updatedAt:fhnew,
-                        createUid:createUid,
-                        updatedUid:updatedUid,
-                        refNumber:ref_number,
-                        linkedUotation:linked_uotation,
-                        invoiceNumber:invoice_number,
-                        invoiceStatus:invoice_status,
-                        invoiceName:invoice_name,
-                        account:account,
-                        salesPerson:sales_person,
-                        clientContact:client_contact,
-                        clientPoNumber:client_po_number,
-                        currency:currency,
-                        tax:tax,
-                        invoiceDate:invoice_date,
-                        dueDate:due_date,
-                        overDate:over_date,
-                        isAlert:is_alert,
-                        totalAmount:total_amount,
-                        paidAmount:paid_amount,
-                        outstandingAmount:outstanding_amount,
-                        techName:tech_name,
-                        trackingNo:tracking_no,
-                        additionalField3:additional_field3,
-                        additionalField4:additional_field4,
-                        remark:remark,                   
-                      },Id,userID);
 
-                     
-                      console.log("重大发现:"); 
-                      // const temp =globalStorage.get("temp");
-                      // console.log(temp);  
-                      // const temps =globalStorage.get("temps");
-                      // console.log(temps); 
-                      // globalStorage.set("temps",null);
-                      //replace("/invoicedetails/"+Id+"/1");
-                      const mynanoid: string = nanoid();
-                      setVal(mynanoid);
+                      onClick={(e) => { 
+                        const fhnew=new Date();
+                        const userID=globalStorage.get("userID");
+                        console.log('userID:'+userID);
+                        ctlInvoiceDetails.updateInvoiceDetailsv2({
+                          id:FHid,
+                          name:name,
+                          description:description,
+                          isactived:"0",
+                          islocked:islocked,
+                          createdAt:createAt,
+                          updatedAt:fhnew,
+                          createUid:createUid,
+                          updatedUid:updatedUid,
+                          refNumber:ref_number,
+                          linkedUotation:linked_uotation,
+                          invoiceNumber:invoice_number,
+                          invoiceStatus:invoice_status,
+                          invoiceName:invoice_name,
+                          account:account,
+                          salesPerson:sales_person,
+                          clientContact:client_contact,
+                          clientPoNumber:client_po_number,
+                          currency:currency,
+                          tax:tax,
+                          invoiceDate:invoice_date,
+                          dueDate:due_date,
+                          overDate:over_date,
+                          isAlert:is_alert,
+                          totalAmount:total_amount,
+                          paidAmount:paid_amount,
+                          outstandingAmount:outstanding_amount,
+                          techName:tech_name,
+                          trackingNo:tracking_no,
+                          additionalField3:additional_field3,
+                          additionalField4:additional_field4,
+                          remark:remark,                   
+                        },Id,userID);
+
+                      console.log("temps_list");
+
+
+                      replace("/invoicedetails");
                     }}
                     style={{backgroundColor:'#4682B4'}}
                   />
@@ -2380,7 +2377,6 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
 
 
       <div className="p-fluid p-formgrid p-grid">
-      
       <table width="98%">
       <thead>
       </thead>
@@ -2392,10 +2388,11 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
           </tr>
 
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.ref_number")}</label>
-                    <div style={{height:10}}> </div>
+          <td width="10%">
+          <label htmlFor="firstname1">{t("invoiceDetails.ref_number")}</label>
+          </td>
+              <td width="40%">
+                
                     <InputText 
                     id="ref_number"
                     value={ref_number}
@@ -2404,15 +2401,13 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setref_number(e.target.value);
                     }}
                     />
-                    </div>
+                 
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.linked_uotation")}</label>
-                      <div style={{height:10}}> </div>
-           
-
+              <td width="10%">
+              <label htmlFor="firstname1">{t("invoiceDetails.linked_uotation")}</label>
+              </td>
+          <td  width="40%">
+      
                   <table width="100%">
                   <tr>
                    <td width="75%">
@@ -2440,17 +2435,14 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                    </td>
                  </tr>
                </table>
-
-
-
-                      </div>
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.invoice_number")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.invoice_number")}</label>
+          </td>
+              <td  >
+
                     <InputText  
                     id="invoice_number"
                     value={invoice_number}
@@ -2459,13 +2451,13 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setinvoice_number(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.invoice_status")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.invoice_status")}</label>
+              </td>
+              <td  >
+
                       <Dropdown 
                       id="invoice_status"
                       value={invoice_status}
@@ -2477,14 +2469,15 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setinvoice_status(e.value);
                       }}
                       />
-                      </div>
+             
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.invoice_name")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.invoice_name")}</label>
+          </td>
+              <td >
+              
                     <InputText 
                     id="invoice_name"
                     value={invoice_name}
@@ -2493,13 +2486,11 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setinvoice_name(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.account")}</label>
-                      <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.account")}</label></td>
+          <td  >
+    
                       <Dropdown 
                       id="account"
                       value={account}
@@ -2511,14 +2502,15 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setaccount(e.value);
                       }}
                       />
-                      </div>
+               
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.sales_person")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.sales_person")}</label>
+          </td>
+              <td >
+     
                     <Dropdown 
                     id="sales_person"
                     value={sales_person}
@@ -2530,13 +2522,13 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setsales_person(e.value);
                     }}
                     />
-                    </div>
+               
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.client_contact")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("invoiceDetails.client_contact")}</label>
+              </td>
+          <td >
+          
                       <Dropdown 
                       id="client_contact"
                       value={client_contact}
@@ -2548,14 +2540,15 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setclient_contact(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.client_po_number")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.client_po_number")}</label>
+          </td>
+              <td  >
+          
                     <InputText 
                     id="client_po_number"
                     value={client_po_number}
@@ -2564,13 +2557,11 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setclient_po_number(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.currency")}</label>
-                      <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.currency")}</label></td>
+          <td >
+                
                       <Dropdown 
                       id="currency"
                       value={currency}
@@ -2582,14 +2573,17 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setcurrency(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.tax")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.tax")}</label>
+          </td>
+              <td >
+                  
+                   
+                  
                     <Dropdown 
                     id="tax"
                     value={tax}
@@ -2601,13 +2595,13 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      settax(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.invoice_date")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.invoice_date")}</label>
+              </td>
+          <td  >
+                     
                       <Calendar 
                       id="invoice_date"
                       value={invoice_date}
@@ -2616,14 +2610,17 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setinvoice_date(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.due_date")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.due_date")}</label>
+          </td>
+              <td >
+                  
+                   
+                  
                     <Calendar 
                     id="due_date"
                     value={due_date}
@@ -2632,33 +2629,31 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setdue_date(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.over_date")}</label>
-                      <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.over_date")}</label></td>
+          <td >
+                
                       <InputNumber 
-                      id="over_date"
                       showButtons
+                      id="over_date"
                       value={over_date}
                       onChange={(e:any)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setover_date(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.is_alert")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.is_alert")}</label>
+          </td>
+              <td >
+               
                     <Dropdown 
                     id="is_alert"
-                    
                     value={is_alert}
                     options={fhitems} 
                     optionLabel="name" 
@@ -2668,46 +2663,47 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setis_alert(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.total_amount")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.total_amount")}</label>
+              </td>
+          <td >
+              
                       <InputNumber 
                       id="total_amount"
-                     
+                      
                       value={total_amount}
                       onChange={(e:any)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        settotal_amount(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.paid_amount")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.paid_amount")}</label>
+          </td>
+              <td >
+            
                     <InputNumber 
-                    id="paid_amount"
                     showButtons
+                    id="paid_amount"
                     value={paid_amount}
                     onChange={(e:any)=>{
                      console.info('e.value:'+JSON.stringify(e.value));
                      setpaid_amount(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("invoiceDetails.outstanding_amount")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("invoiceDetails.outstanding_amount")}</label>
+              </td>
+          <td  >
+                  
                       <InputNumber 
                       id="outstanding_amount"
                       showButtons
@@ -2717,14 +2713,15 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                        setoutstanding_amount(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.tech_name")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.tech_name")}</label>
+          </td>
+              <td  >
+                    
                     <InputText 
                     id="tech_name"
                     value={tech_name}
@@ -2733,13 +2730,13 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      settech_name(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("invoiceDetails.tracking_no")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("invoiceDetails.tracking_no")}</label>
+              </td>
+          <td >
+                  
                     <InputText 
                     id="tracking_no"
                     value={tracking_no}
@@ -2748,14 +2745,15 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      settracking_no(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("invoiceDetails.additional_field3")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("invoiceDetails.additional_field3")}</label>
+          </td>
+              <td>
+                
                     <InputText 
                     id="additional_field3"
                     value={additional_field3}
@@ -2764,13 +2762,11 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setadditional_field3(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("invoiceDetails.additional_field4")}</label>
-                    <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("invoiceDetails.additional_field4")}</label></td>
+          <td >
+                 
                     <InputText 
                     id="additional_field4"
                     value={additional_field4}
@@ -2779,14 +2775,16 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setadditional_field4(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("invoiceDetails.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.remark")}</label>
+            <div style={{height:10}}> </div>
+            </td>
+                <td colSpan={3}>
+                    
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -2795,15 +2793,16 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                   
                 </td>
               </tr>
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.isactived")}</label>
+            </td>
+          <td  >
+       
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -2814,13 +2813,11 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("invoiceDetails.isactived")} />
-                </div>
+               
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td >  <label htmlFor="firstname1">{t("invoiceDetails.islocked")}</label></td> 
+          <td  >
+             
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -2831,14 +2828,15 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("invoiceDetails.islocked")} />
-                </div> 
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.createdAt")}</label>
-                <div style={{height:10}}> </div>
+             
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -2852,13 +2850,11 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
+          <td > <label htmlFor="firstname1">{t("invoiceDetails.updatedAt")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+         
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -2872,14 +2868,15 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                     }
                   }}
                 />
-                </div>
+              
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("invoiceDetails.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.createUid")}</label>
-                <div style={{height:10}}> </div>
+              
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -2891,13 +2888,13 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                  setCreateUid(e.value);
                 }}  placeholder={t("invoiceDetails.createUid")} />
               
-                </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("invoiceDetails.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("invoiceDetails.updatedUid")}</label>
+          </td>
+          <td >
+               
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -2908,7 +2905,7 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("invoiceDetails.updatedUid")} />
-               </div>  
+               
           </td>
           </tr>
 
@@ -2927,18 +2924,19 @@ export const InvoiceDetailsItemView =({ Id, Mode }: InvoiceDetailsItemProps) => 
             </td>
           </tr>
 
+
           <tr>
-          <td >
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/invoicedetails");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+          
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                  <Button
+                <Button
                     label="确认"
                     onClick={(e) => {
                       //replace("/invoicedetails/"+Id+"/0");

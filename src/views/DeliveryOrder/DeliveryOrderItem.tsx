@@ -186,10 +186,9 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
           </tr>
 
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.refNumber")}</label>
-                    <div style={{height:10}}> </div>
+         <td  width="10%"><label htmlFor="firstname1">{t("deliveryOrder.refNumber")}</label></td>
+              <td  width="40%">
+                    
                     <InputText 
                     id="refNumber"
                     value={refNumber}
@@ -198,13 +197,13 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setrefNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.linkedInvoice")}</label>
-                      <div style={{height:10}}> </div>
+              <td width="10%">
+              <label htmlFor="firstname1">{t("deliveryOrder.linkedInvoice")}</label>
+              </td>
+              <td  width="40%">
+                   
                       <Dropdown 
                       id="linkedInvoice"
                       value={linkedInvoice}
@@ -216,14 +215,15 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                        setlinkedInvoice(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.deliveryName")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.deliveryName")}</label>
+          </td>
+              <td  >
+           
                     <InputText 
                     id="deliveryName"
                     value={deliveryName}
@@ -232,13 +232,13 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setdeliveryName(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.clientCompany")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.clientCompany")}</label>
+              </td>
+          <td  >
+         
                       <Dropdown 
                       id="clientCompany"
                       value={clientCompany}
@@ -252,14 +252,15 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                        setclientCompany(e.value);
                       }}
                       />
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.deliveryDate")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.deliveryDate")}</label>
+          </td>
+              <td >
+                
                     <Calendar 
                     id="deliveryDate"
                     value={deliveryDate}
@@ -268,13 +269,13 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setdeliveryDate(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.clientContact")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.clientContact")}</label>
+              </td>
+          <td >
+                   
                       <Dropdown 
                       id="clientContact"
                       value={clientContact}
@@ -286,14 +287,15 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                        setclientContact(e.value);
                       }}
                       />
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.creator")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.creator")}</label>
+          </td>
+              <td>
+                    
                     <Dropdown 
                     id="creator"
                     value={creator}
@@ -305,13 +307,13 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setcreator(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("deliveryOrder.postCode")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.postCode")}</label>
+              </td>
+          <td >
+                   
                     <InputText 
                     id="postCode"
                     value={postCode}
@@ -320,14 +322,15 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.street")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.street")}</label>
+          </td>
+              <td >
+   
                     <InputText 
                     id="street"
                     value={street}
@@ -336,13 +339,13 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setstreet(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("deliveryOrder.city")}</label>
-                    <div style={{height:10}}> </div>
+              <td>   <label htmlFor="firstname1">{t("deliveryOrder.city")}</label></td>
+          <td>
+                   
+                  
+                   
                     <InputText 
                     id="city"
                     value={city}
@@ -351,14 +354,15 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.state")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.state")}</label>
+          </td>
+              <td >
+                  
                     <InputText 
                     id="state"
                     value={state}
@@ -367,13 +371,13 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setstate(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.country")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.country")}</label>
+              </td>
+          <td >
+                 
                       <Dropdown 
                       id="country"
                       options={Countrys} 
@@ -385,14 +389,17 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                        setcountry(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("deliveryOrder.termsConditions")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.termsConditions")}</label>
+            </td>
+                <td colSpan={3}>
+                   
+                    
+                  
                     <InputTextarea 
                     id="termsConditions"
                     value={termsConditions}
@@ -401,14 +408,15 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                      settermsConditions(e.target.value);
                     }}
                     />
-                    </div>
+                    
                 </td>
               </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("deliveryOrder.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.remark")}</label>
+            </td>
+                <td colSpan={3}>
+                  
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -417,15 +425,16 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                    
                 </td>
               </tr>
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.isactived")}</label>
+            </td>
+          <td >
+           
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -436,13 +445,11 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("deliveryOrder.isactived")} />
-                </div>
+               
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td ><label htmlFor="firstname1">{t("deliveryOrder.islocked")}</label></td> 
+          <td  >
+            
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -453,14 +460,15 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("deliveryOrder.islocked")} />
-                </div> 
+              
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.createdAt")}</label>
-                <div style={{height:10}}> </div>
+                
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -474,13 +482,13 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                     }
                   }}
                 />
-               </div>
+             
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("deliveryOrder.updatedAt")}</label>
+          </td>
+          <td >
+               
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -494,14 +502,15 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                     }
                   }}
                 />
-                </div>
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.createUid")}</label>
-                <div style={{height:10}}> </div>
+               
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -513,13 +522,13 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("deliveryOrder.createUid")} />
               
-                </div>
+              
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("deliveryOrder.updatedUid")}</label>
+          </td>
+          <td >
+              
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -530,7 +539,7 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("deliveryOrder.updatedUid")} />
-               </div>  
+                
           </td>
           </tr>
 
@@ -549,14 +558,14 @@ export const DeliveryOrderItemAdd =({ Id, Mode }: DeliveryOrderItemProps) => {
 
 
           <tr>
-          <td >
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/deliveryorder");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+        
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -746,24 +755,20 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
   return (
   <Card>     
       <div className="p-fluid p-formgrid p-grid">
-     <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
-
           <tr>
           <td colSpan={4}> 
             <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>
           </td>
-          </tr>  
+          </tr>
 
-
-
-          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.refNumber")}</label>
-                    <div style={{height:10}}> </div>
+         <tr>
+         <td  width="10%"><label htmlFor="firstname1">{t("deliveryOrder.refNumber")}</label></td>
+              <td  width="40%">
+                    
                     <InputText 
                     id="refNumber"
                     value={refNumber}
@@ -772,13 +777,13 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setrefNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.linkedInvoice")}</label>
-                      <div style={{height:10}}> </div>
+              <td width="10%">
+              <label htmlFor="firstname1">{t("deliveryOrder.linkedInvoice")}</label>
+              </td>
+              <td  width="40%">
+                   
                       <Dropdown 
                       id="linkedInvoice"
                       value={linkedInvoice}
@@ -790,14 +795,15 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                        setlinkedInvoice(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.deliveryName")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.deliveryName")}</label>
+          </td>
+              <td  >
+           
                     <InputText 
                     id="deliveryName"
                     value={deliveryName}
@@ -806,32 +812,35 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setdeliveryName(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.clientCompany")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.clientCompany")}</label>
+              </td>
+          <td  >
+         
                       <Dropdown 
                       id="clientCompany"
                       value={clientCompany}
+                      
                       options={clientCompanys} 
                       optionLabel="name" 
                       optionValue="code"
+                      
                       onChange={(e)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setclientCompany(e.value);
                       }}
                       />
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.deliveryDate")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.deliveryDate")}</label>
+          </td>
+              <td >
+                
                     <Calendar 
                     id="deliveryDate"
                     value={deliveryDate}
@@ -840,13 +849,13 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setdeliveryDate(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.clientContact")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.clientContact")}</label>
+              </td>
+          <td >
+                   
                       <Dropdown 
                       id="clientContact"
                       value={clientContact}
@@ -858,14 +867,15 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                        setclientContact(e.value);
                       }}
                       />
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.creator")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.creator")}</label>
+          </td>
+              <td>
+                    
                     <Dropdown 
                     id="creator"
                     value={creator}
@@ -877,13 +887,13 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setcreator(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("deliveryOrder.postCode")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.postCode")}</label>
+              </td>
+          <td >
+                   
                     <InputText 
                     id="postCode"
                     value={postCode}
@@ -892,14 +902,15 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.street")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.street")}</label>
+          </td>
+              <td  >
+   
                     <InputText 
                     id="street"
                     value={street}
@@ -908,13 +919,13 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setstreet(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("deliveryOrder.city")}</label>
-                    <div style={{height:10}}> </div>
+              <td>   <label htmlFor="firstname1">{t("deliveryOrder.city")}</label></td>
+          <td>
+                   
+                  
+                   
                     <InputText 
                     id="city"
                     value={city}
@@ -923,14 +934,15 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.state")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.state")}</label>
+          </td>
+              <td >
+                  
                     <InputText 
                     id="state"
                     value={state}
@@ -939,32 +951,35 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setstate(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.country")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.country")}</label>
+              </td>
+          <td >
+                 
                       <Dropdown 
                       id="country"
-                      value={country}
                       options={Countrys} 
                       optionLabel="name" 
                       optionValue="code"
+                      value={country}
                       onChange={(e)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setcountry(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("deliveryOrder.termsConditions")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.termsConditions")}</label>
+            </td>
+                <td colSpan={3}>
+                   
+                    
+                  
                     <InputTextarea 
                     id="termsConditions"
                     value={termsConditions}
@@ -973,14 +988,15 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                      settermsConditions(e.target.value);
                     }}
                     />
-                    </div>
+                    
                 </td>
               </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("deliveryOrder.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.remark")}</label>
+            </td>
+                <td colSpan={3}>
+                  
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -989,16 +1005,16 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                    
                 </td>
               </tr>
 
-
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.isactived")}</label>
+            </td>
+          <td >
+           
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -1009,13 +1025,11 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("deliveryOrder.isactived")} />
-                </div>
+               
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td ><label htmlFor="firstname1">{t("deliveryOrder.islocked")}</label></td> 
+          <td  >
+            
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -1026,14 +1040,15 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("deliveryOrder.islocked")} />
-                </div> 
+              
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.createdAt")}</label>
-                <div style={{height:10}}> </div>
+                
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -1047,13 +1062,13 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                     }
                   }}
                 />
-               </div>
+             
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("deliveryOrder.updatedAt")}</label>
+          </td>
+          <td >
+               
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -1067,14 +1082,15 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                     }
                   }}
                 />
-                </div>
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.createUid")}</label>
-                <div style={{height:10}}> </div>
+               
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -1086,13 +1102,13 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("deliveryOrder.createUid")} />
               
-                </div>
+              
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("deliveryOrder.updatedUid")}</label>
+          </td>
+          <td >
+              
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -1103,36 +1119,36 @@ export const DeliveryOrderItemEdit =({ Id, Mode }: DeliveryOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("deliveryOrder.updatedUid")} />
-               </div>  
+                
           </td>
           </tr>
 
           <tr>
             <td colSpan={4}>
-               <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
+             
+              <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
                     <TabPanel header="详细信息">
-                    <DeliveryItemList mid={FHid}
-                      FHonChange={(e:any) => {
-                        setVal(e);
-                      }}                   
-                    ></DeliveryItemList>
+                    <DeliveryItemList mid={FHid}></DeliveryItemList>
                     </TabPanel>
                    
                 </TabView>
+             
             </td>
           </tr>
+
+
           <tr>
-          <td >
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/deliveryorder");}} style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/deliveryorder");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+        
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                  <Button
+                <Button
                     label="提交"
                     onClick={(e) => { 
                       const fhnew=new Date();
@@ -1319,22 +1335,20 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
   return (
   <Card>     
       <div className="p-fluid p-formgrid p-grid">
-     <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
-           <tr>
+          <tr>
           <td colSpan={4}> 
             <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>
           </td>
-          </tr>      
+          </tr>
 
-
-          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.refNumber")}</label>
-                    <div style={{height:10}}> </div>
+         <tr>
+         <td  width="10%"><label htmlFor="firstname1">{t("deliveryOrder.refNumber")}</label></td>
+              <td  width="40%">
+                    
                     <InputText 
                     id="refNumber"
                     value={refNumber}
@@ -1343,13 +1357,13 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setrefNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.linkedInvoice")}</label>
-                      <div style={{height:10}}> </div>
+              <td width="10%">
+              <label htmlFor="firstname1">{t("deliveryOrder.linkedInvoice")}</label>
+              </td>
+              <td  width="40%">
+                   
                       <Dropdown 
                       id="linkedInvoice"
                       value={linkedInvoice}
@@ -1361,14 +1375,15 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                        setlinkedInvoice(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.deliveryName")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.deliveryName")}</label>
+          </td>
+              <td  >
+           
                     <InputText 
                     id="deliveryName"
                     value={deliveryName}
@@ -1377,32 +1392,35 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setdeliveryName(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.clientCompany")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.clientCompany")}</label>
+              </td>
+          <td  >
+         
                       <Dropdown 
                       id="clientCompany"
                       value={clientCompany}
+                      
                       options={clientCompanys} 
                       optionLabel="name" 
                       optionValue="code"
+                      
                       onChange={(e)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setclientCompany(e.value);
                       }}
                       />
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.deliveryDate")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.deliveryDate")}</label>
+          </td>
+              <td >
+                
                     <Calendar 
                     id="deliveryDate"
                     value={deliveryDate}
@@ -1411,44 +1429,51 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setdeliveryDate(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.clientContact")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.clientContact")}</label>
+              </td>
+          <td >
+                   
                       <Dropdown 
                       id="clientContact"
                       value={clientContact}
+                      options={FHUsers} 
+                      optionLabel="name" 
+                      optionValue="code"
                       onChange={(e)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setclientContact(e.value);
                       }}
                       />
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.creator")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.creator")}</label>
+          </td>
+              <td>
+                    
                     <Dropdown 
                     id="creator"
                     value={creator}
+                    options={FHUsers} 
+                    optionLabel="name" 
+                    optionValue="code"
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.value));
                      setcreator(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("deliveryOrder.postCode")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.postCode")}</label>
+              </td>
+          <td >
+                   
                     <InputText 
                     id="postCode"
                     value={postCode}
@@ -1457,14 +1482,15 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.street")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.street")}</label>
+          </td>
+              <td >
+   
                     <InputText 
                     id="street"
                     value={street}
@@ -1473,13 +1499,13 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setstreet(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("deliveryOrder.city")}</label>
-                    <div style={{height:10}}> </div>
+              <td>   <label htmlFor="firstname1">{t("deliveryOrder.city")}</label></td>
+          <td>
+                   
+                  
+                   
                     <InputText 
                     id="city"
                     value={city}
@@ -1488,14 +1514,15 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("deliveryOrder.state")}</label>
-                    <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("deliveryOrder.state")}</label>
+          </td>
+              <td >
+                  
                     <InputText 
                     id="state"
                     value={state}
@@ -1504,32 +1531,35 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setstate(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("deliveryOrder.country")}</label>
-                      <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("deliveryOrder.country")}</label>
+              </td>
+          <td >
+                 
                       <Dropdown 
                       id="country"
-                      value={country}
                       options={Countrys} 
                       optionLabel="name" 
                       optionValue="code"
+                      value={country}
                       onChange={(e)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setcountry(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("deliveryOrder.termsConditions")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.termsConditions")}</label>
+            </td>
+                <td colSpan={3}>
+                   
+                    
+                  
                     <InputTextarea 
                     id="termsConditions"
                     value={termsConditions}
@@ -1538,14 +1568,15 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                      settermsConditions(e.target.value);
                     }}
                     />
-                    </div>
+                    
                 </td>
               </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("deliveryOrder.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.remark")}</label>
+            </td>
+                <td colSpan={3}>
+                  
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -1554,15 +1585,16 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                    
                 </td>
               </tr>
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.isactived")}</label>
+            </td>
+          <td >
+           
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -1573,13 +1605,11 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("deliveryOrder.isactived")} />
-                </div>
+               
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td ><label htmlFor="firstname1">{t("deliveryOrder.islocked")}</label></td> 
+          <td  >
+            
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -1590,14 +1620,15 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("deliveryOrder.islocked")} />
-                </div> 
+              
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.createdAt")}</label>
-                <div style={{height:10}}> </div>
+                
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -1611,13 +1642,13 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                     }
                   }}
                 />
-               </div>
+             
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("deliveryOrder.updatedAt")}</label>
+          </td>
+          <td >
+               
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -1631,14 +1662,15 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                     }
                   }}
                 />
-                </div>
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("deliveryOrder.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.createUid")}</label>
-                <div style={{height:10}}> </div>
+               
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -1650,13 +1682,13 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("deliveryOrder.createUid")} />
               
-                </div>
+              
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("deliveryOrder.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("deliveryOrder.updatedUid")}</label>
+          </td>
+          <td >
+              
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -1667,30 +1699,33 @@ export const DeliveryOrderItemView =({ Id, Mode }: DeliveryOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("deliveryOrder.updatedUid")} />
-               </div>  
+                
           </td>
           </tr>
 
           <tr>
             <td colSpan={4}>
+             
               <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
                     <TabPanel header="详细信息">
                     <DeliveryItemList mid={FHid}></DeliveryItemList>
                     </TabPanel>
                    
                 </TabView>
+             
             </td>
           </tr>
 
+
           <tr>
-          <td >
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/deliveryorder");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+        
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button

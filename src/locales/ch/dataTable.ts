@@ -12,7 +12,7 @@ export const dataTable = {
     Delete: '删除',
     Cancel: '取消',
     Export: '数据导出',
-    Search: '选择数据',
+    Search: '数据',
     Report: '报表打印',
     Import: '数据导入',
     HeadInfo: '详细',

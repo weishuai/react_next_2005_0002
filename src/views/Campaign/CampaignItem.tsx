@@ -111,33 +111,32 @@ export const CampaignItemAdd =({ Id, Mode }: CampaignItemProps) => {
   return (
   <Card>     
       <div className="p-fluid p-formgrid p-grid">
-      
       <table width="98%">
       <thead>
       </thead>
       <tbody>
-   
-          <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("campaign.name")}</label>
-                <div style={{height:10}}> </div>
-                <InputText 
-                id="name" 
-                value={name}  
-                onChange={(e)=>{
-                 console.info('e.value:'+JSON.stringify(e.target.value));
-                 setname(e.target.value);
-                }}  
-                />
-                </div>
+        <tr>
+          <td>
+            <label htmlFor="name">{t("campaign.name")}</label>
           </td>
-          </tr>
-          <tr>
-            <td colSpan={4}>
-                <div className="p-field p-col-12 p-md-12">
-                <label htmlFor="firstname1">{t("campaign.description")}</label>
-                <div style={{height:10}}> </div>
+          <td colSpan={3}>
+          <InputText 
+                        id="name" 
+                        value={name}  
+                        onChange={(e)=>{
+                         console.info('e.value:'+JSON.stringify(e.target.value));
+                         setname(e.target.value);
+                        }}  
+                        />
+          </td>
+    
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.description")}</label>
+
+          </td>
+          <td colSpan={3}>
                 <InputTextarea 
                 id="description"
                 value={description}  
@@ -147,86 +146,77 @@ export const CampaignItemAdd =({ Id, Mode }: CampaignItemProps) => {
                 }}                 
                 
                 ></InputTextarea>
-                </div>
-            </td>
-          </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("campaign.name")}</label>
-                    <div style={{height:10}}> </div>
+
+          </td>
+     
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.name")}</label>
+          </td>
+          <td >
                     <InputText 
-                    id="name"
-                    value={name}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setname(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("campaign.starts")}</label>
-                      <div style={{height:10}}> </div>
-                      <Calendar 
-                      dateFormat="dd/mm/yy"
-                      id="starts"
-                      value={starts}
+                      id="name"
+                      value={name}
                       onChange={(e)=>{
-                       console.info('e.value:'+JSON.stringify(e.value));
-                       setstarts(e.value);
+                       console.info('e.value:'+JSON.stringify(e.target.value));
+                       setname(e.target.value);
                       }}
-                      />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("campaign.ends")}</label>
-                    <div style={{height:10}}> </div>
-                    <Calendar 
-                    id="ends"
-                    dateFormat="dd/mm/yy"
-                    value={ends}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.value));
-                     setends(e.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("campaign.owner")}</label>
-                      <div style={{height:10}}> </div>
+                      />          
+          </td>
+          <td>
 
-
-                      <Dropdown 
-                      id="owner"
-                        value={owner} 
-                       
-                        options={FHUsers} 
-                        optionLabel="name" 
-                        optionValue="code"
-                        onChange={(e: { value: any}) => {
-                        console.info('e.value:'+JSON.stringify(e.value));
-                        setowner(e.value);
-                        }}  placeholder={t("campaign.owner")} />
-
-
-
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("campaign.budget")}</label>
-                    <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("campaign.starts")}</label>
+          </td>
+          <td>
+                      <Calendar 
+                         dateFormat="dd/mm/yy"
+                         id="starts"
+                         value={starts}
+                         onChange={(e)=>{
+                          console.info('e.value:'+JSON.stringify(e.value));
+                          setstarts(e.value);
+                         }}
+                         />         
+          </td>
+        </tr>   
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.ends")}</label>
+          </td>
+          <td>
+                                <Calendar 
+                                id="ends"
+                                dateFormat="dd/mm/yy"
+                                value={ends}
+                                onChange={(e)=>{
+                                 console.info('e.value:'+JSON.stringify(e.value));
+                                 setends(e.value);
+                                }}
+                                />
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.owner")}</label>
+          </td>
+          <td>
+                       <Dropdown 
+                       id="owner"
+                         value={owner} 
+                        
+                         options={FHUsers} 
+                         optionLabel="name" 
+                         optionValue="code"
+                         onChange={(e: { value: any}) => {
+                         console.info('e.value:'+JSON.stringify(e.value));
+                         setowner(e.value);
+                         }}  placeholder={t("campaign.owner")} />           
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.budget")}</label>
+          </td>
+          <td>
                     <InputNumber 
                     id="budget"
                     value={budget}
@@ -235,104 +225,93 @@ export const CampaignItemAdd =({ Id, Mode }: CampaignItemProps) => {
                      setbudget(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("campaign.status")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
-                value={status} 
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setstatus(e.value);
-                }}   />
-                    </div>
-              </td>
-              </tr>
-          <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("campaign.description")}</label>
-                    <div style={{height:10}}> </div>
-                    <InputText 
-                    id="description"
-                    value={description}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setdescription(e.target.value);
-                    }}
-                    />
-                    </div>
-                </td>
-              </tr>
 
-          <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.isactived")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={isactived} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIsactived(e.value);
-                }}  placeholder={t("campaign.isactived")} />
-                </div>
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.islocked")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={islocked} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIslocked(e.value);
-                }}  placeholder={t("campaign.islocked")} />
-                </div> 
+          <td>
+          <label htmlFor="firstname1">{t("campaign.status")}</label>
           </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.createdAt")}</label>
-                <div style={{height:10}}> </div>
+          <td>
+                   <Dropdown 
+                    value={status} 
+                    options={fhitems} 
+                    optionLabel="name" 
+                    optionValue="code"
+                    onChange={(e: { value: any}) => {
+                     console.info('e.value:'+JSON.stringify(e.value));
+                     setstatus(e.value);
+                    }}   />        
+          </td>
+        </tr>
+        <tr>
+          <td> <label htmlFor="firstname1">{t("campaign.description")}</label></td>
+          <td colSpan={3}>  
+                                <InputText 
+                                id="description"
+                                value={description}
+                                onChange={(e)=>{
+                                 console.info('e.value:'+JSON.stringify(e.target.value));
+                                 setdescription(e.target.value);
+                                }}
+                                />
+          </td>
+       
+        </tr>
+        <tr>
+          <td>  <label htmlFor="firstname1">{t("campaign.isactived")}</label>
+          </td>
+          <td>
+            <Dropdown 
+                            value={isactived} 
+                            disabled={true}
+                            options={fhitems} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                             console.info('e.value:'+JSON.stringify(e.value));
+                             setIsactived(e.value);
+                            }}  placeholder={t("campaign.isactived")} />
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.islocked")}</label>
+          </td>
+          <td>
+                           <Dropdown 
+                            value={islocked} 
+                            disabled={true}
+                            options={fhitems} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                             console.info('e.value:'+JSON.stringify(e.value));
+                             setIslocked(e.value);
+                            }}  placeholder={t("campaign.islocked")} />
+          </td>
+        </tr>      
+        <tr>
+          <td> 
+            <label htmlFor="firstname1">{t("campaign.createdAt")}</label>
+          </td>
+          <td>
                 <Calendar
-                  showTime 
-                  showSeconds
-                  dateFormat="dd/mm/yy"
-                  id="createdAt"
-                  value={createAt}
-                  disabled={true}
-                  placeholder={t("campaign.createdAtPlaceholder")}
-                  onChange={(e) => {
-                    if (e.value != null) {
-                    console.log('e.value' + e.value);
-                    setCreateAt(e.value);
-                    }
-                  }}
-                />
-               </div>
+                              showTime 
+                              showSeconds
+                              dateFormat="dd/mm/yy"
+                              id="createdAt"
+                              value={createAt}
+                              disabled={true}
+                              placeholder={t("campaign.createdAtPlaceholder")}
+                              onChange={(e) => {
+                                if (e.value != null) {
+                                console.log('e.value' + e.value);
+                                setCreateAt(e.value);
+                                }
+                              }}
+                            />
           </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.updatedAt")}</label>
+          </td>
+          <td>
                 <Calendar
                   showTime 
                   showSeconds
@@ -347,91 +326,77 @@ export const CampaignItemAdd =({ Id, Mode }: CampaignItemProps) => {
                       setUpdatedAt(e.value);
                     }
                   }}
-                />
-                </div>
+                />            
           </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.createUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={createUid} 
-                disabled={true}
-                options={FHUsers} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setCreateUid(e.value);
-                }}  placeholder={t("campaign.createUid")} />
-              
-                </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={updatedUid} 
-                disabled={true}
-                options={FHUsers}
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setUpdatedUid(e.value);
-                }}  placeholder={t("campaign.updatedUid")} />
-               </div>  
-          </td>
-          </tr>
-
-
-
-
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/campaign");}}  style={{backgroundColor:'#4682B4'}}  />
-                </div>
-          </td>
-          <td ></td>
+        </tr>
+        <tr>
           <td>
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
-                  <Button
-                    label="提交"
-                    onClick={(e) => { 
-                      ctlCampaign.createCampaign({
-                        id:FHid,
-                        name:name,
-
-                        description:description,
-                        isactived:isactived,
-                        islocked:islocked,
-                        createdAt:createAt,
-                        updatedAt:updatedAt,
-                        createUid:createUid,
-                        updatedUid:updatedUid,    
-                        starts:starts,
-                        ends:ends,  
-                        owner:owner,
-                        budget:budget,
-                        status:status,
-
-                      });
-                      replace("/campaign");
-                    }}
-                    style={{backgroundColor:'#4682B4'}}
-                  />
-                </div>
+          <label htmlFor="firstname1">{t("campaign.createUid")}</label>
           </td>
-          </tr>
-          </tbody>
-          </table>
+          <td>
+                    <Dropdown 
+                    value={createUid} 
+                    disabled={true}
+                    options={FHUsers} 
+                    optionLabel="name" 
+                    optionValue="code"
+                    onChange={(e: { value: any}) => {
+                     console.info('e.value:'+JSON.stringify(e.value));
+                     setCreateUid(e.value);
+                    }}  placeholder={t("campaign.createUid")} />        
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.updatedUid")}</label>
+          </td>
+          <td>
+                            <Dropdown 
+                            value={updatedUid} 
+                            disabled={true}
+                            options={FHUsers}
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                             console.info('e.value:'+JSON.stringify(e.value));
+                             setUpdatedUid(e.value);
+                            }}  placeholder={t("campaign.updatedUid")} />
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={2}>
+             <Button label="取消" onClick={(e) => {replace("/campaign");}}  style={{backgroundColor:'#4682B4'}}  />
+          </td>
+          <td colSpan={2}>
+                  <Button
+                            label="提交"
+                            onClick={(e) => { 
+                              ctlCampaign.createCampaign({
+                                id:FHid,
+                                name:name,
+        
+                                description:description,
+                                isactived:isactived,
+                                islocked:islocked,
+                                createdAt:createAt,
+                                updatedAt:updatedAt,
+                                createUid:createUid,
+                                updatedUid:updatedUid,    
+                                starts:starts,
+                                ends:ends,  
+                                owner:owner,
+                                budget:budget,
+                                status:status,
+        
+                              });
+                              replace("/campaign");
+                            }}
+                            style={{backgroundColor:'#4682B4'}}
+                          />    
+          </td>
+      
+        </tr>
+
+      </tbody>
+     </table>
       </div>
     </Card>
   );
@@ -527,32 +492,32 @@ export const CampaignItemEdit =({ Id, Mode }: CampaignItemProps) => {
   return (
   <Card>     
       <div className="p-fluid p-formgrid p-grid">
-     <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
- 
-          <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("campaign.name")}</label>
-                <div style={{height:10}}> </div>
-                <InputText 
-                id="name" 
-                value={name}  
-                onChange={(e)=>{
-                 console.info('e.value:'+JSON.stringify(e.target.value));
-                 setname(e.target.value);
-                }}  
-                />
-                </div>
+        <tr>
+          <td>
+            <label htmlFor="name">{t("campaign.name")}</label>
+            </td>
+          <td colSpan={3}>
+          <InputText 
+                        id="name" 
+                        value={name}  
+                        onChange={(e)=>{
+                         console.info('e.value:'+JSON.stringify(e.target.value));
+                         setname(e.target.value);
+                        }}  
+                        />
           </td>
-          </tr>
-          <tr>
-            <td colSpan={4}>
-                <div className="p-field p-col-12 p-md-12">
-                <label htmlFor="firstname1">{t("campaign.description")}</label>
-                <div style={{height:10}}> </div>
+
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.description")}</label>
+
+          </td>
+          <td colSpan={3}>
                 <InputTextarea 
                 id="description"
                 value={description}  
@@ -562,82 +527,77 @@ export const CampaignItemEdit =({ Id, Mode }: CampaignItemProps) => {
                 }}                 
                 
                 ></InputTextarea>
-                </div>
-            </td>
-          </tr>
 
-          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("campaign.name")}</label>
-                    <div style={{height:10}}> </div>
+          </td>
+     
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.name")}</label>
+          </td>
+          <td >
                     <InputText 
-                    id="name"
-                    value={name}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setname(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("campaign.starts")}</label>
-                      <div style={{height:10}}> </div>
-                      <Calendar 
-                      dateFormat="dd/mm/yy"
-                      id="starts"
-                      value={starts}
+                      id="name"
+                      value={name}
                       onChange={(e)=>{
-                       console.info('e.value:'+JSON.stringify(e.value));
-                       setstarts(e.value);
+                       console.info('e.value:'+JSON.stringify(e.target.value));
+                       setname(e.target.value);
                       }}
-                      />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("campaign.ends")}</label>
-                    <div style={{height:10}}> </div>
-                    <Calendar 
-                    dateFormat="dd/mm/yy"
-                    id="ends"
-                    value={ends}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.value));
-                     setends(e.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("campaign.owner")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
-                      id="owner"
-                        value={owner} 
-                       
-                        options={FHUsers} 
-                        optionLabel="name" 
-                        optionValue="code"
-                        onChange={(e: { value: any}) => {
-                        console.info('e.value:'+JSON.stringify(e.value));
-                        setowner(e.value);
-                        }}  placeholder={t("campaign.owner")} />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("campaign.budget")}</label>
-                    <div style={{height:10}}> </div>
+                      />          
+          </td>
+          <td>
+
+          <label htmlFor="firstname1">{t("campaign.starts")}</label>
+          </td>
+          <td>
+                      <Calendar 
+                         dateFormat="dd/mm/yy"
+                         id="starts"
+                         value={starts}
+                         onChange={(e)=>{
+                          console.info('e.value:'+JSON.stringify(e.value));
+                          setstarts(e.value);
+                         }}
+                         />         
+          </td>
+        </tr>   
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.ends")}</label>
+          </td>
+          <td>
+                                <Calendar 
+                                id="ends"
+                                dateFormat="dd/mm/yy"
+                                value={ends}
+                                onChange={(e)=>{
+                                 console.info('e.value:'+JSON.stringify(e.value));
+                                 setends(e.value);
+                                }}
+                                />
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.owner")}</label>
+          </td>
+          <td>
+                       <Dropdown 
+                       id="owner"
+                         value={owner} 
+                        
+                         options={FHUsers} 
+                         optionLabel="name" 
+                         optionValue="code"
+                         onChange={(e: { value: any}) => {
+                         console.info('e.value:'+JSON.stringify(e.value));
+                         setowner(e.value);
+                         }}  placeholder={t("campaign.owner")} />           
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.budget")}</label>
+          </td>
+          <td>
                     <InputNumber 
                     id="budget"
                     value={budget}
@@ -646,89 +606,93 @@ export const CampaignItemEdit =({ Id, Mode }: CampaignItemProps) => {
                      setbudget(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("campaign.status")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
-                value={status} 
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setstatus(e.value);
-                }}   />
-                    </div>
-              </td>
-              </tr>
 
-
-          <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.isactived")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={isactived} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIsactived(e.value);
-                }}  placeholder={t("campaign.isactived")} />
-                </div>
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.islocked")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={islocked} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIslocked(e.value);
-                }}  placeholder={t("campaign.islocked")} />
-                </div> 
+          <td>
+          <label htmlFor="firstname1">{t("campaign.status")}</label>
           </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.createdAt")}</label>
-                <div style={{height:10}}> </div>
+          <td>
+                   <Dropdown 
+                    value={status} 
+                    options={fhitems} 
+                    optionLabel="name" 
+                    optionValue="code"
+                    onChange={(e: { value: any}) => {
+                     console.info('e.value:'+JSON.stringify(e.value));
+                     setstatus(e.value);
+                    }}   />        
+          </td>
+        </tr>
+        <tr>
+          <td> <label htmlFor="firstname1">{t("campaign.description")}</label></td>
+          <td colSpan={3}>  
+                                <InputText 
+                                id="description"
+                                value={description}
+                                onChange={(e)=>{
+                                 console.info('e.value:'+JSON.stringify(e.target.value));
+                                 setdescription(e.target.value);
+                                }}
+                                />
+          </td>
+       
+        </tr>
+        <tr>
+          <td>  <label htmlFor="firstname1">{t("campaign.isactived")}</label>
+          </td>
+          <td>
+            <Dropdown 
+                            value={isactived} 
+                            disabled={true}
+                            options={fhitems} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                             console.info('e.value:'+JSON.stringify(e.value));
+                             setIsactived(e.value);
+                            }}  placeholder={t("campaign.isactived")} />
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.islocked")}</label>
+          </td>
+          <td>
+                           <Dropdown 
+                            value={islocked} 
+                            disabled={true}
+                            options={fhitems} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                             console.info('e.value:'+JSON.stringify(e.value));
+                             setIslocked(e.value);
+                            }}  placeholder={t("campaign.islocked")} />
+          </td>
+        </tr>      
+        <tr>
+          <td> 
+            <label htmlFor="firstname1">{t("campaign.createdAt")}</label>
+          </td>
+          <td>
                 <Calendar
-                  showTime 
-                  showSeconds
-                  dateFormat="dd/mm/yy"
-                  id="createdAt"
-                  value={createAt}
-                  disabled={true}
-                  placeholder={t("campaign.createdAtPlaceholder")}
-                  onChange={(e) => {
-                    if (e.value != null) {
-                    console.log('e.value' + e.value);
-                    setCreateAt(e.value);
-                    }
-                  }}
-                />
-               </div>
+                              showTime 
+                              showSeconds
+                              dateFormat="dd/mm/yy"
+                              id="createdAt"
+                              value={createAt}
+                              disabled={true}
+                              placeholder={t("campaign.createdAtPlaceholder")}
+                              onChange={(e) => {
+                                if (e.value != null) {
+                                console.log('e.value' + e.value);
+                                setCreateAt(e.value);
+                                }
+                              }}
+                            />
           </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.updatedAt")}</label>
+          </td>
+          <td>
                 <Calendar
                   showTime 
                   showSeconds
@@ -743,59 +707,46 @@ export const CampaignItemEdit =({ Id, Mode }: CampaignItemProps) => {
                       setUpdatedAt(e.value);
                     }
                   }}
-                />
-                </div>
+                />            
           </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.createUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={createUid} 
-                disabled={true}
-                options={FHUsers} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setCreateUid(e.value);
-                }}  placeholder={t("campaign.createUid")} />
-              
-                </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={updatedUid} 
-                disabled={true}
-                options={FHUsers}
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setUpdatedUid(e.value);
-                }}  placeholder={t("campaign.updatedUid")} />
-               </div>  
-          </td>
-          </tr>
-
-
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/campaign");}} style={{backgroundColor:'#4682B4'}}  />
-                </div>
-          </td>
-          <td ></td>
+        </tr>
+        <tr>
           <td>
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("campaign.createUid")}</label>
+          </td>
+          <td>
+                    <Dropdown 
+                    value={createUid} 
+                    disabled={true}
+                    options={FHUsers} 
+                    optionLabel="name" 
+                    optionValue="code"
+                    onChange={(e: { value: any}) => {
+                     console.info('e.value:'+JSON.stringify(e.value));
+                     setCreateUid(e.value);
+                    }}  placeholder={t("campaign.createUid")} />        
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.updatedUid")}</label>
+          </td>
+          <td>
+                            <Dropdown 
+                            value={updatedUid} 
+                            disabled={true}
+                            options={FHUsers}
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                             console.info('e.value:'+JSON.stringify(e.value));
+                             setUpdatedUid(e.value);
+                            }}  placeholder={t("campaign.updatedUid")} />
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={2}>
+             <Button label="取消" onClick={(e) => {replace("/campaign");}}  style={{backgroundColor:'#4682B4'}}  />
+          </td>
+          <td colSpan={2}>
                   <Button
                     label="提交"
                     onClick={(e) => { 
@@ -830,12 +781,13 @@ export const CampaignItemEdit =({ Id, Mode }: CampaignItemProps) => {
                       replace("/campaign");
                     }}
                     style={{backgroundColor:'#4682B4'}}
-                  />
-                </div>
+                  />   
           </td>
-          </tr>
-          </tbody>
-          </table>
+      
+        </tr>
+
+      </tbody>
+     </table>
       </div>
     </Card>
   );
@@ -918,124 +870,114 @@ export const CampaignItemView =({ Id, Mode }: CampaignItemProps) => {
   return (
   <Card>     
       <div className="p-fluid p-formgrid p-grid">
-     <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
-    
-          <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("campaign.name")}</label>
-                <div style={{height:10}}> </div>
-                <InputText 
-                id="name" 
-                value={name}  
-                disabled={true}
-                onChange={(e)=>{
-                 console.info('e.value:'+JSON.stringify(e.target.value));
-                 setname(e.target.value);
-                }}  
-                />
-                </div>
+        <tr>
+          <td>
+            <label htmlFor="name">{t("campaign.name")}</label>
+            </td>
+          <td colSpan={3}>
+
+          <InputText 
+                        id="name" 
+                        value={name}  
+                        onChange={(e)=>{
+                         console.info('e.value:'+JSON.stringify(e.target.value));
+                         setname(e.target.value);
+                        }}  
+                        />          
           </td>
-          </tr>
-          <tr>
-            <td colSpan={4}>
-                <div className="p-field p-col-12 p-md-12">
-                <label htmlFor="firstname1">{t("campaign.description")}</label>
-                <div style={{height:10}}> </div>
+
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.description")}</label>
+
+          </td>
+          <td colSpan={3}>
                 <InputTextarea 
                 id="description"
                 value={description}  
-                disabled={true}
                 onChange={(e)=>{
                  console.info('e.value:'+JSON.stringify(e.target.value));
                  setdescription(e.target.value);
                 }}                 
                 
                 ></InputTextarea>
-                </div>
-            </td>
-          </tr>
-          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("campaign.name")}</label>
-                    <div style={{height:10}}> </div>
+
+          </td>
+     
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.name")}</label>
+          </td>
+          <td >
                     <InputText 
-                    disabled={true}
-                    id="name"
-                    value={name}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.target.value));
-                     setname(e.target.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("campaign.starts")}</label>
-                      <div style={{height:10}}> </div>
-                      <Calendar 
-                      disabled={true}
-                      dateFormat="dd/mm/yy"
-                      id="starts"
-                      value={starts}
+                      id="name"
+                      value={name}
                       onChange={(e)=>{
-                       console.info('e.value:'+JSON.stringify(e.value));
-                       setstarts(e.value);
+                       console.info('e.value:'+JSON.stringify(e.target.value));
+                       setname(e.target.value);
                       }}
-                      />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("campaign.ends")}</label>
-                    <div style={{height:10}}> </div>
-                    <Calendar 
-                    disabled={true}
-                    dateFormat="dd/mm/yy"
-                    id="ends"
-                    value={ends}
-                    onChange={(e)=>{
-                     console.info('e.value:'+JSON.stringify(e.value));
-                     setends(e.value);
-                    }}
-                    />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("campaign.owner")}</label>
-                      <div style={{height:10}}> </div>
-                      <Dropdown 
-                      disabled={true}
-                      id="owner"
-                        value={owner} 
-                       
-                        options={FHUsers} 
-                        optionLabel="name" 
-                        optionValue="code"
-                        onChange={(e: { value: any}) => {
-                        console.info('e.value:'+JSON.stringify(e.value));
-                        setowner(e.value);
-                        }}  placeholder={t("campaign.owner")} />
-                      </div>
-                </td>
-                </tr>
-         <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("campaign.budget")}</label>
-                    <div style={{height:10}}> </div>
+                      />          
+          </td>
+          <td>
+
+          <label htmlFor="firstname1">{t("campaign.starts")}</label>
+          </td>
+          <td>
+                      <Calendar 
+                         dateFormat="dd/mm/yy"
+                         id="starts"
+                         value={starts}
+                         onChange={(e)=>{
+                          console.info('e.value:'+JSON.stringify(e.value));
+                          setstarts(e.value);
+                         }}
+                         />         
+          </td>
+        </tr>   
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.ends")}</label>
+          </td>
+          <td>
+                                <Calendar 
+                                id="ends"
+                                dateFormat="dd/mm/yy"
+                                value={ends}
+                                onChange={(e)=>{
+                                 console.info('e.value:'+JSON.stringify(e.value));
+                                 setends(e.value);
+                                }}
+                                />
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.owner")}</label>
+          </td>
+          <td>
+                       <Dropdown 
+                       id="owner"
+                         value={owner} 
+                        
+                         options={FHUsers} 
+                         optionLabel="name" 
+                         optionValue="code"
+                         onChange={(e: { value: any}) => {
+                         console.info('e.value:'+JSON.stringify(e.value));
+                         setowner(e.value);
+                         }}  placeholder={t("campaign.owner")} />           
+          </td>
+        </tr>
+        <tr>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.budget")}</label>
+          </td>
+          <td>
                     <InputNumber 
-                    disabled={true}
                     id="budget"
                     value={budget}
                     onChange={(e)=>{
@@ -1043,95 +985,93 @@ export const CampaignItemView =({ Id, Mode }: CampaignItemProps) => {
                      setbudget(e.value);
                     }}
                     />
-                    </div>
-              </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("campaign.status")}</label>
-                    <div style={{height:10}}> </div>
 
-
-                <Dropdown 
-                disabled={true}
-                value={status} 
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setstatus(e.value);
-                }}   />
-
-
-
-                    </div>
-              </td>
-              </tr>
-
-
-          <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.isactived")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={isactived} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIsactived(e.value);
-                }}  placeholder={t("campaign.isactived")} />
-                </div>
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.islocked")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={islocked} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIslocked(e.value);
-                }}  placeholder={t("campaign.islocked")} />
-                </div> 
+          <td>
+          <label htmlFor="firstname1">{t("campaign.status")}</label>
           </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.createdAt")}</label>
-                <div style={{height:10}}> </div>
+          <td>
+                   <Dropdown 
+                    value={status} 
+                    options={fhitems} 
+                    optionLabel="name" 
+                    optionValue="code"
+                    onChange={(e: { value: any}) => {
+                     console.info('e.value:'+JSON.stringify(e.value));
+                     setstatus(e.value);
+                    }}   />        
+          </td>
+        </tr>
+        <tr>
+          <td> <label htmlFor="firstname1">{t("campaign.description")}</label></td>
+          <td colSpan={3}>  
+                                <InputText 
+                                id="description"
+                                value={description}
+                                onChange={(e)=>{
+                                 console.info('e.value:'+JSON.stringify(e.target.value));
+                                 setdescription(e.target.value);
+                                }}
+                                />
+          </td>
+       
+        </tr>
+        <tr>
+          <td>  <label htmlFor="firstname1">{t("campaign.isactived")}</label>
+          </td>
+          <td>
+            <Dropdown 
+                            value={isactived} 
+                            disabled={true}
+                            options={fhitems} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                             console.info('e.value:'+JSON.stringify(e.value));
+                             setIsactived(e.value);
+                            }}  placeholder={t("campaign.isactived")} />
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.islocked")}</label>
+          </td>
+          <td>
+                           <Dropdown 
+                            value={islocked} 
+                            disabled={true}
+                            options={fhitems} 
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                             console.info('e.value:'+JSON.stringify(e.value));
+                             setIslocked(e.value);
+                            }}  placeholder={t("campaign.islocked")} />
+          </td>
+        </tr>      
+        <tr>
+          <td> 
+            <label htmlFor="firstname1">{t("campaign.createdAt")}</label>
+          </td>
+          <td>
                 <Calendar
-                  showTime 
-                  showSeconds
-                  dateFormat="dd/mm/yy"
-                  id="createdAt"
-                  value={createAt}
-                  disabled={true}
-                  placeholder={t("campaign.createdAtPlaceholder")}
-                  onChange={(e) => {
-                    if (e.value != null) {
-                    console.log('e.value' + e.value);
-                    setCreateAt(e.value);
-                    }
-                  }}
-                />
-               </div>
+                              showTime 
+                              showSeconds
+                              dateFormat="dd/mm/yy"
+                              id="createdAt"
+                              value={createAt}
+                              disabled={true}
+                              placeholder={t("campaign.createdAtPlaceholder")}
+                              onChange={(e) => {
+                                if (e.value != null) {
+                                console.log('e.value' + e.value);
+                                setCreateAt(e.value);
+                                }
+                              }}
+                            />
           </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.updatedAt")}</label>
+          </td>
+          <td>
                 <Calendar
                   showTime 
                   showSeconds
@@ -1146,70 +1086,59 @@ export const CampaignItemView =({ Id, Mode }: CampaignItemProps) => {
                       setUpdatedAt(e.value);
                     }
                   }}
-                />
-                </div>
+                />            
           </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.createUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={createUid} 
-                disabled={true}
-                options={FHUsers} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setCreateUid(e.value);
-                }}  placeholder={t("campaign.createUid")} />
-              
-                </div>
-          </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("campaign.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={updatedUid} 
-                disabled={true}
-                options={FHUsers}
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setUpdatedUid(e.value);
-                }}  placeholder={t("campaign.updatedUid")} />
-               </div>  
-          </td>
-          </tr>
-
-
-
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/campaign");}}  style={{backgroundColor:'#4682B4'}}  />
-                </div>
-          </td>
-          <td ></td>
+        </tr>
+        <tr>
           <td>
-                <div className="p-field p-col-12 p-md-6">
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("campaign.createUid")}</label>
+          </td>
+          <td>
+                    <Dropdown 
+                    value={createUid} 
+                    disabled={true}
+                    options={FHUsers} 
+                    optionLabel="name" 
+                    optionValue="code"
+                    onChange={(e: { value: any}) => {
+                     console.info('e.value:'+JSON.stringify(e.value));
+                     setCreateUid(e.value);
+                    }}  placeholder={t("campaign.createUid")} />        
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("campaign.updatedUid")}</label>
+          </td>
+          <td>
+                            <Dropdown 
+                            value={updatedUid} 
+                            disabled={true}
+                            options={FHUsers}
+                            optionLabel="name" 
+                            optionValue="code"
+                            onChange={(e: { value: any}) => {
+                             console.info('e.value:'+JSON.stringify(e.value));
+                             setUpdatedUid(e.value);
+                            }}  placeholder={t("campaign.updatedUid")} />
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={2}>
+             <Button label="取消" onClick={(e) => {replace("/campaign");}}  style={{backgroundColor:'#4682B4'}}  />
+          </td>
+          <td colSpan={2}>
                   <Button
                     label="确认"
                     onClick={(e) => {replace("/campaign");}}
                     style={{backgroundColor:'#4682B4'}}
                   />
-                </div>
           </td>
-          </tr>
-          </tbody>
-          </table>
+      
+        </tr>
+
+      </tbody>
+     </table>
+
+
       </div>
     </Card>
   );

@@ -215,10 +215,11 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
       </thead>
       <tbody>
       <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("leads.name")}</label>
-                <div style={{height:10}}> </div>
+          <td><label htmlFor="name">{t("leads.name")}</label></td>
+          <td colSpan={3}>      
+               
+                
+             
                 <InputText 
                 id="name" 
                 value={name}  
@@ -227,14 +228,17 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+                
           </td>
           </tr>
           <tr>
-            <td colSpan={4}>
-                <div className="p-field p-col-12 p-md-12">
-                <label htmlFor="firstname1">{t("leads.description")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.description")}</label>  
+            </td>
+            <td colSpan={3}>
+               
+              
+              
                 <InputTextarea 
                 id="description"
                 value={description}  
@@ -244,15 +248,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                 }}                 
                 
                 ></InputTextarea>
-                </div>
+             
             </td>
           </tr>
 
           <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.jobTitle")}</label>
-                    <div style={{height:10}}> </div>
+            <td style={{  width: '10%' }}>
+            <label htmlFor="firstname1">{t("leads.jobTitle")}</label>
+            </td>
+              <td  style={{  width: '40%' }}>
                     <InputText 
                     id="jobTitle"
                     value={jobTitle}
@@ -261,13 +265,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setjobTitle(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.company")}</label>
-                      <div style={{height:10}}> </div>
+              <td  style={{  width: '10%' }}>
+              <label htmlFor="firstname1">{t("leads.company")}</label>
+              </td>
+          <td  style={{  width: '40%' }}>
+                     
+                      
+                  
                       <Dropdown 
                       id="company"
                       value={company}
@@ -279,14 +285,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                        setcompany(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.industry")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.industry")}</label>  
+            </td>
+              <td  >
+                 
                     <InputText 
                     id="industry"
                     value={industry}
@@ -295,13 +302,12 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setindustry(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.website")}</label>
-                    <div style={{height:10}}> </div>
+              <td ><label htmlFor="firstname1">{t("leads.website")}</label></td>
+          <td  >
+                   
+                 
                     <InputText 
                     id="website"
                     value={website}
@@ -310,14 +316,14 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setwebsite(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.email")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.email")}</label>
+            </td>
+              <td >
                     <InputText 
                     id="email"
                     value={email}
@@ -326,13 +332,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setemail(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.phoneNumber")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("leads.phoneNumber")}</label>
+              </td>
+          <td >
+                  
+                   
+                   
                     <InputText 
                     id="phoneNumber"
                     value={phoneNumber}
@@ -341,14 +349,14 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setphoneNumber(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.mobileNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.mobileNumber")}</label>
+            </td>
+              <td  >
                     <InputText 
                     id="mobileNumber"
                     value={mobileNumber}
@@ -357,13 +365,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setmobileNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.faxNumber")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("leads.faxNumber")}</label>
+              </td>
+          <td >
+                
+                    
+                  
                     <InputText 
                     id="faxNumber"
                     value={faxNumber}
@@ -372,14 +382,17 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setfaxNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.remark")}</label>
+            </td>
+              <td >
+                 
+                   
+               
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -388,12 +401,14 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.leadOwner")}</label>
+              <td >
+              <label htmlFor="firstname1">{t("leads.leadOwner")}</label>
+              </td>
+          <td >
+                 
+                     
                       <div style={{height:10}}> </div>
                       <Dropdown 
                       id="leadOwner"
@@ -406,14 +421,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                        setleadOwner(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.leadPool")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.leadPool")}</label>
+            </td>
+              <td  >
+     
                     <Dropdown 
                     id="leadPool"
                     value={leadPool}
@@ -425,13 +441,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setleadPool(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.campaign")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("leads.campaign")}</label>
+              </td>
+          <td >
+                   
+                       
+                     
                       <Dropdown 
                       id="campaign"
                       value={campaign}
@@ -443,14 +461,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                        setcampaign(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.source")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.source")}</label>
+            </td>
+              <td  >
+             
                     <Dropdown 
                     id="source"
                     value={source}
@@ -462,13 +481,13 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setsource(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.streetRoad")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("leads.streetRoad")}</label>
+              </td>
+          <td >
+                     
                       <InputText 
                       id="streetRoad"
                       value={streetRoad}
@@ -477,14 +496,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                        setstreetRoad(e.target.value);
                       }}
                       />
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.city")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.city")}</label>
+            </td>
+              <td  >
+               
                     <InputText 
                     id="city"
                     value={city}
@@ -493,13 +513,13 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.ctate")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("leads.ctate")}</label>
+              </td>
+          <td >
+               
                     <InputText 
                     id="ctate"
                     value={ctate}
@@ -508,14 +528,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setctate(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.postCode")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.postCode")}</label>
+            </td>
+              <td >
+                    
                     <InputText 
                     id="postCode"
                     value={postCode}
@@ -524,13 +545,11 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.country")}</label>
-                      <div style={{height:10}}> </div>
+              <td>  <label htmlFor="firstname1">{t("leads.country")}</label></td>
+          <td>
+                   
                       <Dropdown 
                       id="country"
                       value={country}
@@ -542,14 +561,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                        setcountry(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.linkedIn")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.linkedIn")}</label>
+            </td>
+              <td >
+                  
                     <InputText 
                     id="linkedIn"
                     value={linkedIn}
@@ -558,13 +578,11 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                      setlinkedIn(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.satus")}</label>
-                      <div style={{height:10}}> </div>
+              <td> <label htmlFor="firstname1">{t("leads.satus")}</label></td>
+          <td  >
+                    
                       <Dropdown 
                       id="satus"
                       options={fhStatusItems}
@@ -576,17 +594,18 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                        setsatus(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
    
 
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.isactived")}</label>
+            </td>
+          <td >
+               
                 <Dropdown 
                 value={isactived} 
                 options={fhitems} 
@@ -597,13 +616,13 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  ///setIsactived(e.value);
                 }}  placeholder={t("leads.isactived")} />
-                </div>
+            
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td > <label htmlFor="firstname1">{t("leads.islocked")}</label></td> 
+          <td  >
+                
+               
+             
                 <Dropdown 
                 value={islocked} 
                 options={fhitems} 
@@ -613,14 +632,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("leads.islocked")} />
-                </div> 
+              
           </td>
           </tr>
           <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.createdAt")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.createdAt")}</label>
+            </td>
+            <td >
+         
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -633,13 +653,12 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("leads.updatedAt")}</label>
+          </td>
+          <td >
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -652,14 +671,15 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                     }
                   }}
                 />
-                </div>
+                
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("leads.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.createUid")}</label>
-                <div style={{height:10}}> </div>
+             
                 <Dropdown 
                 value={createUid} 
                 options={FHUsers} 
@@ -670,14 +690,12 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("leads.createUid")} />
               
-                </div>
+                
           </td>
-          <td ></td>
+          <td ><label htmlFor="firstname1">{t("leads.updatedUid")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+       
+          <Dropdown 
                 value={updatedUid} 
                 options={FHUsers}
                 optionLabel="name" 
@@ -686,21 +704,21 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("leads.updatedUid")} />
-               </div>  
+              
           </td>
           </tr>
 
 
 
           <tr>
-          <td >
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/leads");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+        
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -745,7 +763,7 @@ export const LeadsItemAdd =({ Id, Mode }: LeadsItemProps) => {
           </td>
           </tr>
           </tbody>
-          </table>
+        </table>
       </div>
     </Card>
   );
@@ -937,17 +955,16 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
   return (
   <Card>     
       <div className="p-fluid p-formgrid p-grid">
-     <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
-
- 
-          <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("leads.name")}</label>
-                <div style={{height:10}}> </div>
+      <tr>
+          <td><label htmlFor="name">{t("leads.name")}</label></td>
+          <td colSpan={3}>      
+               
+                
+             
                 <InputText 
                 id="name" 
                 value={name}  
@@ -956,16 +973,35 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+                
           </td>
           </tr>
-
+          <tr>
+            <td>
+            <label htmlFor="firstname1">{t("leads.description")}</label>  
+            </td>
+            <td colSpan={3}>
+               
+              
+              
+                <InputTextarea 
+                id="description"
+                value={description}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setdDescription(e.target.value);
+                }}                 
+                
+                ></InputTextarea>
+             
+            </td>
+          </tr>
 
           <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.jobTitle")}</label>
-                    <div style={{height:10}}> </div>
+            <td style={{  width: '10%' }}>
+            <label htmlFor="firstname1">{t("leads.jobTitle")}</label>
+            </td>
+              <td style={{  width: '40%' }}>
                     <InputText 
                     id="jobTitle"
                     value={jobTitle}
@@ -974,13 +1010,15 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setjobTitle(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.company")}</label>
-                      <div style={{height:10}}> </div>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1">{t("leads.company")}</label>
+              </td>
+          <td style={{  width: '40%' }}>
+                     
+                      
+                  
                       <Dropdown 
                       id="company"
                       value={company}
@@ -992,14 +1030,15 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                        setcompany(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.industry")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.industry")}</label>  
+            </td>
+              <td  >
+                 
                     <InputText 
                     id="industry"
                     value={industry}
@@ -1008,13 +1047,12 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setindustry(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.website")}</label>
-                    <div style={{height:10}}> </div>
+              <td ><label htmlFor="firstname1">{t("leads.website")}</label></td>
+          <td  >
+                   
+                 
                     <InputText 
                     id="website"
                     value={website}
@@ -1023,14 +1061,14 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setwebsite(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.email")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.email")}</label>
+            </td>
+              <td >
                     <InputText 
                     id="email"
                     value={email}
@@ -1039,13 +1077,15 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setemail(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.phoneNumber")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("leads.phoneNumber")}</label>
+              </td>
+          <td >
+                  
+                   
+                   
                     <InputText 
                     id="phoneNumber"
                     value={phoneNumber}
@@ -1054,14 +1094,14 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setphoneNumber(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.mobileNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.mobileNumber")}</label>
+            </td>
+              <td  >
                     <InputText 
                     id="mobileNumber"
                     value={mobileNumber}
@@ -1070,13 +1110,15 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setmobileNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.faxNumber")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("leads.faxNumber")}</label>
+              </td>
+          <td >
+                
+                    
+                  
                     <InputText 
                     id="faxNumber"
                     value={faxNumber}
@@ -1085,14 +1127,17 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setfaxNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.remark")}</label>
+            </td>
+              <td >
+                 
+                   
+               
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -1101,12 +1146,14 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.leadOwner")}</label>
+              <td >
+              <label htmlFor="firstname1">{t("leads.leadOwner")}</label>
+              </td>
+          <td >
+                 
+                     
                       <div style={{height:10}}> </div>
                       <Dropdown 
                       id="leadOwner"
@@ -1119,32 +1166,35 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                        setleadOwner(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.leadPool")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.leadPool")}</label>
+            </td>
+              <td  >
+     
                     <Dropdown 
                     id="leadPool"
                     value={leadPool}
                     options={LeadPools}
                     optionLabel="name" 
-                    optionValue="code"                   
+                    optionValue="code"                
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.value));
                      setleadPool(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.campaign")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("leads.campaign")}</label>
+              </td>
+          <td >
+                   
+                       
+                     
                       <Dropdown 
                       id="campaign"
                       value={campaign}
@@ -1156,33 +1206,33 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                        setcampaign(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.source")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.source")}</label>
+            </td>
+              <td  >
+             
                     <Dropdown 
                     id="source"
                     value={source}
                     options={fhsourceItems}
                     optionLabel="name" 
                     optionValue="code" 
-
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.value));
                      setsource(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.streetRoad")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("leads.streetRoad")}</label>
+              </td>
+          <td >
+                     
                       <InputText 
                       id="streetRoad"
                       value={streetRoad}
@@ -1191,14 +1241,15 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                        setstreetRoad(e.target.value);
                       }}
                       />
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.city")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.city")}</label>
+            </td>
+              <td  >
+               
                     <InputText 
                     id="city"
                     value={city}
@@ -1207,13 +1258,13 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.ctate")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("leads.ctate")}</label>
+              </td>
+          <td >
+               
                     <InputText 
                     id="ctate"
                     value={ctate}
@@ -1222,14 +1273,15 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setctate(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.postCode")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.postCode")}</label>
+            </td>
+              <td >
+                    
                     <InputText 
                     id="postCode"
                     value={postCode}
@@ -1238,32 +1290,31 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.country")}</label>
-                      <div style={{height:10}}> </div>
+              <td>  <label htmlFor="firstname1">{t("leads.country")}</label></td>
+          <td>
+                   
                       <Dropdown 
                       id="country"
                       value={country}
                       options={Countrys}
                       optionLabel="name" 
-                      optionValue="code"                     
+                      optionValue="code"                   
                       onChange={(e)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setcountry(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.linkedIn")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.linkedIn")}</label>
+            </td>
+              <td >
+                  
                     <InputText 
                     id="linkedIn"
                     value={linkedIn}
@@ -1272,55 +1323,53 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                      setlinkedIn(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.satus")}</label>
-                      <div style={{height:10}}> </div>
+              <td> <label htmlFor="firstname1">{t("leads.satus")}</label></td>
+          <td  >
+                    
                       <Dropdown 
                       id="satus"
                       options={fhStatusItems}
                       value={satus}
                       optionLabel="name" 
-                      optionValue="code"                     
+                      optionValue="code"                    
                       onChange={(e)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setsatus(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
    
 
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.isactived")}</label>
+            </td>
+          <td >
+               
                 <Dropdown 
                 value={isactived} 
-                disabled={true}
                 options={fhitems} 
                 optionLabel="name" 
                 optionValue="code"
+                
                 onChange={(e: { value: any}) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  ///setIsactived(e.value);
                 }}  placeholder={t("leads.isactived")} />
-                </div>
+            
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td > <label htmlFor="firstname1">{t("leads.islocked")}</label></td> 
+          <td  >
+                
+               
+             
                 <Dropdown 
                 value={islocked} 
-                disabled={true}
                 options={fhitems} 
                 optionLabel="name" 
                 optionValue="code"
@@ -1328,19 +1377,19 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("leads.islocked")} />
-                </div> 
+              
           </td>
           </tr>
           <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.createdAt")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.createdAt")}</label>
+            </td>
+            <td >
+         
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
                   value={createAt}
-                  disabled={true}
                   placeholder={t("leads.createdAtPlaceholder")}
                   onChange={(e) => {
                     if (e.value != null) {
@@ -1349,18 +1398,16 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("leads.updatedAt")}</label>
+          </td>
+          <td >
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
                   value={updatedAt}
-                  disabled={true}
                   placeholder={t("leads.updatedAtPlaceholder")}
                   onChange={(e) => {
                     if (e.value != null) {
@@ -1369,17 +1416,17 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                     }
                   }}
                 />
-                </div>
+                
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("leads.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.createUid")}</label>
-                <div style={{height:10}}> </div>
+             
                 <Dropdown 
                 value={createUid} 
-                disabled={true}
                 options={FHUsers} 
                 optionLabel="name" 
                 optionValue="code"
@@ -1388,16 +1435,13 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("leads.createUid")} />
               
-                </div>
+                
           </td>
-          <td ></td>
+          <td ><label htmlFor="firstname1">{t("leads.updatedUid")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+       
+          <Dropdown 
                 value={updatedUid} 
-                disabled={true}
                 options={FHUsers}
                 optionLabel="name" 
                 optionValue="code"
@@ -1405,20 +1449,21 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("leads.updatedUid")} />
-               </div>  
+              
           </td>
           </tr>
 
-     
+
+
           <tr>
-          <td >
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/leads");}} style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/leads");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+        
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -1465,7 +1510,7 @@ export const LeadsItemEdit =({ Id, Mode }: LeadsItemProps) => {
           </td>
           </tr>
           </tbody>
-          </table>
+        </table>
       </div>
     </Card>
   );
@@ -1654,15 +1699,16 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
   return (
   <Card>     
       <div className="p-fluid p-formgrid p-grid">
-     <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
       <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("leads.name")}</label>
-                <div style={{height:10}}> </div>
+          <td><label htmlFor="name">{t("leads.name")}</label></td>
+          <td colSpan={3}>      
+               
+                
+             
                 <InputText 
                 id="name" 
                 value={name}  
@@ -1671,16 +1717,35 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+                
           </td>
           </tr>
-
+          <tr>
+            <td>
+            <label htmlFor="firstname1">{t("leads.description")}</label>  
+            </td>
+            <td colSpan={3}>
+               
+              
+              
+                <InputTextarea 
+                id="description"
+                value={description}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setdDescription(e.target.value);
+                }}                 
+                
+                ></InputTextarea>
+             
+            </td>
+          </tr>
 
           <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.jobTitle")}</label>
-                    <div style={{height:10}}> </div>
+            <td style={{  width: '10%' }}>  
+            <label htmlFor="firstname1">{t("leads.jobTitle")}</label>
+            </td>
+              <td  style={{  width: '40%' }}>
                     <InputText 
                     id="jobTitle"
                     value={jobTitle}
@@ -1689,13 +1754,15 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setjobTitle(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.company")}</label>
-                      <div style={{height:10}}> </div>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1">{t("leads.company")}</label>
+              </td>
+          <td style={{  width: '40%' }}>
+                     
+                      
+                  
                       <Dropdown 
                       id="company"
                       value={company}
@@ -1707,14 +1774,15 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                        setcompany(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.industry")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.industry")}</label>  
+            </td>
+              <td  >
+                 
                     <InputText 
                     id="industry"
                     value={industry}
@@ -1723,13 +1791,12 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setindustry(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.website")}</label>
-                    <div style={{height:10}}> </div>
+              <td ><label htmlFor="firstname1">{t("leads.website")}</label></td>
+          <td  >
+                   
+                 
                     <InputText 
                     id="website"
                     value={website}
@@ -1738,14 +1805,14 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setwebsite(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.email")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.email")}</label>
+            </td>
+              <td >
                     <InputText 
                     id="email"
                     value={email}
@@ -1754,13 +1821,15 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setemail(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.phoneNumber")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("leads.phoneNumber")}</label>
+              </td>
+          <td >
+                  
+                   
+                   
                     <InputText 
                     id="phoneNumber"
                     value={phoneNumber}
@@ -1769,14 +1838,14 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setphoneNumber(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.mobileNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.mobileNumber")}</label>
+            </td>
+              <td  >
                     <InputText 
                     id="mobileNumber"
                     value={mobileNumber}
@@ -1785,13 +1854,15 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setmobileNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.faxNumber")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("leads.faxNumber")}</label>
+              </td>
+          <td >
+                
+                    
+                  
                     <InputText 
                     id="faxNumber"
                     value={faxNumber}
@@ -1800,14 +1871,17 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setfaxNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.remark")}</label>
+            </td>
+              <td >
+                 
+                   
+               
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -1816,12 +1890,14 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.leadOwner")}</label>
+              <td >
+              <label htmlFor="firstname1">{t("leads.leadOwner")}</label>
+              </td>
+          <td >
+                 
+                     
                       <div style={{height:10}}> </div>
                       <Dropdown 
                       id="leadOwner"
@@ -1834,32 +1910,35 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                        setleadOwner(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.leadPool")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.leadPool")}</label>
+            </td>
+              <td  >
+     
                     <Dropdown 
                     id="leadPool"
                     value={leadPool}
                     options={LeadPools}
                     optionLabel="name" 
-                    optionValue="code"                   
+                    optionValue="code"                
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.value));
                      setleadPool(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.campaign")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("leads.campaign")}</label>
+              </td>
+          <td >
+                   
+                       
+                     
                       <Dropdown 
                       id="campaign"
                       value={campaign}
@@ -1871,33 +1950,33 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                        setcampaign(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.source")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.source")}</label>
+            </td>
+              <td  >
+             
                     <Dropdown 
                     id="source"
                     value={source}
                     options={fhsourceItems}
                     optionLabel="name" 
                     optionValue="code" 
-
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.value));
                      setsource(e.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.streetRoad")}</label>
-                      <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("leads.streetRoad")}</label>
+              </td>
+          <td >
+                     
                       <InputText 
                       id="streetRoad"
                       value={streetRoad}
@@ -1906,14 +1985,15 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                        setstreetRoad(e.target.value);
                       }}
                       />
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.city")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.city")}</label>
+            </td>
+              <td  >
+               
                     <InputText 
                     id="city"
                     value={city}
@@ -1922,13 +2002,13 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("leads.ctate")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("leads.ctate")}</label>
+              </td>
+          <td >
+               
                     <InputText 
                     id="ctate"
                     value={ctate}
@@ -1937,14 +2017,15 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setctate(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.postCode")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.postCode")}</label>
+            </td>
+              <td >
+                    
                     <InputText 
                     id="postCode"
                     value={postCode}
@@ -1953,32 +2034,31 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.country")}</label>
-                      <div style={{height:10}}> </div>
+              <td>  <label htmlFor="firstname1">{t("leads.country")}</label></td>
+          <td>
+                   
                       <Dropdown 
                       id="country"
                       value={country}
                       options={Countrys}
                       optionLabel="name" 
-                      optionValue="code"                     
+                      optionValue="code"                   
                       onChange={(e)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setcountry(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("leads.linkedIn")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.linkedIn")}</label>
+            </td>
+              <td >
+                  
                     <InputText 
                     id="linkedIn"
                     value={linkedIn}
@@ -1987,55 +2067,53 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                      setlinkedIn(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("leads.satus")}</label>
-                      <div style={{height:10}}> </div>
+              <td> <label htmlFor="firstname1">{t("leads.satus")}</label></td>
+          <td  >
+                    
                       <Dropdown 
                       id="satus"
                       options={fhStatusItems}
                       value={satus}
                       optionLabel="name" 
-                      optionValue="code"                     
+                      optionValue="code"                    
                       onChange={(e)=>{
                        console.info('e.value:'+JSON.stringify(e.value));
                        setsatus(e.value);
                       }}
                       />
-                      </div>
+                    
                 </td>
                 </tr>
    
 
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.isactived")}</label>
+            </td>
+          <td >
+               
                 <Dropdown 
                 value={isactived} 
-                disabled={true}
                 options={fhitems} 
                 optionLabel="name" 
                 optionValue="code"
+                
                 onChange={(e: { value: any}) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  ///setIsactived(e.value);
                 }}  placeholder={t("leads.isactived")} />
-                </div>
+            
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td > <label htmlFor="firstname1">{t("leads.islocked")}</label></td> 
+          <td  >
+                
+               
+             
                 <Dropdown 
                 value={islocked} 
-                disabled={true}
                 options={fhitems} 
                 optionLabel="name" 
                 optionValue="code"
@@ -2043,19 +2121,19 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("leads.islocked")} />
-                </div> 
+              
           </td>
           </tr>
           <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.createdAt")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("leads.createdAt")}</label>
+            </td>
+            <td >
+         
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
                   value={createAt}
-                  disabled={true}
                   placeholder={t("leads.createdAtPlaceholder")}
                   onChange={(e) => {
                     if (e.value != null) {
@@ -2064,18 +2142,16 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("leads.updatedAt")}</label>
+          </td>
+          <td >
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
                   value={updatedAt}
-                  disabled={true}
                   placeholder={t("leads.updatedAtPlaceholder")}
                   onChange={(e) => {
                     if (e.value != null) {
@@ -2084,17 +2160,17 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                     }
                   }}
                 />
-                </div>
+                
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("leads.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.createUid")}</label>
-                <div style={{height:10}}> </div>
+             
                 <Dropdown 
                 value={createUid} 
-                disabled={true}
                 options={FHUsers} 
                 optionLabel="name" 
                 optionValue="code"
@@ -2103,16 +2179,13 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("leads.createUid")} />
               
-                </div>
+                
           </td>
-          <td ></td>
+          <td ><label htmlFor="firstname1">{t("leads.updatedUid")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("leads.updatedUid")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
+       
+          <Dropdown 
                 value={updatedUid} 
-                disabled={true}
                 options={FHUsers}
                 optionLabel="name" 
                 optionValue="code"
@@ -2120,21 +2193,21 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("leads.updatedUid")} />
-               </div>  
+              
           </td>
           </tr>
 
-   
+
 
           <tr>
-          <td >
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/leads");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+        
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -2146,7 +2219,7 @@ export const LeadsItemView =({ Id, Mode }: LeadsItemProps) => {
           </td>
           </tr>
           </tbody>
-          </table>
+        </table>
       </div>
     </Card>
   );

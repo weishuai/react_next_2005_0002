@@ -153,10 +153,9 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
       <tbody>
 
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.client")}</label>
-                    <div style={{height:10}}> </div>
+              <td style={{  width: '10%' }}><label htmlFor="firstname1">{t("client.client")}</label></td>
+              <td  style={{  width: '40%' }}>
+              
                     <InputText 
                     id="name"
                     value={name}
@@ -165,13 +164,13 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setName(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.clientState")}</label>
-                    <div style={{height:10}}> </div>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1">{t("client.clientState")}</label>  
+              </td>
+          <td  style={{  width: '40%' }}>
+                 
                     <Dropdown
                     id="clientState"
                     options={fhStatusItems} 
@@ -183,14 +182,15 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setclientState(e.value);
                     }}
                     />
-                    </div>
+                  
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.type")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.type")}</label>
+            </td>
+              <td  >
+                
                     <Dropdown
                     id="type"
                     options={fhitemType} 
@@ -202,13 +202,11 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      settype(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("client.accountOwner")}</label>
-                      <div style={{height:10}}> </div>
+              <td>   <label htmlFor="firstname1">{t("client.accountOwner")}</label></td>
+          <td >
+              
                       <Dropdown 
                         id="accountOwner"
                         value={accountOwner}
@@ -219,14 +217,15 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                         console.info('e.value:'+JSON.stringify(e.value));
                         setaccountOwner(e.value);
                         }}  />  
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.regNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.regNumber")}</label>
+            </td>
+              <td >
+                    
                     <InputText 
                     id="regNumber"
                     value={regNumber}
@@ -235,13 +234,13 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setregNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.industry")}</label>
-                    <div style={{height:10}}></div>
+              <td >
+              <label htmlFor="firstname1">{t("client.industry")}</label>
+              </td>
+          <td >
+ 
                     <InputText 
                     id="industry"
                     value={industry}
@@ -250,14 +249,15 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setindustry(e.target.value);
                     }}
                     />
-                    </div>
+              
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.phoneNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.phoneNumber")}</label>
+            </td>
+              <td >
+           
                     <InputText 
                     id="phoneNumber"
                     value={phoneNumber}
@@ -266,13 +266,13 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setphoneNumber(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.website")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("client.website")}</label>
+              </td>
+          <td >
+           
                     <InputText 
                     id="website"
                     value={website}
@@ -281,14 +281,15 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setwebsite(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.faxNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.faxNumber")}</label>
+            </td>
+              <td >
+           
                     <InputText 
                     id="faxNumber"
                     value={faxNumber}
@@ -297,13 +298,13 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setfaxNumber(e.target.value);
                     }}
                     />
-                    </div>
+                
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.street")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("client.street")}</label>
+              </td>
+          <td  >
+                  
                     <InputText 
                     id="street"
                     value={street}
@@ -312,14 +313,15 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setstreet(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.city")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.city")}</label>
+            </td>
+              <td  >
+                 
                     <InputText 
                     id="city"
                     value={city}
@@ -328,13 +330,13 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.state")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("client.state")}</label>
+              </td>
+          <td >
+                 
                     <InputText 
                     id="state"
                     value={state}
@@ -343,14 +345,15 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setstate(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.postCode")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.postCode")}</label>
+            </td>
+              <td >
+          
                     <InputText 
                     id="postCode"
                     value={postCode}
@@ -359,13 +362,11 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("client.country")}</label>
-                      <div style={{height:10}}> </div>
+              <td>  <label htmlFor="firstname1">{t("client.country")}</label></td>
+          <td  >
+                     
                       <Dropdown 
                       id="country"
                       value={country}
@@ -377,14 +378,15 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                        setcountry(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.don")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.don")}</label>
+            </td>
+              <td >
+                
                     <InputText 
                     id="don"
                     value={don}
@@ -393,13 +395,13 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setdon(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.ref")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("client.ref")}</label>
+              </td>
+          <td >
+              
                     <InputText 
                     id="ref"
                     value={ref}
@@ -408,14 +410,15 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setref(e.target.value);
                     }}
                     />
-                    </div>
+                 
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.additionalField4")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.additionalField4")}</label>
+            </td>
+              <td >
+                  
                     <InputText 
                     id="additionalField4"
                     value={additionalField4}
@@ -424,13 +427,13 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setadditionalField4(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.additionalField5")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("client.additionalField5")}</label>
+              </td>
+          <td >
+               
                     <InputText 
                     id="additionalField5"
                     value={additionalField5}
@@ -439,15 +442,16 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                      setadditionalField5(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.isactived")}</label>
+            </td>
+          <td >
+               
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -458,13 +462,13 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("client.isactived")} />
-                </div>
+              
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td >
+          <label htmlFor="firstname1">{t("client.islocked")}</label>
+            </td> 
+          <td  >
+
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -475,14 +479,15 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("client.islocked")} />
-                </div> 
+                
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("client.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.createdAt")}</label>
-                <div style={{height:10}}> </div>
+           
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -496,13 +501,13 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                     }
                   }}
                 />
-               </div>
+          
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("client.updatedAt")}</label>
+          </td>
+          <td >
+              
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -516,14 +521,15 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                     }
                   }}
                 />
-                </div>
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("client.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.createUid")}</label>
-                <div style={{height:10}}> </div>
+                
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -535,13 +541,11 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("client.createUid")} />
               
-                </div>
+              
           </td>
-          <td ></td>
+          <td > <label htmlFor="firstname1">{t("client.updatedUid")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+     
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -552,18 +556,18 @@ export const ClientItemAdd =({ Id, Mode }: ClientItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("client.updatedUid")} />
-               </div>  
+              
           </td>
           </tr>
           <tr>
-          <td >
+          <td  colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/client");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+          
+          <td colSpan={2}> 
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -737,17 +741,15 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
   return (
   <Card>     
       <div className="p-fluid p-formgrid p-grid">
-     <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
 
-
-          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.client")}</label>
-                    <div style={{height:10}}> </div>
+         <tr>
+              <td style={{  width: '10%' }}><label htmlFor="firstname1">{t("client.client")}</label></td>
+              <td  style={{  width: '40%' }}>
+              
                     <InputText 
                     id="name"
                     value={name}
@@ -756,37 +758,37 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setName(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.clientState")}</label>
-                    <div style={{height:10}}> </div>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1">{t("client.clientState")}</label>  
+              </td>
+          <td style={{  width: '40%' }}>
+                 
                     <Dropdown
-
                     id="clientState"
-                    value={clientState}
                     options={fhStatusItems} 
                     optionLabel="name" 
-                    optionValue="code"                   
+                    optionValue="code"
+                    value={clientState}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.value));
                      setclientState(e.value);
                     }}
                     />
-                    </div>
+                  
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.type")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.type")}</label>
+            </td>
+              <td  >
+                
                     <Dropdown
                     id="type"
+                    options={fhitemType} 
                     value={type}
-                    options={fhitemType}
                     optionLabel="name" 
                     optionValue="code"
                     onChange={(e)=>{
@@ -794,14 +796,12 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      settype(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("client.accountOwner")}</label>
-                      <div style={{height:10}}> </div>
-                        <Dropdown 
+              <td>   <label htmlFor="firstname1">{t("client.accountOwner")}</label></td>
+          <td >
+              
+                      <Dropdown 
                         id="accountOwner"
                         value={accountOwner}
                         options={FHUsers} 
@@ -810,15 +810,16 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                         onChange={(e: { value: any}) => {
                         console.info('e.value:'+JSON.stringify(e.value));
                         setaccountOwner(e.value);
-                        }}  />            
-                      </div>
+                        }}  />  
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.regNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.regNumber")}</label>
+            </td>
+              <td >
+                    
                     <InputText 
                     id="regNumber"
                     value={regNumber}
@@ -827,13 +828,13 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setregNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.industry")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("client.industry")}</label>
+              </td>
+          <td >
+ 
                     <InputText 
                     id="industry"
                     value={industry}
@@ -842,14 +843,15 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setindustry(e.target.value);
                     }}
                     />
-                    </div>
+              
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.phoneNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.phoneNumber")}</label>
+            </td>
+              <td >
+           
                     <InputText 
                     id="phoneNumber"
                     value={phoneNumber}
@@ -858,13 +860,13 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setphoneNumber(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.website")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("client.website")}</label>
+              </td>
+          <td >
+           
                     <InputText 
                     id="website"
                     value={website}
@@ -873,14 +875,15 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setwebsite(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.faxNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.faxNumber")}</label>
+            </td>
+              <td >
+           
                     <InputText 
                     id="faxNumber"
                     value={faxNumber}
@@ -889,13 +892,13 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setfaxNumber(e.target.value);
                     }}
                     />
-                    </div>
+                
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.street")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("client.street")}</label>
+              </td>
+          <td  >
+                  
                     <InputText 
                     id="street"
                     value={street}
@@ -904,14 +907,15 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setstreet(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.city")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.city")}</label>
+            </td>
+              <td  >
+                 
                     <InputText 
                     id="city"
                     value={city}
@@ -920,13 +924,13 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.state")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("client.state")}</label>
+              </td>
+          <td >
+                 
                     <InputText 
                     id="state"
                     value={state}
@@ -935,14 +939,15 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setstate(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.postCode")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.postCode")}</label>
+            </td>
+              <td >
+          
                     <InputText 
                     id="postCode"
                     value={postCode}
@@ -951,13 +956,11 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("client.country")}</label>
-                      <div style={{height:10}}> </div>
+              <td>  <label htmlFor="firstname1">{t("client.country")}</label></td>
+          <td  >
+                     
                       <Dropdown 
                       id="country"
                       value={country}
@@ -969,14 +972,15 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                        setcountry(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.don")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.don")}</label>
+            </td>
+              <td >
+                
                     <InputText 
                     id="don"
                     value={don}
@@ -985,13 +989,13 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setdon(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.ref")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("client.ref")}</label>
+              </td>
+          <td >
+              
                     <InputText 
                     id="ref"
                     value={ref}
@@ -1000,14 +1004,15 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setref(e.target.value);
                     }}
                     />
-                    </div>
+                 
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.additionalField4")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.additionalField4")}</label>
+            </td>
+              <td >
+                  
                     <InputText 
                     id="additionalField4"
                     value={additionalField4}
@@ -1016,13 +1021,13 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setadditionalField4(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.additionalField5")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("client.additionalField5")}</label>
+              </td>
+          <td >
+               
                     <InputText 
                     id="additionalField5"
                     value={additionalField5}
@@ -1031,49 +1036,52 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                      setadditionalField5(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
 
-
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.isactived")}</label>
+            </td>
+          <td >
+               
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
                 options={fhitems} 
-
+                optionLabel="name" 
+                optionValue="code"
                 onChange={(e: { value: any}) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("client.isactived")} />
-                </div>
+              
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td >
+          <label htmlFor="firstname1">{t("client.islocked")}</label>
+            </td> 
+          <td  >
+
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
                 options={fhitems} 
-
+                optionLabel="name" 
+                optionValue="code"
                 onChange={(e: { value: any}) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("client.islocked")} />
-                </div> 
+                
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("client.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.createdAt")}</label>
-                <div style={{height:10}}> </div>
+           
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -1087,13 +1095,13 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                     }
                   }}
                 />
-               </div>
+          
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("client.updatedAt")}</label>
+          </td>
+          <td >
+              
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -1107,14 +1115,15 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                     }
                   }}
                 />
-                </div>
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("client.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.createUid")}</label>
-                <div style={{height:10}}> </div>
+                
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -1126,13 +1135,11 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("client.createUid")} />
               
-                </div>
+              
           </td>
-          <td ></td>
+          <td > <label htmlFor="firstname1">{t("client.updatedUid")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+     
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -1143,19 +1150,18 @@ export const ClientItemEdit =({ Id, Mode }: ClientItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("client.updatedUid")} />
-               </div>  
+              
           </td>
           </tr>
-
           <tr>
-          <td >
+          <td  colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/client");}} style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/client");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+          
+          <td colSpan={2}> 
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -1335,16 +1341,15 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
   return (
   <Card>     
       <div className="p-fluid p-formgrid p-grid">
-     <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
 
-          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.client")}</label>
-                    <div style={{height:10}}> </div>
+         <tr>
+              <td style={{  width: '10%' }}><label htmlFor="firstname1">{t("client.client")}</label></td>
+              <td style={{  width: '40%' }} >
+              
                     <InputText 
                     id="name"
                     value={name}
@@ -1353,35 +1358,36 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setName(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.clientState")}</label>
-                    <div style={{height:10}}> </div>
+              <td style={{  width: '10%' }}>
+              <label htmlFor="firstname1">{t("client.clientState")}</label>  
+              </td>
+          <td style={{  width: '40%' }}>
+                 
                     <Dropdown
                     id="clientState"
-                    value={clientState}
                     options={fhStatusItems} 
                     optionLabel="name" 
                     optionValue="code"
+                    value={clientState}
                     onChange={(e)=>{
                      console.info('e.value:'+JSON.stringify(e.value));
                      setclientState(e.value);
                     }}
                     />
-                    </div>
+                  
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.type")}</label>
-                    <div style={{height:10}}> </div>
-                    <Dropdown 
-                    options={fhitemType}
+            <td>
+            <label htmlFor="firstname1">{t("client.type")}</label>
+            </td>
+              <td  >
+                
+                    <Dropdown
                     id="type"
+                    options={fhitemType} 
                     value={type}
                     optionLabel="name" 
                     optionValue="code"
@@ -1390,13 +1396,11 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      settype(e.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("client.accountOwner")}</label>
-                      <div style={{height:10}}> </div>
+              <td>   <label htmlFor="firstname1">{t("client.accountOwner")}</label></td>
+          <td >
+              
                       <Dropdown 
                         id="accountOwner"
                         value={accountOwner}
@@ -1407,14 +1411,15 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                         console.info('e.value:'+JSON.stringify(e.value));
                         setaccountOwner(e.value);
                         }}  />  
-                      </div>
+                      
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.regNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.regNumber")}</label>
+            </td>
+              <td >
+                    
                     <InputText 
                     id="regNumber"
                     value={regNumber}
@@ -1423,13 +1428,13 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setregNumber(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.industry")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("client.industry")}</label>
+              </td>
+          <td >
+ 
                     <InputText 
                     id="industry"
                     value={industry}
@@ -1438,14 +1443,15 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setindustry(e.target.value);
                     }}
                     />
-                    </div>
+              
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.phoneNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.phoneNumber")}</label>
+            </td>
+              <td >
+           
                     <InputText 
                     id="phoneNumber"
                     value={phoneNumber}
@@ -1454,13 +1460,13 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setphoneNumber(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.website")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("client.website")}</label>
+              </td>
+          <td >
+           
                     <InputText 
                     id="website"
                     value={website}
@@ -1469,14 +1475,15 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setwebsite(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.faxNumber")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.faxNumber")}</label>
+            </td>
+              <td >
+           
                     <InputText 
                     id="faxNumber"
                     value={faxNumber}
@@ -1485,13 +1492,13 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setfaxNumber(e.target.value);
                     }}
                     />
-                    </div>
+                
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.street")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("client.street")}</label>
+              </td>
+          <td  >
+                  
                     <InputText 
                     id="street"
                     value={street}
@@ -1500,14 +1507,15 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setstreet(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.city")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.city")}</label>
+            </td>
+              <td  >
+                 
                     <InputText 
                     id="city"
                     value={city}
@@ -1516,13 +1524,13 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setcity(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.state")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("client.state")}</label>
+              </td>
+          <td >
+                 
                     <InputText 
                     id="state"
                     value={state}
@@ -1531,14 +1539,15 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setstate(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.postCode")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.postCode")}</label>
+            </td>
+              <td >
+          
                     <InputText 
                     id="postCode"
                     value={postCode}
@@ -1547,13 +1556,11 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setpostCode(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                      <div className="p-field p-col-12 p-md-6">
-                       <label htmlFor="firstname1">{t("client.country")}</label>
-                      <div style={{height:10}}> </div>
+              <td>  <label htmlFor="firstname1">{t("client.country")}</label></td>
+          <td  >
+                     
                       <Dropdown 
                       id="country"
                       value={country}
@@ -1565,14 +1572,15 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                        setcountry(e.value);
                       }}
                       />
-                      </div>
+                     
                 </td>
                 </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.don")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.don")}</label>
+            </td>
+              <td >
+                
                     <InputText 
                     id="don"
                     value={don}
@@ -1581,13 +1589,13 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setdon(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.ref")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("client.ref")}</label>
+              </td>
+          <td >
+              
                     <InputText 
                     id="ref"
                     value={ref}
@@ -1596,14 +1604,15 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setref(e.target.value);
                     }}
                     />
-                    </div>
+                 
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("client.additionalField4")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.additionalField4")}</label>
+            </td>
+              <td >
+                  
                     <InputText 
                     id="additionalField4"
                     value={additionalField4}
@@ -1612,13 +1621,13 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setadditionalField4(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("client.additionalField5")}</label>
-                    <div style={{height:10}}> </div>
+              <td>
+              <label htmlFor="firstname1">{t("client.additionalField5")}</label>
+              </td>
+          <td >
+               
                     <InputText 
                     id="additionalField5"
                     value={additionalField5}
@@ -1627,15 +1636,16 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                      setadditionalField5(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("client.isactived")}</label>
+            </td>
+          <td >
+               
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -1646,13 +1656,13 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("client.isactived")} />
-                </div>
+              
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td >
+          <label htmlFor="firstname1">{t("client.islocked")}</label>
+            </td> 
+          <td  >
+
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -1663,14 +1673,15 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("client.islocked")} />
-                </div> 
+                
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("client.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.createdAt")}</label>
-                <div style={{height:10}}> </div>
+           
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -1684,13 +1695,13 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                     }
                   }}
                 />
-               </div>
+          
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("client.updatedAt")}</label>
+          </td>
+          <td >
+              
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -1704,14 +1715,15 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                     }
                   }}
                 />
-                </div>
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("client.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.createUid")}</label>
-                <div style={{height:10}}> </div>
+                
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -1723,13 +1735,11 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("client.createUid")} />
               
-                </div>
+              
           </td>
-          <td ></td>
+          <td > <label htmlFor="firstname1">{t("client.updatedUid")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("client.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+     
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -1740,23 +1750,21 @@ export const ClientItemView =({ Id, Mode }: ClientItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("client.updatedUid")} />
-               </div>  
+              
           </td>
           </tr>
-
-
           <tr>
-          <td >
+          <td  colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/client");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+          
+          <td colSpan={2}> 
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                  <Button
+               <Button
                     label="确认"
                     onClick={(e) => {replace("/client");}}
                     style={{backgroundColor:'#4682B4'}}

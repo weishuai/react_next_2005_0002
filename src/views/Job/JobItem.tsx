@@ -114,16 +114,18 @@ export const JobItemAdd =({ Id, Mode }: JobItemProps) => {
       <thead>
       </thead>
       <tbody>
+
           <tr>
           <td colSpan={4}> 
             <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>
           </td>
-          </tr>
+          </tr>  
           <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("job.name")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="name">{t("job.name")}</label>
+            </td>
+          <td colSpan={3}>      
+        
                 <InputText 
                 id="name" 
                 value={name}  
@@ -132,67 +134,87 @@ export const JobItemAdd =({ Id, Mode }: JobItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+             
           </td>
-          </tr>
+          </tr>  
           <tr>
-            <td colSpan={4}>
-                <div className="p-field p-col-12 p-md-12">
-                <label htmlFor="firstname1">{t("job.description")}</label>
-                <div style={{height:10}}> </div>
-                <InputTextarea 
-                id="description"
-                value={description}  
+            <td>
+            <label htmlFor="name">{t("job.wi_type")}</label>
+            </td>
+          <td colSpan={3}>      
+      
+                <InputText 
+                id="name" 
+                value={name}  
                 onChange={(e)=>{
                  console.info('e.value:'+JSON.stringify(e.target.value));
-                 setdDescription(e.target.value);
-                }}                 
+                 setName(e.target.value);
+                }}  
+                />
                 
-                ></InputTextarea>
-                </div>
+          </td>
+          </tr>  
+  
+          <tr>
+            <td>
+            <label htmlFor="name">{t("job.clients")}</label>
             </td>
+          <td colSpan={3}>      
+          
+                <InputText 
+                id="name" 
+                value={name}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setName(e.target.value);
+                }}  
+                />
+         
+          </td>
+
+          </tr>  
+          <tr>
+        <td>
+        <label htmlFor="name">{t("job.mycreateUid")}</label>
+        </td>
+          <td colSpan={3}>      
+                
+                <InputText 
+                id="name" 
+                value={name}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setName(e.target.value);
+                }}  
+                />
+              
+          </td>
+          </tr>  
+          <tr>
+        <td>
+        <label htmlFor="name">{t("job.num")}</label>
+        </td>
+          <td colSpan={3}>      
+             
+                <InputText 
+                id="name" 
+                value={name}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setName(e.target.value);
+                }}  
+                />
+            
+          </td>        
+
           </tr>
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.isactived")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={isactived} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIsactived(e.value);
-                }}  placeholder={t("job.isactived")} />
-                </div>
-          </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.islocked")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={islocked} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIslocked(e.value);
-                }}  placeholder={t("job.islocked")} />
-                </div> 
-          </td>
-          </tr>
-          <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.createdAt")}</label>
-                <div style={{height:10}}> </div>
+            <td  width="10%">
+            <label htmlFor="firstname1">{t("job.mycreatedAt")}</label>
+            </td>
+          <td  width="40%">
+           
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -206,13 +228,11 @@ export const JobItemAdd =({ Id, Mode }: JobItemProps) => {
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <td   width="10%"> <label htmlFor="firstname1">{t("job.myupdatedAt")}</label></td>
+          <td  width="40%">
+             
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -226,14 +246,118 @@ export const JobItemAdd =({ Id, Mode }: JobItemProps) => {
                     }
                   }}
                 />
-                </div>
+                
+          </td>
+          </tr>
+
+
+          <tr>
+            <td>
+            <label htmlFor="firstname1">{t("job.description")}</label>
+            </td>
+            <td colSpan={3}>
+            
+                <InputTextarea 
+                id="description"
+                value={description}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setdDescription(e.target.value);
+                }}                 
+                
+                ></InputTextarea>
+               
+            </td>
+          </tr>
+
+ 
+
+          <tr>
+            <td>
+            <label htmlFor="firstname1">{t("job.isactived")}</label>
+            </td>
+          <td  >
+             
+                <Dropdown 
+                value={isactived} 
+                disabled={true}
+                options={fhitems} 
+                optionLabel="name" 
+                optionValue="code"
+                onChange={(e: { value: any}) => {
+                 console.info('e.value:'+JSON.stringify(e.value));
+                 setIsactived(e.value);
+                }}  placeholder={t("job.isactived")} />
+              
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("job.islocked")}</label>
+           </td> 
+          <td >
+               
+              
+               
+                <Dropdown 
+                value={islocked} 
+                disabled={true}
+                options={fhitems} 
+                optionLabel="name" 
+                optionValue="code"
+                onChange={(e: { value: any}) => {
+                 console.info('e.value:'+JSON.stringify(e.value));
+                 setIslocked(e.value);
+                }}  placeholder={t("job.islocked")} />
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("job.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.createUid")}</label>
-                <div style={{height:10}}> </div>
+      
+                <Calendar
+                  dateFormat="dd/mm/yy"
+                  id="createdAt"
+                  value={createAt}
+                  disabled={true}
+                  placeholder={t("job.createdAtPlaceholder")}
+                  onChange={(e) => {
+                    if (e.value != null) {
+                    console.log('e.value' + e.value);
+                    setCreateAt(e.value);
+                    }
+                  }}
+                />
+            
+          </td>
+          <td >
+          <label htmlFor="firstname1">{t("job.updatedAt")}</label>
+          </td>
+          <td >
+         
+                <Calendar
+                  dateFormat="dd/mm/yy"
+                  id="updatedAt"
+                  value={updatedAt}
+                  disabled={true}
+                  placeholder={t("job.updatedAtPlaceholder")}
+                  onChange={(e) => {
+                    if (e.value != null) {
+                      console.log('e.value' + e.value);
+                      setUpdatedAt(e.value);
+                    }
+                  }}
+                />
+                
+          </td>
+          </tr>
+          <tr>
+            <td>
+            <label htmlFor="firstname1">{t("job.createUid")}</label>
+            </td>
+          <td >
+               
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -245,13 +369,13 @@ export const JobItemAdd =({ Id, Mode }: JobItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("job.createUid")} />
               
-                </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("job.updatedUid")}</label>
+          </td>
+          <td >
+               
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -262,33 +386,34 @@ export const JobItemAdd =({ Id, Mode }: JobItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("job.updatedUid")} />
-               </div>  
+              
           </td>
           </tr>
 
           <tr>
             <td colSpan={4}>
-             
-              <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
+                <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
                     <TabPanel header="工序信息">
-                    <JobItemList mid={FHid}></JobItemList>
+                    <JobItemList mid={FHid}
+                     FHonChange={(e:any) => {
+                      setVal(e);
+                    }}> 
+
+                    </JobItemList>
                     </TabPanel>
                    
                 </TabView>
-             
             </td>
           </tr>
-
-
           <tr>
-          <td >
+          <td colSpan={2} >
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/job");}}  style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/job");}} style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+         
+          <td colSpan={2}> 
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -411,10 +536,11 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
           </td>
           </tr>  
           <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("job.name")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="name">{t("job.name")}</label>
+            </td>
+          <td colSpan={3}>      
+        
                 <InputText 
                 id="name" 
                 value={name}  
@@ -423,14 +549,15 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+             
           </td>
           </tr>  
           <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("job.wi_type")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="name">{t("job.wi_type")}</label>
+            </td>
+          <td colSpan={3}>      
+      
                 <InputText 
                 id="name" 
                 value={name}  
@@ -439,15 +566,16 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+                
           </td>
           </tr>  
   
           <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("job.clients")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="name">{t("job.clients")}</label>
+            </td>
+          <td colSpan={3}>      
+          
                 <InputText 
                 id="name" 
                 value={name}  
@@ -456,16 +584,16 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+         
           </td>
 
           </tr>  
           <tr>
-
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("job.mycreateUid")}</label>
-                <div style={{height:10}}> </div>
+        <td>
+        <label htmlFor="name">{t("job.mycreateUid")}</label>
+        </td>
+          <td colSpan={3}>      
+                
                 <InputText 
                 id="name" 
                 value={name}  
@@ -474,15 +602,15 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+              
           </td>
           </tr>  
           <tr>
-
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("job.num")}</label>
-                <div style={{height:10}}> </div>
+        <td>
+        <label htmlFor="name">{t("job.num")}</label>
+        </td>
+          <td colSpan={3}>      
+             
                 <InputText 
                 id="name" 
                 value={name}  
@@ -491,16 +619,17 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+            
           </td>        
 
           </tr>
 
           <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.mycreatedAt")}</label>
-                <div style={{height:10}}> </div>
+            <td  width="10%">
+            <label htmlFor="firstname1">{t("job.mycreatedAt")}</label>
+            </td>
+          <td  width="40%">
+           
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -514,13 +643,11 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.myupdatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <td   width="10%"> <label htmlFor="firstname1">{t("job.myupdatedAt")}</label></td>
+          <td   width="40%">
+             
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -534,16 +661,17 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                     }
                   }}
                 />
-                </div>
+                
           </td>
           </tr>
 
 
           <tr>
-            <td colSpan={4}>
-                <div className="p-field p-col-12 p-md-12">
-                <label htmlFor="firstname1">{t("job.description")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("job.description")}</label>
+            </td>
+            <td colSpan={3}>
+            
                 <InputTextarea 
                 id="description"
                 value={description}  
@@ -553,17 +681,18 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                 }}                 
                 
                 ></InputTextarea>
-                </div>
+               
             </td>
           </tr>
 
  
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("job.isactived")}</label>
+            </td>
+          <td  >
+             
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -574,13 +703,15 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("job.isactived")} />
-                </div>
+              
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td>
+          <label htmlFor="firstname1">{t("job.islocked")}</label>
+           </td> 
+          <td >
+               
+              
+               
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -591,14 +722,15 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("job.islocked")} />
-                </div> 
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("job.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.createdAt")}</label>
-                <div style={{height:10}}> </div>
+      
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -612,13 +744,13 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                     }
                   }}
                 />
-               </div>
+            
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("job.updatedAt")}</label>
+          </td>
+          <td >
+         
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -632,14 +764,15 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                     }
                   }}
                 />
-                </div>
+                
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("job.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.createUid")}</label>
-                <div style={{height:10}}> </div>
+               
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -651,13 +784,13 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("job.createUid")} />
               
-                </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("job.updatedUid")}</label>
+          </td>
+          <td >
+               
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -668,7 +801,7 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("job.updatedUid")} />
-               </div>  
+              
           </td>
           </tr>
 
@@ -688,14 +821,14 @@ export const JobItemEdit =({ Id, Mode }: JobItemProps) => {
             </td>
           </tr>
           <tr>
-          <td >
+          <td colSpan={2} >
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/job");}} style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+         
+          <td colSpan={2}> 
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -808,91 +941,111 @@ export const JobItemView =({ Id, Mode }: JobItemProps) => {
   return (
   <Card>     
       <div className="p-fluid p-formgrid p-grid">
-     <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
-           <tr>
+
+          <tr>
           <td colSpan={4}> 
             <Steps model={items} activeIndex={activeIndex} onSelect={(e) => setActiveIndex(e.index)} readOnly={false}/>
           </td>
-          </tr>      
+          </tr>  
           <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("job.name")}</label>
-                <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="name">{t("job.name")}</label>
+            </td>
+          <td colSpan={3}>      
+        
                 <InputText 
                 id="name" 
                 value={name}  
-                disabled={true}
                 onChange={(e)=>{
                  console.info('e.value:'+JSON.stringify(e.target.value));
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+             
           </td>
-          </tr>
+          </tr>  
           <tr>
-            <td colSpan={4}>
-                <div className="p-field p-col-12 p-md-12">
-                <label htmlFor="firstname1">{t("job.description")}</label>
-                <div style={{height:10}}> </div>
-                <InputTextarea 
-                id="description"
-                value={description}  
-                disabled={true}
+            <td>
+            <label htmlFor="name">{t("job.wi_type")}</label>
+            </td>
+          <td colSpan={3}>      
+      
+                <InputText 
+                id="name" 
+                value={name}  
                 onChange={(e)=>{
                  console.info('e.value:'+JSON.stringify(e.target.value));
-                 setdDescription(e.target.value);
-                }}                 
+                 setName(e.target.value);
+                }}  
+                />
                 
-                ></InputTextarea>
-                </div>
+          </td>
+          </tr>  
+  
+          <tr>
+            <td>
+            <label htmlFor="name">{t("job.clients")}</label>
             </td>
-          </tr>
- 
-          <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.isactived")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={isactived} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIsactived(e.value);
-                }}  placeholder={t("job.isactived")} />
-                </div>
+          <td colSpan={3}>      
+          
+                <InputText 
+                id="name" 
+                value={name}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setName(e.target.value);
+                }}  
+                />
+         
           </td>
-          <td width="2%"></td> 
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.islocked")}</label>
-                <div style={{height:10}}> </div>
-                <Dropdown 
-                value={islocked} 
-                disabled={true}
-                options={fhitems} 
-                optionLabel="name" 
-                optionValue="code"
-                onChange={(e: { value: any}) => {
-                 console.info('e.value:'+JSON.stringify(e.value));
-                 setIslocked(e.value);
-                }}  placeholder={t("job.islocked")} />
-                </div> 
-          </td>
-          </tr>
+
+          </tr>  
           <tr>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.createdAt")}</label>
-                <div style={{height:10}}> </div>
+        <td>
+        <label htmlFor="name">{t("job.mycreateUid")}</label>
+        </td>
+          <td colSpan={3}>      
+                
+                <InputText 
+                id="name" 
+                value={name}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setName(e.target.value);
+                }}  
+                />
+              
+          </td>
+          </tr>  
+          <tr>
+        <td>
+        <label htmlFor="name">{t("job.num")}</label>
+        </td>
+          <td colSpan={3}>      
+             
+                <InputText 
+                id="name" 
+                value={name}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setName(e.target.value);
+                }}  
+                />
+            
+          </td>        
+
+          </tr>
+
+          <tr>
+            <td  width="10%">
+            <label htmlFor="firstname1">{t("job.mycreatedAt")}</label>
+            </td>
+          <td  width="40%">
+           
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -906,13 +1059,11 @@ export const JobItemView =({ Id, Mode }: JobItemProps) => {
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
-          <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+          <td   width="10%"> <label htmlFor="firstname1">{t("job.myupdatedAt")}</label></td>
+          <td  width="40%">
+             
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -926,14 +1077,118 @@ export const JobItemView =({ Id, Mode }: JobItemProps) => {
                     }
                   }}
                 />
-                </div>
+                
+          </td>
+          </tr>
+
+
+          <tr>
+            <td>
+            <label htmlFor="firstname1">{t("job.description")}</label>
+            </td>
+            <td colSpan={3}>
+            
+                <InputTextarea 
+                id="description"
+                value={description}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setdDescription(e.target.value);
+                }}                 
+                
+                ></InputTextarea>
+               
+            </td>
+          </tr>
+
+ 
+
+          <tr>
+            <td>
+            <label htmlFor="firstname1">{t("job.isactived")}</label>
+            </td>
+          <td  >
+             
+                <Dropdown 
+                value={isactived} 
+                disabled={true}
+                options={fhitems} 
+                optionLabel="name" 
+                optionValue="code"
+                onChange={(e: { value: any}) => {
+                 console.info('e.value:'+JSON.stringify(e.value));
+                 setIsactived(e.value);
+                }}  placeholder={t("job.isactived")} />
+              
+          </td>
+          <td>
+          <label htmlFor="firstname1">{t("job.islocked")}</label>
+           </td> 
+          <td >
+               
+              
+               
+                <Dropdown 
+                value={islocked} 
+                disabled={true}
+                options={fhitems} 
+                optionLabel="name" 
+                optionValue="code"
+                onChange={(e: { value: any}) => {
+                 console.info('e.value:'+JSON.stringify(e.value));
+                 setIslocked(e.value);
+                }}  placeholder={t("job.islocked")} />
+               
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("job.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.createUid")}</label>
-                <div style={{height:10}}> </div>
+      
+                <Calendar
+                  dateFormat="dd/mm/yy"
+                  id="createdAt"
+                  value={createAt}
+                  disabled={true}
+                  placeholder={t("job.createdAtPlaceholder")}
+                  onChange={(e) => {
+                    if (e.value != null) {
+                    console.log('e.value' + e.value);
+                    setCreateAt(e.value);
+                    }
+                  }}
+                />
+            
+          </td>
+          <td >
+          <label htmlFor="firstname1">{t("job.updatedAt")}</label>
+          </td>
+          <td >
+         
+                <Calendar
+                  dateFormat="dd/mm/yy"
+                  id="updatedAt"
+                  value={updatedAt}
+                  disabled={true}
+                  placeholder={t("job.updatedAtPlaceholder")}
+                  onChange={(e) => {
+                    if (e.value != null) {
+                      console.log('e.value' + e.value);
+                      setUpdatedAt(e.value);
+                    }
+                  }}
+                />
+                
+          </td>
+          </tr>
+          <tr>
+            <td>
+            <label htmlFor="firstname1">{t("job.createUid")}</label>
+            </td>
+          <td >
+               
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -945,13 +1200,13 @@ export const JobItemView =({ Id, Mode }: JobItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("job.createUid")} />
               
-                </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("job.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("job.updatedUid")}</label>
+          </td>
+          <td >
+               
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -962,38 +1217,41 @@ export const JobItemView =({ Id, Mode }: JobItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("job.updatedUid")} />
-               </div>  
+              
           </td>
           </tr>
 
           <tr>
             <td colSpan={4}>
-               <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
+                <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
                     <TabPanel header="工序信息">
-                    <JobItemList mid={FHid}></JobItemList>
+                    <JobItemList mid={FHid}
+                     FHonChange={(e:any) => {
+                      setVal(e);
+                    }}> 
+
+                    </JobItemList>
                     </TabPanel>
                    
                 </TabView>
-
             </td>
           </tr>
-
           <tr>
-          <td >
+          <td colSpan={2} >
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/job");}}  style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/job");}} style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+         
+          <td colSpan={2}> 
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                  <Button
-                    label="确认"
-                    onClick={(e) => {replace("/job");}}
-                    style={{backgroundColor:'#4682B4'}}
-                  />
+                 <Button
+                      label="确认"
+                      onClick={(e) => {replace("/job");}}
+                      style={{backgroundColor:'#4682B4'}}
+                    />
                 </div>
           </td>
           </tr>

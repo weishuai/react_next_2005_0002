@@ -19,4 +19,7 @@ export const PurchaseOrder = {
     updatedAtPlaceholder: '修改时间',
     createUid: '创建人',
     updatedUid: '修改人',
+    refNumber:'内部参考',
+    paymentTerms:'所属团队'	
+
 }

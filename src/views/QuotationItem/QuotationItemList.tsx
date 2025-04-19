@@ -5,7 +5,7 @@ import {FilterMatchMode, FilterOperator} from 'primereact/api';
 import {Column} from 'primereact/column';
 import {QuotationItemController} from '../../controllers/QuotationItemController';
 import {Button} from 'primereact/button';
-import {MyDataTable} from '../../components/myDataTable/DataTable';
+import {MyDataTable} from '../../components/myDataTable/FHDataTable';
 const { nanoid } = require('nanoid');
 export const QuotationItemList = (props: any) => {
     const { t, i18n } = useTranslation();
@@ -69,7 +69,7 @@ export const QuotationItemList = (props: any) => {
           <hr></hr>
          <span className="p-buttonset">
             
-            <Button label={t('dataTable.Save')} icon="pi pi-check"  onClick={()=>{replace("/quotationitem/0/0/"+Mainid);}} style={{backgroundColor:'#4682B4'}}  />
+            <Button label={t('dataTable.Save')}  icon="pi pi-check"  onClick={()=>{replace("/quotationitem/0/0/"+Mainid);}} style={{backgroundColor:'#4682B4'}}  />
           
             <Button label={t('dataTable.Delete')} icon="pi pi-trash" style={{backgroundColor:'#4682B4'}} onClick={()=>{
                 for(let item of FHids)
@@ -78,16 +78,17 @@ export const QuotationItemList = (props: any) => {
                 }
                 replace("/quotationitem");
                 }}   />
-           <span style={{width:100}}></span>
+                  <span style={{width:650}}></span>
+           {/* <span style={{width:100}}></span>
             <Button label={t('dataTable.Import')} icon="pi pi-sign-in"  style={{backgroundColor:'#4682B4'}} />
             <Button label={t('dataTable.Export')} icon="pi pi-sign-out"  style={{backgroundColor:'#4682B4'}} />
-            <Button label={t('dataTable.Report')} icon="pi pi-file-pdf" /> 
+            <Button label={t('dataTable.Report')} icon="pi pi-file-pdf" />  */}
                    
         </span>
-        <hr></hr>
+
         </div>
        
-            <div className="card" >
+          
             <MyDataTable 
                 
                 fhvalue={customers}
@@ -164,7 +165,7 @@ export const QuotationItemList = (props: any) => {
 
                     >
             </MyDataTable>
-            </div>
+            
         </div>
     );
 }

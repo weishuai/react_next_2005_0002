@@ -127,12 +127,12 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
       <thead>
       </thead>
       <tbody>
-
       <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("AccountTag.name")}</label>
-                <div style={{height:10}}> </div>
+      <td>
+      <label htmlFor="name">{t("AccountTag.name")}</label>
+             </td>     
+          <td colSpan={3}>      
+               
                 <InputText 
                 id="name" 
                 value={name}  
@@ -141,16 +141,16 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+               
           </td>
           </tr>
- 
-
-          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.ref_number")}</label>
-                    <div style={{height:10}}> </div>
+     
+           <tr>
+            <td width="10%">
+            <label htmlFor="firstname1">{t("quotation.ref_number")}</label>
+            </td>
+              <td  width="40%">
+          
                     <InputText 
                     id="ref_number"
                     value={ref_number}
@@ -159,13 +159,13 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      setref_number(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.opportunity_id")}</label>
-                          <div style={{height:10}}> </div>
+              <td width="10%">   <label htmlFor="firstname1">{t("quotation.opportunity_id")}</label>
+
+              </td>
+               <td  width="40%">
+                     
                           <Dropdown 
                           id="opportunity_id"
                           value={opportunity_id}  
@@ -177,14 +177,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                            setopportunity_id(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
          <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.quotation_name")}</label>
-                          <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.quotation_name")}</label>
+            </td>
+                    <td  >
+                        
                           <Dropdown 
                           id="quotation_name"
                           value={quotation_name}
@@ -196,13 +197,13 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                            setquotation_name(e.value);
                           }}
                           />
-                          </div>
+                      
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.sales_person")}</label>
-                          <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.sales_person")}</label>
+                    </td>
+                    <td >
+                    
                           <Dropdown 
                           id="sales_person"
                           value={sales_person}  
@@ -214,14 +215,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                            setsales_person(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
-         <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.payment_terms")}</label>
-                          <div style={{height:10}}> </div>
+                <tr>
+                  <td>
+                  <label htmlFor="firstname1">{t("quotation.payment_terms")}</label>
+                  </td>
+                    <td  >
+                      
                           <Dropdown 
                           id="payment_terms"
                           value={payment_terms}
@@ -233,13 +235,13 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                            setpayment_terms(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.contact")}</label>
-                          <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.contact")}</label>
+                    </td>
+                   <td  >
+                       
                           <Dropdown 
                           id="contact"
                           value={contact}  
@@ -251,14 +253,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                            setcontact(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
-         <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.taxes")}</label>
-                          <div style={{height:10}}> </div>
+             <tr>
+                  <td>
+                  <label htmlFor="firstname1">{t("quotation.taxes")}</label>
+                  </td>
+                    <td>
+                         
                           <Dropdown 
                           id="taxes"
                           value={taxes}
@@ -270,13 +273,13 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                            settaxes(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.currency")}</label>
-                          <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.currency")}</label>
+                    </td>
+          <td >
+                        
                           <Dropdown 
                           id="currency"
                           value={currency}  
@@ -288,14 +291,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                            setcurrency(e.value);
                           }}
                           />
-                          </div>
+                        
                     </td>
                     </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.cat")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.cat")}</label>
+            </td>
+              <td  >
+                   
                     <InputText 
                     id="cat"
                     value={cat}
@@ -304,13 +308,11 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      setcat(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.status")}</label>
-                          <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("quotation.status")}</label></td>
+          <td >
+                       
                           <Dropdown 
                           id="status"
                           value={status}  
@@ -322,14 +324,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                            setstatus(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.amount")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.amount")}</label>
+            </td>
+              <td >
+                   
                     <InputText 
                     id="amount"
                     value={amount}
@@ -338,13 +341,13 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      setamount(e.target.value);
                     }}
                     />
-                    </div>
+                 
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.percentage")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("quotation.percentage")}</label>
+              </td>
+          <td  >
+                   
                     <InputText 
                     id="percentage"
                     value={percentage}
@@ -353,14 +356,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      setpercentage(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.discount_type")}</label>
-                          <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.discount_type")}</label>
+            </td>
+                    <td >
+                          
                           <Dropdown 
                           id="discount_type"
                           value={discount_type}
@@ -372,13 +376,13 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                            setdiscount_type(e.value);
                           }}
                           />
-                          </div>
+                     
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.discount")}</label>
-                    <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.discount")}</label>
+                    </td>
+          <td >
+                 
                     <InputText 
                     id="discount"
                     value={discount}
@@ -387,14 +391,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      setdiscount(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.total_discount")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.total_discount")}</label>
+            </td>
+              <td  >
+                  
                     <InputText 
                     id="total_discount"
                     value={total_discount}
@@ -403,13 +408,13 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      settotal_discount(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.test1")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("quotation.test1")}</label>
+              </td>
+          <td  >
+                    
                     <InputText 
                     id="test1"
                     value={test1}
@@ -418,14 +423,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      settest1(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.test2")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.test2")}</label>
+            </td>
+              <td  >
+                   
                     <InputText 
                     id="test2"
                     value={test2}
@@ -434,13 +440,11 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      settest2(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.additional_field3")}</label>
-                    <div style={{height:10}}> </div>
+              <td>  <label htmlFor="firstname1">{t("quotation.additional_field3")}</label></td>
+          <td  >
+                    
                     <InputText 
                     id="additional_field3"
                     value={additional_field3}
@@ -449,14 +453,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      setadditional_field3(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.additional_field4")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.additional_field4")}</label>
+            </td>
+              <td  >
+                   
                     <InputText 
                     id="additional_field4"
                     value={additional_field4}
@@ -465,13 +470,11 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      setadditional_field4(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.terms_conditions")}</label>
-                          <div style={{height:10}}> </div>
+              <td >  <label htmlFor="firstname1">{t("quotation.terms_conditions")}</label></td>
+          <td >
+                       
                           <Dropdown 
                           id="terms_conditions"
                           value={terms_conditions}  
@@ -483,14 +486,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                            setterms_conditions(e.value);
                           }}
                           />
-                          </div>
+                          
                     </td>
                     </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("quotation.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.remark")}</label>
+            </td>
+                <td colSpan={3}>
+                    
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -499,16 +503,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                 
                 </td>
               </tr>
 
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>  <label htmlFor="firstname1">{t("quotation.isactived")}</label></td>
+          <td  >
+        
                 <Dropdown
                 value={isactived}
                 disabled={true}
@@ -519,13 +522,11 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("quotation.isactived")} />
-                </div>
+               
           </td>
-          <td width="2%"></td>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td > <label htmlFor="firstname1">{t("quotation.islocked")}</label></td>
+          <td  >
+              
                 <Dropdown
                 value={islocked}
                 disabled={true}
@@ -536,19 +537,20 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("quotation.islocked")} />
-                </div>
+              
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.createdAt")}</label>
-                <div style={{height:10}}> </div>
+           
                 <Calendar
                   showTime
                   id="createdAt"
                   value={createAt}
-
+                  disabled={true}
                   placeholder={t("quotation.createdAtPlaceholder")}
                   onChange={(e) => {
                     if (e.value != null) {
@@ -557,18 +559,16 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
+          <td ><label htmlFor="firstname1">{t("quotation.updatedAt")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+                
                 <Calendar
                   showTime
                   id="updatedAt"
                   value={updatedAt}
-
+                  disabled={true}
                   placeholder={t("quotation.updatedAtPlaceholder")}
                   onChange={(e) => {
                     if (e.value != null) {
@@ -577,14 +577,15 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                     }
                   }}
                 />
-                </div>
+                
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.createUid")}</label>
-                <div style={{height:10}}> </div>
+          
                 <Dropdown
                 value={createUid}
                 disabled={true}
@@ -596,13 +597,13 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("quotation.createUid")} />
 
-                </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("quotation.updatedUid")}</label>
+          </td>
+          <td >
+            
                 <Dropdown
                 value={updatedUid}
                 disabled={true}
@@ -613,10 +614,9 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("quotation.updatedUid")} />
-               </div>
+        
           </td>
           </tr>
-
           <tr>
             <td colSpan={4}>
              
@@ -628,37 +628,35 @@ export const QuotationItemAdd =({ Id, Mode }: QuotationItemProps) => {
                 </TabView>
              
             </td>
-          </tr>
-
-
+          </tr>         
           <tr>
-          <td >
+          <td  colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/quotation");}}  style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/quotation/");}} style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+         
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                  <Button
-                    label="提交"
-                    onClick={(e) => {
-                      ctlQuotation.createQuotation({
-                        id:FHid,
-                        name:name,
-                        isactived:isactived,
-                        islocked:islocked,
-                        createdAt:createAt,
-                        updatedAt:updatedAt,
-                        createUid:createUid,
-                        updatedUid:updatedUid,
-                      });
-                      push("/quotation/"+Id+"/1");
-                    }}
-                    style={{backgroundColor:'#4682B4'}}
-                  />
+                <Button
+                      label="提交"
+                      onClick={(e) => {
+                        ctlQuotation.createQuotation({
+                          id:FHid,
+                          name:name,
+                          isactived:isactived,
+                          islocked:islocked,
+                          createdAt:createAt,
+                          updatedAt:updatedAt,
+                          createUid:createUid,
+                          updatedUid:updatedUid,
+                        });
+                        push("/quotation/"+Id+"/1");
+                      }}
+                      style={{backgroundColor:'#4682B4'}}
+                    />
                 </div>
           </td>
           </tr>
@@ -753,10 +751,11 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
       </thead>
       <tbody>
       <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("AccountTag.name")}</label>
-                <div style={{height:10}}> </div>
+      <td>
+      <label htmlFor="name">{t("AccountTag.name")}</label>
+             </td>     
+          <td colSpan={3}>      
+               
                 <InputText 
                 id="name" 
                 value={name}  
@@ -765,15 +764,16 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+               
           </td>
           </tr>
      
            <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.ref_number")}</label>
-                    <div style={{height:10}}> </div>
+            <td width="10%">
+            <label htmlFor="firstname1">{t("quotation.ref_number")}</label>
+            </td>
+              <td  width="40%">
+          
                     <InputText 
                     id="ref_number"
                     value={ref_number}
@@ -782,13 +782,13 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      setref_number(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.opportunity_id")}</label>
-                          <div style={{height:10}}> </div>
+              <td width="10%">   <label htmlFor="firstname1">{t("quotation.opportunity_id")}</label>
+
+              </td>
+               <td  width="40%">
+                     
                           <Dropdown 
                           id="opportunity_id"
                           value={opportunity_id}  
@@ -800,14 +800,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                            setopportunity_id(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
          <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.quotation_name")}</label>
-                          <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.quotation_name")}</label>
+            </td>
+                    <td  >
+                        
                           <Dropdown 
                           id="quotation_name"
                           value={quotation_name}
@@ -819,13 +820,13 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                            setquotation_name(e.value);
                           }}
                           />
-                          </div>
+                      
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.sales_person")}</label>
-                          <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.sales_person")}</label>
+                    </td>
+                    <td >
+                    
                           <Dropdown 
                           id="sales_person"
                           value={sales_person}  
@@ -837,14 +838,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                            setsales_person(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
-         <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.payment_terms")}</label>
-                          <div style={{height:10}}> </div>
+                <tr>
+                  <td>
+                  <label htmlFor="firstname1">{t("quotation.payment_terms")}</label>
+                  </td>
+                    <td  >
+                      
                           <Dropdown 
                           id="payment_terms"
                           value={payment_terms}
@@ -856,13 +858,13 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                            setpayment_terms(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.contact")}</label>
-                          <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.contact")}</label>
+                    </td>
+                   <td  >
+                       
                           <Dropdown 
                           id="contact"
                           value={contact}  
@@ -874,14 +876,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                            setcontact(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
-         <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.taxes")}</label>
-                          <div style={{height:10}}> </div>
+             <tr>
+                  <td>
+                  <label htmlFor="firstname1">{t("quotation.taxes")}</label>
+                  </td>
+                    <td>
+                         
                           <Dropdown 
                           id="taxes"
                           value={taxes}
@@ -893,13 +896,13 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                            settaxes(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.currency")}</label>
-                          <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.currency")}</label>
+                    </td>
+          <td >
+                        
                           <Dropdown 
                           id="currency"
                           value={currency}  
@@ -911,14 +914,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                            setcurrency(e.value);
                           }}
                           />
-                          </div>
+                        
                     </td>
                     </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.cat")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.cat")}</label>
+            </td>
+              <td  >
+                   
                     <InputText 
                     id="cat"
                     value={cat}
@@ -927,13 +931,11 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      setcat(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.status")}</label>
-                          <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("quotation.status")}</label></td>
+          <td >
+                       
                           <Dropdown 
                           id="status"
                           value={status}  
@@ -945,14 +947,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                            setstatus(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.amount")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.amount")}</label>
+            </td>
+              <td >
+                   
                     <InputText 
                     id="amount"
                     value={amount}
@@ -961,13 +964,13 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      setamount(e.target.value);
                     }}
                     />
-                    </div>
+                 
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.percentage")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("quotation.percentage")}</label>
+              </td>
+          <td  >
+                   
                     <InputText 
                     id="percentage"
                     value={percentage}
@@ -976,14 +979,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      setpercentage(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.discount_type")}</label>
-                          <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.discount_type")}</label>
+            </td>
+                    <td >
+                          
                           <Dropdown 
                           id="discount_type"
                           value={discount_type}
@@ -995,13 +999,13 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                            setdiscount_type(e.value);
                           }}
                           />
-                          </div>
+                     
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.discount")}</label>
-                    <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.discount")}</label>
+                    </td>
+          <td >
+                 
                     <InputText 
                     id="discount"
                     value={discount}
@@ -1010,14 +1014,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      setdiscount(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.total_discount")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.total_discount")}</label>
+            </td>
+              <td  >
+                  
                     <InputText 
                     id="total_discount"
                     value={total_discount}
@@ -1026,13 +1031,13 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      settotal_discount(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.test1")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("quotation.test1")}</label>
+              </td>
+          <td  >
+                    
                     <InputText 
                     id="test1"
                     value={test1}
@@ -1041,14 +1046,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      settest1(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.test2")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.test2")}</label>
+            </td>
+              <td  >
+                   
                     <InputText 
                     id="test2"
                     value={test2}
@@ -1057,13 +1063,11 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      settest2(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.additional_field3")}</label>
-                    <div style={{height:10}}> </div>
+              <td>  <label htmlFor="firstname1">{t("quotation.additional_field3")}</label></td>
+          <td  >
+                    
                     <InputText 
                     id="additional_field3"
                     value={additional_field3}
@@ -1072,14 +1076,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      setadditional_field3(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.additional_field4")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.additional_field4")}</label>
+            </td>
+              <td  >
+                   
                     <InputText 
                     id="additional_field4"
                     value={additional_field4}
@@ -1088,13 +1093,11 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      setadditional_field4(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.terms_conditions")}</label>
-                          <div style={{height:10}}> </div>
+              <td >  <label htmlFor="firstname1">{t("quotation.terms_conditions")}</label></td>
+          <td >
+                       
                           <Dropdown 
                           id="terms_conditions"
                           value={terms_conditions}  
@@ -1106,14 +1109,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                            setterms_conditions(e.value);
                           }}
                           />
-                          </div>
+                          
                     </td>
                     </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("quotation.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.remark")}</label>
+            </td>
+                <td colSpan={3}>
+                    
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -1122,16 +1126,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                 
                 </td>
               </tr>
 
 
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>  <label htmlFor="firstname1">{t("quotation.isactived")}</label></td>
+          <td  >
+        
                 <Dropdown
                 value={isactived}
                 disabled={true}
@@ -1142,13 +1145,11 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("quotation.isactived")} />
-                </div>
+               
           </td>
-          <td width="2%"></td>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td > <label htmlFor="firstname1">{t("quotation.islocked")}</label></td>
+          <td  >
+              
                 <Dropdown
                 value={islocked}
                 disabled={true}
@@ -1159,14 +1160,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("quotation.islocked")} />
-                </div>
+              
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.createdAt")}</label>
-                <div style={{height:10}}> </div>
+           
                 <Calendar
                   showTime
                   id="createdAt"
@@ -1180,13 +1182,11 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
+          <td ><label htmlFor="firstname1">{t("quotation.updatedAt")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+                
                 <Calendar
                   showTime
                   id="updatedAt"
@@ -1200,14 +1200,15 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                     }
                   }}
                 />
-                </div>
+                
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.createUid")}</label>
-                <div style={{height:10}}> </div>
+          
                 <Dropdown
                 value={createUid}
                 disabled={true}
@@ -1219,13 +1220,13 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("quotation.createUid")} />
 
-                </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("quotation.updatedUid")}</label>
+          </td>
+          <td >
+            
                 <Dropdown
                 value={updatedUid}
                 disabled={true}
@@ -1236,7 +1237,7 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("quotation.updatedUid")} />
-               </div>
+        
           </td>
           </tr>
           <tr>
@@ -1252,14 +1253,14 @@ export const QuotationItemEdit =({ Id, Mode }: QuotationItemProps) => {
             </td>
           </tr>         
           <tr>
-          <td >
+          <td  colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/quotation/");}} style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+         
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -1380,10 +1381,11 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
       </thead>
       <tbody>
       <tr>
-          <td colSpan={4}>      
-                <div className="p-field" >
-                <label htmlFor="name">{t("quotation.name")}</label>
-                <div style={{height:10}}> </div>
+      <td>
+      <label htmlFor="name">{t("AccountTag.name")}</label>
+             </td>     
+          <td colSpan={3}>      
+               
                 <InputText 
                 id="name" 
                 value={name}  
@@ -1392,15 +1394,16 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                  setName(e.target.value);
                 }}  
                 />
-                </div>
+               
           </td>
           </tr>
-  
-          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.ref_number")}</label>
-                    <div style={{height:10}}> </div>
+     
+           <tr>
+            <td width="10%">
+            <label htmlFor="firstname1">{t("quotation.ref_number")}</label>
+            </td>
+              <td  width="40%">
+          
                     <InputText 
                     id="ref_number"
                     value={ref_number}
@@ -1409,13 +1412,13 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      setref_number(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.opportunity_id")}</label>
-                          <div style={{height:10}}> </div>
+              <td width="10%">   <label htmlFor="firstname1">{t("quotation.opportunity_id")}</label>
+
+              </td>
+               <td  width="40%">
+                     
                           <Dropdown 
                           id="opportunity_id"
                           value={opportunity_id}  
@@ -1427,14 +1430,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                            setopportunity_id(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
          <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.quotation_name")}</label>
-                          <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.quotation_name")}</label>
+            </td>
+                    <td  >
+                        
                           <Dropdown 
                           id="quotation_name"
                           value={quotation_name}
@@ -1446,13 +1450,13 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                            setquotation_name(e.value);
                           }}
                           />
-                          </div>
+                      
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.sales_person")}</label>
-                          <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.sales_person")}</label>
+                    </td>
+                    <td >
+                    
                           <Dropdown 
                           id="sales_person"
                           value={sales_person}  
@@ -1464,14 +1468,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                            setsales_person(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
-         <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.payment_terms")}</label>
-                          <div style={{height:10}}> </div>
+                <tr>
+                  <td>
+                  <label htmlFor="firstname1">{t("quotation.payment_terms")}</label>
+                  </td>
+                    <td  >
+                      
                           <Dropdown 
                           id="payment_terms"
                           value={payment_terms}
@@ -1483,13 +1488,13 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                            setpayment_terms(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.contact")}</label>
-                          <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.contact")}</label>
+                    </td>
+                   <td  >
+                       
                           <Dropdown 
                           id="contact"
                           value={contact}  
@@ -1501,14 +1506,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                            setcontact(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
-         <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.taxes")}</label>
-                          <div style={{height:10}}> </div>
+             <tr>
+                  <td>
+                  <label htmlFor="firstname1">{t("quotation.taxes")}</label>
+                  </td>
+                    <td>
+                         
                           <Dropdown 
                           id="taxes"
                           value={taxes}
@@ -1520,13 +1526,13 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                            settaxes(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.currency")}</label>
-                          <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.currency")}</label>
+                    </td>
+          <td >
+                        
                           <Dropdown 
                           id="currency"
                           value={currency}  
@@ -1538,14 +1544,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                            setcurrency(e.value);
                           }}
                           />
-                          </div>
+                        
                     </td>
                     </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.cat")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.cat")}</label>
+            </td>
+              <td  >
+                   
                     <InputText 
                     id="cat"
                     value={cat}
@@ -1554,13 +1561,11 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      setcat(e.target.value);
                     }}
                     />
-                    </div>
+                  
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.status")}</label>
-                          <div style={{height:10}}> </div>
+              <td > <label htmlFor="firstname1">{t("quotation.status")}</label></td>
+          <td >
+                       
                           <Dropdown 
                           id="status"
                           value={status}  
@@ -1572,14 +1577,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                            setstatus(e.value);
                           }}
                           />
-                          </div>
+                         
                     </td>
                     </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.amount")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.amount")}</label>
+            </td>
+              <td >
+                   
                     <InputText 
                     id="amount"
                     value={amount}
@@ -1588,13 +1594,13 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      setamount(e.target.value);
                     }}
                     />
-                    </div>
+                 
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.percentage")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("quotation.percentage")}</label>
+              </td>
+          <td  >
+                   
                     <InputText 
                     id="percentage"
                     value={percentage}
@@ -1603,14 +1609,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      setpercentage(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-                    <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                          <label htmlFor="firstname1">{t("quotation.discount_type")}</label>
-                          <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.discount_type")}</label>
+            </td>
+                    <td >
+                          
                           <Dropdown 
                           id="discount_type"
                           value={discount_type}
@@ -1622,13 +1629,13 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                            setdiscount_type(e.value);
                           }}
                           />
-                          </div>
+                     
                     </td>
-                    <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.discount")}</label>
-                    <div style={{height:10}}> </div>
+                    <td >
+                    <label htmlFor="firstname1">{t("quotation.discount")}</label>
+                    </td>
+          <td >
+                 
                     <InputText 
                     id="discount"
                     value={discount}
@@ -1637,14 +1644,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      setdiscount(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.total_discount")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.total_discount")}</label>
+            </td>
+              <td  >
+                  
                     <InputText 
                     id="total_discount"
                     value={total_discount}
@@ -1653,13 +1661,13 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      settotal_discount(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.test1")}</label>
-                    <div style={{height:10}}> </div>
+              <td >
+              <label htmlFor="firstname1">{t("quotation.test1")}</label>
+              </td>
+          <td  >
+                    
                     <InputText 
                     id="test1"
                     value={test1}
@@ -1668,14 +1676,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      settest1(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.test2")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.test2")}</label>
+            </td>
+              <td  >
+                   
                     <InputText 
                     id="test2"
                     value={test2}
@@ -1684,13 +1693,11 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      settest2(e.target.value);
                     }}
                     />
-                    </div>
+                   
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                     <label htmlFor="firstname1">{t("quotation.additional_field3")}</label>
-                    <div style={{height:10}}> </div>
+              <td>  <label htmlFor="firstname1">{t("quotation.additional_field3")}</label></td>
+          <td  >
+                    
                     <InputText 
                     id="additional_field3"
                     value={additional_field3}
@@ -1699,14 +1706,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      setadditional_field3(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
               </tr>
          <tr>
-              <td  width="46%">
-                    <div className="p-field p-col-12 p-md-6">
-                    <label htmlFor="firstname1">{t("quotation.additional_field4")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.additional_field4")}</label>
+            </td>
+              <td  >
+                   
                     <InputText 
                     id="additional_field4"
                     value={additional_field4}
@@ -1715,13 +1723,11 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      setadditional_field4(e.target.value);
                     }}
                     />
-                    </div>
+                    
               </td>
-              <td width="2%"></td>
-          <td  width="46%">
-                          <div className="p-field p-col-12 p-md-6">
-                           <label htmlFor="firstname1">{t("quotation.terms_conditions")}</label>
-                          <div style={{height:10}}> </div>
+              <td >  <label htmlFor="firstname1">{t("quotation.terms_conditions")}</label></td>
+          <td >
+                       
                           <Dropdown 
                           id="terms_conditions"
                           value={terms_conditions}  
@@ -1733,14 +1739,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                            setterms_conditions(e.value);
                           }}
                           />
-                          </div>
+                          
                     </td>
                     </tr>
           <tr>
-                <td colSpan={4}>
-                    <div className="p-field p-col-12 p-md-12">
-                    <label htmlFor="firstname1">{t("quotation.remark")}</label>
-                    <div style={{height:10}}> </div>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.remark")}</label>
+            </td>
+                <td colSpan={3}>
+                    
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -1749,15 +1756,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                    </div>
+                 
                 </td>
               </tr>
 
+
           <tr>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.isactived")}</label>
-                <div style={{height:10}}> </div>
+            <td>  <label htmlFor="firstname1">{t("quotation.isactived")}</label></td>
+          <td  >
+        
                 <Dropdown
                 value={isactived}
                 disabled={true}
@@ -1768,13 +1775,11 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("quotation.isactived")} />
-                </div>
+               
           </td>
-          <td width="2%"></td>
-          <td  width="46%">
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.islocked")}</label>
-                <div style={{height:10}}> </div>
+          <td > <label htmlFor="firstname1">{t("quotation.islocked")}</label></td>
+          <td  >
+              
                 <Dropdown
                 value={islocked}
                 disabled={true}
@@ -1785,14 +1790,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("quotation.islocked")} />
-                </div>
+              
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.createdAt")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.createdAt")}</label>
-                <div style={{height:10}}> </div>
+           
                 <Calendar
                   showTime
                   id="createdAt"
@@ -1806,13 +1812,11 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                     }
                   }}
                 />
-               </div>
+               
           </td>
-          <td ></td>
+          <td ><label htmlFor="firstname1">{t("quotation.updatedAt")}</label></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.updatedAt")}</label>
-                <div style={{height:10}}> </div>
+                
                 <Calendar
                   showTime
                   id="updatedAt"
@@ -1826,14 +1830,15 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                     }
                   }}
                 />
-                </div>
+                
           </td>
           </tr>
           <tr>
+            <td>
+            <label htmlFor="firstname1">{t("quotation.createUid")}</label>
+            </td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.createUid")}</label>
-                <div style={{height:10}}> </div>
+          
                 <Dropdown
                 value={createUid}
                 disabled={true}
@@ -1845,13 +1850,13 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("quotation.createUid")} />
 
-                </div>
+               
           </td>
-          <td ></td>
           <td >
-                <div className="p-field p-col-12 p-md-6">
-                <label htmlFor="firstname1">{t("quotation.updatedUid")}</label>
-                <div style={{height:10}}> </div>
+          <label htmlFor="firstname1">{t("quotation.updatedUid")}</label>
+          </td>
+          <td >
+            
                 <Dropdown
                 value={updatedUid}
                 disabled={true}
@@ -1862,7 +1867,7 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("quotation.updatedUid")} />
-               </div>
+        
           </td>
           </tr>
           <tr>
@@ -1876,26 +1881,23 @@ export const QuotationItemView =({ Id, Mode }: QuotationItemProps) => {
                 </TabView>
              
             </td>
-          </tr>
-
-
-
+          </tr>         
           <tr>
-          <td >
+          <td  colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/quotation/");}}  style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/quotation/");}} style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-          <td ></td>
-          <td>
+         
+          <td colSpan={2}>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                  <Button
-                    label="确认"
-                    onClick={(e) => {replace("/quotation/"+Id+"/1");}}
-                    style={{backgroundColor:'#4682B4'}}
-                  />
+                <Button
+                     label="确认"
+                     onClick={(e) => {replace("/quotation/"+Id+"/1");}}
+                     style={{backgroundColor:'#4682B4'}}
+                   />
                 </div>
           </td>
           </tr>

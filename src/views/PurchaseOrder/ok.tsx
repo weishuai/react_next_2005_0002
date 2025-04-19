@@ -189,12 +189,9 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="name">{t("purchaseOrder.name")}</label>
-            </td>
-          <td colSpan={3}>      
+          <td colSpan={4}>      
                 <div className="p-field" >
-                
+                <label htmlFor="name">{t("purchaseOrder.name")}</label>
                 <div style={{height:10}}> </div>
                 <InputText 
                 id="name" 
@@ -207,12 +204,28 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                 </div>
           </td>
           </tr>
+          {/* <tr>
+            <td colSpan={4}>
+                <div className="p-field p-col-12 p-md-12">
+                <label htmlFor="firstname1">{t("purchaseOrder.description")}</label>
+                <div style={{height:10}}> </div>
+                <InputTextarea 
+                id="description"
+                value={description}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setdDescription(e.target.value);
+                }}                 
+                
+                ></InputTextarea>
+                </div>
+            </td>
+          </tr> */}
          <tr>
-               <td  width="10%">
-               <label htmlFor="firstname1">{t("purchaseOrder.refNumber")}</label>
-              </td>
-              <td  width="40%">
-                   
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("purchaseOrder.refNumber")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="refNumber"
                     value={refNumber}
@@ -221,12 +234,13 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                      setrefNumber(e.target.value);
                     }}
                     />
-                 
+                    </div>
               </td>
-              <td width="10%">
-              <label htmlFor="firstname1">{t("purchaseOrder.currency")}</label>
-              </td>
-          <td  width="40%">
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("purchaseOrder.currency")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="currency"
                       value={currency}
@@ -238,15 +252,14 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                        setcurrency(e.value);
                       }}
                       />
-               
+                      </div>
                 </td>
                 </tr>
          <tr>
-               <td>
-               <label htmlFor="firstname1">{t("purchaseOrder.taxes")}</label>
-              </td>
-              <td  >
-                    
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("purchaseOrder.taxes")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="taxes"
                     value={taxes}
@@ -258,13 +271,13 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                      settaxes(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("purchaseOrder.contact")}</label>
-              </td>
-          <td >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("purchaseOrder.contact")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="contact"
                       value={contact}
@@ -276,15 +289,14 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                        setcontact(e.value);
                       }}
                       />
-                  
+                      </div>
                 </td>
                 </tr>
           <tr>
-               <td>
-               <label htmlFor="firstname1">{t("purchaseOrder.paymentTerms")}</label>
-              </td>
-                  <td colSpan={3}>
-                     
+                  <td colSpan={4}>
+                      <div className="p-field p-col-12 p-md-12">
+                      <label htmlFor="firstname1">{t("purchaseOrder.paymentTerms")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="paymentTerms"
                       value={paymentTerms}
@@ -296,17 +308,14 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                        setpaymentTerms(e.value);
                       }}
                       />
-                   
+                      </div>
                   </td>
                 </tr>
           <tr>
-
-              <td>
-              <label htmlFor="firstname1">{t("purchaseOrder.remark")}</label>
-              </td>
-
-                <td colSpan={3}>
-               
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("purchaseOrder.remark")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -315,16 +324,15 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                  
+                    </div>
                 </td>
               </tr>
 
           <tr>
-             <td>
-             <label htmlFor="firstname1">{t("purchaseOrder.isactived")}</label>
-              </td>           
-          <td >
-
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.isactived")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -335,13 +343,13 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("purchaseOrder.isactived")} />
-               
+                </div>
           </td>
-          <td >
-          <label htmlFor="firstname1">{t("purchaseOrder.islocked")}</label>
-            </td> 
-          <td >
-         
+          <td width="2%"></td> 
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.islocked")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -352,16 +360,14 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("purchaseOrder.islocked")} />
-           
+                </div> 
           </td>
           </tr>
           <tr>
-               <td>
-               <label htmlFor="firstname1">{t("purchaseOrder.createdAt")}</label>
-              </td>
-
           <td >
-           
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.createdAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -375,13 +381,13 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                     }
                   }}
                 />
-            
+               </div>
           </td>
+          <td ></td>
           <td >
-          <label htmlFor="firstname1">{t("purchaseOrder.updatedAt")}</label>
-          </td>
-          <td >
-        
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.updatedAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -395,16 +401,14 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                     }
                   }}
                 />
-                
+                </div>
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("purchaseOrder.createUid")}</label>
-            </td>
-
           <td >
-  
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.createUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -416,13 +420,13 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("purchaseOrder.createUid")} />
               
-               
+                </div>
           </td>
+          <td ></td>
           <td >
-          <label htmlFor="firstname1">{t("purchaseOrder.updatedUid")}</label>
-          </td>
-          <td >
-             
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.updatedUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -433,7 +437,7 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("purchaseOrder.updatedUid")} />
-             
+               </div>  
           </td>
           </tr>
 
@@ -452,14 +456,14 @@ export const PurchaseOrderItemAdd =({ Id, Mode }: PurchaseOrderItemProps) => {
 
 
           <tr>
-          <td   colSpan={2}>
+          <td >
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/purchaseorder");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-         
-          <td  colSpan={2}>
+          <td ></td>
+          <td>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -680,7 +684,7 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
   <Card>     
      <div className="p-fluid p-formgrid p-grid">
       
-     <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
@@ -690,12 +694,9 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="name">{t("purchaseOrder.name")}</label>
-            </td>
-          <td colSpan={3}>      
+          <td colSpan={4}>      
                 <div className="p-field" >
-                
+                <label htmlFor="name">{t("purchaseOrder.name")}</label>
                 <div style={{height:10}}> </div>
                 <InputText 
                 id="name" 
@@ -708,12 +709,28 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                 </div>
           </td>
           </tr>
+          {/* <tr>
+            <td colSpan={4}>
+                <div className="p-field p-col-12 p-md-12">
+                <label htmlFor="firstname1">{t("purchaseOrder.description")}</label>
+                <div style={{height:10}}> </div>
+                <InputTextarea 
+                id="description"
+                value={description}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setdDescription(e.target.value);
+                }}                 
+                
+                ></InputTextarea>
+                </div>
+            </td>
+          </tr> */}
          <tr>
-               <td width="10%"> 
-               <label htmlFor="firstname1">{t("purchaseOrder.refNumber")}</label>
-              </td>
-              <td  width="40%">
-                   
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("purchaseOrder.refNumber")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="refNumber"
                     value={refNumber}
@@ -722,12 +739,13 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                      setrefNumber(e.target.value);
                     }}
                     />
-                 
+                    </div>
               </td>
-              <td width="10%">
-              <label htmlFor="firstname1">{t("purchaseOrder.currency")}</label>
-              </td>
-          <td  width="40%">
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("purchaseOrder.currency")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="currency"
                       value={currency}
@@ -739,15 +757,14 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                        setcurrency(e.value);
                       }}
                       />
-               
+                      </div>
                 </td>
                 </tr>
          <tr>
-               <td>
-               <label htmlFor="firstname1">{t("purchaseOrder.taxes")}</label>
-              </td>
-              <td  >
-                    
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("purchaseOrder.taxes")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="taxes"
                     value={taxes}
@@ -759,13 +776,13 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                      settaxes(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("purchaseOrder.contact")}</label>
-              </td>
-          <td >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("purchaseOrder.contact")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="contact"
                       value={contact}
@@ -777,15 +794,14 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                        setcontact(e.value);
                       }}
                       />
-                  
+                      </div>
                 </td>
                 </tr>
           <tr>
-               <td>
-               <label htmlFor="firstname1">{t("purchaseOrder.paymentTerms")}</label>
-              </td>
-                  <td colSpan={3}>
-                     
+                  <td colSpan={4}>
+                      <div className="p-field p-col-12 p-md-12">
+                      <label htmlFor="firstname1">{t("purchaseOrder.paymentTerms")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="paymentTerms"
                       value={paymentTerms}
@@ -797,17 +813,14 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                        setpaymentTerms(e.value);
                       }}
                       />
-                   
+                      </div>
                   </td>
                 </tr>
           <tr>
-
-              <td>
-              <label htmlFor="firstname1">{t("purchaseOrder.remark")}</label>
-              </td>
-
-                <td colSpan={3}>
-               
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("purchaseOrder.remark")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -816,16 +829,15 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                  
+                    </div>
                 </td>
               </tr>
 
           <tr>
-             <td>
-             <label htmlFor="firstname1">{t("purchaseOrder.isactived")}</label>
-              </td>           
-          <td >
-
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.isactived")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -836,13 +848,13 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("purchaseOrder.isactived")} />
-               
+                </div>
           </td>
-          <td >
-          <label htmlFor="firstname1">{t("purchaseOrder.islocked")}</label>
-            </td> 
-          <td >
-         
+          <td width="2%"></td> 
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.islocked")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -853,16 +865,14 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("purchaseOrder.islocked")} />
-           
+                </div> 
           </td>
           </tr>
           <tr>
-               <td>
-               <label htmlFor="firstname1">{t("purchaseOrder.createdAt")}</label>
-              </td>
-
           <td >
-           
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.createdAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -876,13 +886,13 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                     }
                   }}
                 />
-            
+               </div>
           </td>
+          <td ></td>
           <td >
-          <label htmlFor="firstname1">{t("purchaseOrder.updatedAt")}</label>
-          </td>
-          <td >
-        
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.updatedAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -896,16 +906,14 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                     }
                   }}
                 />
-                
+                </div>
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("purchaseOrder.createUid")}</label>
-            </td>
-
           <td >
-  
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.createUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -917,13 +925,13 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("purchaseOrder.createUid")} />
               
-               
+                </div>
           </td>
+          <td ></td>
           <td >
-          <label htmlFor="firstname1">{t("purchaseOrder.updatedUid")}</label>
-          </td>
-          <td >
-             
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.updatedUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -934,33 +942,32 @@ export const PurchaseOrderItemEdit =({ Id, Mode }: PurchaseOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("purchaseOrder.updatedUid")} />
-             
+               </div>  
           </td>
           </tr>
 
           <tr>
             <td colSpan={4}>
-             
-              <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
+                <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
                     <TabPanel header="产品信息">
-                    <PurchaseItemList mid={FHid}></PurchaseItemList>
+                    <PurchaseItemList mid={FHid}
+                        FHonChange={(e:any) => {
+                          setVal(e);
+                        }}/> 
                     </TabPanel>
                    
                 </TabView>
-             
             </td>
           </tr>
-
-
           <tr>
-          <td   colSpan={2}>
+          <td >
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
-                <Button label="取消" onClick={(e) => {replace("/purchaseorder");}}  style={{backgroundColor:'#4682B4'}}  />
+                <Button label="取消" onClick={(e) => {replace("/purchaseorder");}} style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-         
-          <td  colSpan={2}>
+          <td ></td>
+          <td>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
@@ -1133,7 +1140,7 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
   <Card>     
     <div className="p-fluid p-formgrid p-grid">
       
-    <table width="98%">
+      <table width="98%">
       <thead>
       </thead>
       <tbody>
@@ -1143,12 +1150,9 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="name">{t("purchaseOrder.name")}</label>
-            </td>
-          <td colSpan={3}>      
+          <td colSpan={4}>      
                 <div className="p-field" >
-                
+                <label htmlFor="name">{t("purchaseOrder.name")}</label>
                 <div style={{height:10}}> </div>
                 <InputText 
                 id="name" 
@@ -1161,12 +1165,28 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                 </div>
           </td>
           </tr>
+          {/* <tr>
+            <td colSpan={4}>
+                <div className="p-field p-col-12 p-md-12">
+                <label htmlFor="firstname1">{t("purchaseOrder.description")}</label>
+                <div style={{height:10}}> </div>
+                <InputTextarea 
+                id="description"
+                value={description}  
+                onChange={(e)=>{
+                 console.info('e.value:'+JSON.stringify(e.target.value));
+                 setdDescription(e.target.value);
+                }}                 
+                
+                ></InputTextarea>
+                </div>
+            </td>
+          </tr> */}
          <tr>
-               <td width="10%">
-               <label htmlFor="firstname1">{t("purchaseOrder.refNumber")}</label>
-              </td>
-              <td  width="40%">
-                   
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("purchaseOrder.refNumber")}</label>
+                    <div style={{height:10}}> </div>
                     <InputText 
                     id="refNumber"
                     value={refNumber}
@@ -1175,12 +1195,13 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                      setrefNumber(e.target.value);
                     }}
                     />
-                 
+                    </div>
               </td>
-              <td width="10%">
-              <label htmlFor="firstname1">{t("purchaseOrder.currency")}</label>
-              </td>
-          <td  width="40%">
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("purchaseOrder.currency")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="currency"
                       value={currency}
@@ -1192,15 +1213,14 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                        setcurrency(e.value);
                       }}
                       />
-               
+                      </div>
                 </td>
                 </tr>
          <tr>
-               <td>
-               <label htmlFor="firstname1">{t("purchaseOrder.taxes")}</label>
-              </td>
-              <td  >
-                    
+              <td  width="46%">
+                    <div className="p-field p-col-12 p-md-6">
+                    <label htmlFor="firstname1">{t("purchaseOrder.taxes")}</label>
+                    <div style={{height:10}}> </div>
                     <Dropdown 
                     id="taxes"
                     value={taxes}
@@ -1212,13 +1232,13 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                      settaxes(e.value);
                     }}
                     />
-                   
+                    </div>
               </td>
-              <td>
-              <label htmlFor="firstname1">{t("purchaseOrder.contact")}</label>
-              </td>
-          <td >
-                   
+              <td width="2%"></td>
+          <td  width="46%">
+                      <div className="p-field p-col-12 p-md-6">
+                       <label htmlFor="firstname1">{t("purchaseOrder.contact")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="contact"
                       value={contact}
@@ -1230,15 +1250,14 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                        setcontact(e.value);
                       }}
                       />
-                  
+                      </div>
                 </td>
                 </tr>
           <tr>
-               <td>
-               <label htmlFor="firstname1">{t("purchaseOrder.paymentTerms")}</label>
-              </td>
-                  <td colSpan={3}>
-                     
+                  <td colSpan={4}>
+                      <div className="p-field p-col-12 p-md-12">
+                      <label htmlFor="firstname1">{t("purchaseOrder.paymentTerms")}</label>
+                      <div style={{height:10}}> </div>
                       <Dropdown 
                       id="paymentTerms"
                       value={paymentTerms}
@@ -1250,17 +1269,14 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                        setpaymentTerms(e.value);
                       }}
                       />
-                   
+                      </div>
                   </td>
                 </tr>
           <tr>
-
-              <td>
-              <label htmlFor="firstname1">{t("purchaseOrder.remark")}</label>
-              </td>
-
-                <td colSpan={3}>
-               
+                <td colSpan={4}>
+                    <div className="p-field p-col-12 p-md-12">
+                    <label htmlFor="firstname1">{t("purchaseOrder.remark")}</label>
+                    <div style={{height:10}}> </div>
                     <InputTextarea 
                     id="remark"
                     value={remark}
@@ -1269,16 +1285,15 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                      setremark(e.target.value);
                     }}
                     />
-                  
+                    </div>
                 </td>
               </tr>
 
           <tr>
-             <td>
-             <label htmlFor="firstname1">{t("purchaseOrder.isactived")}</label>
-              </td>           
-          <td >
-
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.isactived")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={isactived} 
                 disabled={true}
@@ -1289,13 +1304,13 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIsactived(e.value);
                 }}  placeholder={t("purchaseOrder.isactived")} />
-               
+                </div>
           </td>
-          <td >
-          <label htmlFor="firstname1">{t("purchaseOrder.islocked")}</label>
-            </td> 
-          <td >
-         
+          <td width="2%"></td> 
+          <td  width="46%">
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.islocked")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={islocked} 
                 disabled={true}
@@ -1306,16 +1321,14 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setIslocked(e.value);
                 }}  placeholder={t("purchaseOrder.islocked")} />
-           
+                </div> 
           </td>
           </tr>
           <tr>
-               <td>
-               <label htmlFor="firstname1">{t("purchaseOrder.createdAt")}</label>
-              </td>
-
           <td >
-           
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.createdAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="createdAt"
@@ -1329,13 +1342,13 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                     }
                   }}
                 />
-            
+               </div>
           </td>
+          <td ></td>
           <td >
-          <label htmlFor="firstname1">{t("purchaseOrder.updatedAt")}</label>
-          </td>
-          <td >
-        
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.updatedAt")}</label>
+                <div style={{height:10}}> </div>
                 <Calendar
                   dateFormat="dd/mm/yy"
                   id="updatedAt"
@@ -1349,16 +1362,14 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                     }
                   }}
                 />
-                
+                </div>
           </td>
           </tr>
           <tr>
-            <td>
-            <label htmlFor="firstname1">{t("purchaseOrder.createUid")}</label>
-            </td>
-
           <td >
-  
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.createUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={createUid} 
                 disabled={true}
@@ -1370,13 +1381,13 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                  setCreateUid(e.value);
                 }}  placeholder={t("purchaseOrder.createUid")} />
               
-               
+                </div>
           </td>
+          <td ></td>
           <td >
-          <label htmlFor="firstname1">{t("purchaseOrder.updatedUid")}</label>
-          </td>
-          <td >
-             
+                <div className="p-field p-col-12 p-md-6">
+                <label htmlFor="firstname1">{t("purchaseOrder.updatedUid")}</label>
+                <div style={{height:10}}> </div>
                 <Dropdown 
                 value={updatedUid} 
                 disabled={true}
@@ -1387,33 +1398,30 @@ export const PurchaseOrderItemView =({ Id, Mode }: PurchaseOrderItemProps) => {
                  console.info('e.value:'+JSON.stringify(e.value));
                  setUpdatedUid(e.value);
                 }}  placeholder={t("purchaseOrder.updatedUid")} />
-             
+               </div>  
           </td>
           </tr>
 
           <tr>
             <td colSpan={4}>
-             
-              <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
+               <TabView activeIndex={activeIndex1} onTabChange={(e) => setActiveIndex1(e.index)}>
                     <TabPanel header="产品信息">
                     <PurchaseItemList mid={FHid}></PurchaseItemList>
                     </TabPanel>
                    
                 </TabView>
-             
             </td>
           </tr>
 
-
           <tr>
-          <td   colSpan={2}>
+          <td >
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                 <Button label="取消" onClick={(e) => {replace("/purchaseorder");}}  style={{backgroundColor:'#4682B4'}}  />
                 </div>
           </td>
-         
-          <td  colSpan={2}>
+          <td ></td>
+          <td>
                 <div className="p-field p-col-12 p-md-6">
                 <div style={{height:10}}> </div>
                   <Button
