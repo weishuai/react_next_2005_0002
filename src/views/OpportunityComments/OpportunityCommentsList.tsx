@@ -105,7 +105,7 @@ export const OpportunityCommentsList = (props: any) => {
                 props.FHonChange(mynanoid);
                 setVal(mynanoid);
                 }}   />
-            <span style={{width:650}}></span>
+            <span style={{width:1200}}></span>
             {/* <Button label={t('dataTable.Import')} icon="pi pi-sign-in"  style={{backgroundColor:'#4682B4'}} />
             <Button label={t('dataTable.Export')} icon="pi pi-sign-out"  style={{backgroundColor:'#4682B4'}} />
             <Button label={t('dataTable.Report')} icon="pi pi-file-pdf" />  */}

@@ -62,6 +62,19 @@ const LoginPage = () => {
                             </div>
                             <Button label="登录系统" className="w-full p-3 text-xl" onClick={() =>{
 
+
+                                // 存储数据
+                                localStorage.setItem('key', 'value');
+                                sessionStorage.setItem('key', 'value');
+                                // 读取数据
+                                const data = localStorage.getItem('key');
+                                console.log("data:",data);
+                                // 删除数据
+                                localStorage.removeItem('key');
+                                // 清空所有数据
+                                localStorage.clear();
+
+
                                 const fhojt=ctl.longin(email,password);
                                 fhojt.then((data)=>{
                                     console.log("data:");
